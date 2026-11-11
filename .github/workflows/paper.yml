@@ -14,6 +14,7 @@ on:
 permissions:
   contents: write
   actions: write
+  issues: write
 
 concurrency:
   group: paper
@@ -34,10 +35,25 @@ jobs:
           path: data
           key: velas-${{ github.run_id }}
           restore-keys: velas-
-      - name: Bot (cada minuto; publica el panel cada 10 minutos)
+      - name: Bot (cada minuto; publica el panel al arrancar, en cada operación y cada 10 minutos)
         env:
           DATA_SOURCE: binance
+          GH_TOKEN: ${{ github.token }}
+          AVISAR_A: maugeperfumerie
         run: |
+          LOG=state/paper_mtfBreakout.log
+          count() { grep -cE 'APERTURA|CIERRE|EVENTO' "$LOG" 2>/dev/null || echo 0; }
+          # Avisa cada operación como comentario en un hilo de GitHub (llega como notificación).
+          notify() {
+            ISSUE=$(gh issue list --label operaciones --state open --json number -q '.[0].number' 2>/dev/null)
+            if [ -z "$ISSUE" ]; then
+              gh label create operaciones --color 2563eb --force >/dev/null 2>&1
+              ISSUE=$(gh issue create --label operaciones --title "📈 Operaciones del bot (paper trading)" \
+                --body "Cada vez que el bot abre o cierra una operación aparece un comentario acá. Panel: https://camilobosio.com/crypto-bot/" | grep -oE '[0-9]+$')
+            fi
+            printf '@%s\n\n```\n%s\n```\n\nPanel: https://camilobosio.com/crypto-bot/\n' "$AVISAR_A" "$1" > /tmp/aviso.md
+            gh issue comment "$ISSUE" --body-file /tmp/aviso.md >/dev/null || true
+          }
           git config user.name "crypto-bot"
           git config user.email "crypto-bot@users.noreply.github.com"
           publish() {
@@ -49,10 +65,18 @@ jobs:
           }
           END=$((SECONDS + 320*60))
           n=0
+          last=$(count)
           while [ $SECONDS -lt $END ]; do
             node scripts/paper.js --once || echo "ciclo con error, sigo"
             n=$((n+1))
-            if [ $((n % 10)) -eq 0 ]; then publish; fi
+            c=$(count)
+            if [ "$c" -gt "$last" ]; then
+              publish
+              notify "$(grep -E 'APERTURA|CIERRE|EVENTO' "$LOG" | tail -n $((c - last)))"
+              last=$c
+            elif [ $n -eq 1 ] || [ $((n % 10)) -eq 0 ]; then
+              publish
+            fi
             sleep 60
           done
           publish
