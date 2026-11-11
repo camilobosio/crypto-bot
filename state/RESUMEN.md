@@ -1,0 +1,23 @@
+# Paper trading de futuros: mtfBreakout
+
+Dinero **simulado** · precios reales de Bybit. Actualizado 2026-11-11 21:03:01 UTC · última vela 2026-11-11 20:55
+
+| | |
+|---|---|
+| Capital inicial | 100 USDT |
+| Patrimonio | **100.00 USDT** (0.00 %) |
+| Caída desde el máximo | 0.0 % (corta en 40 %) |
+| Operaciones cerradas | 0 (0 % ganadoras) |
+| Comisiones / financiamiento | 0.00 / 0.00 USDT |
+| Estado | ✅ operando |
+
+## Posiciones abiertas
+Ninguna.
+
+## Últimas operaciones
+Todavía ninguna.
+
+## Log reciente
+```
+[2026-11-11 21:03:01] Iniciado: 100 USDT simulados · mtfBreakout {"dcN":24,"stopAtr":1,"tpR":2,"useDaily":false,"trail":false,"maxBars":288} · BTCUSDT ETHUSDT SOLUSDT XRPUSDT DOGEUSDT BNBUSDT LINKUSDT SUIUSDT
+```
