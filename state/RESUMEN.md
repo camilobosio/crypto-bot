@@ -1,6 +1,6 @@
 # Paper trading de futuros: mtfBreakout
 
-Dinero **simulado** · precios reales de Bybit. Actualizado 2026-11-11 22:31:00 UTC · última vela 2026-11-11 22:25
+Dinero **simulado** · precios reales de Bybit. Actualizado 2026-11-11 22:40:10 UTC · última vela 2026-11-11 22:35
 
 | | |
 |---|---|
@@ -26,4 +26,6 @@ Todavía ninguna.
 [2026-11-11 22:20:48] Vela 2026-11-11 22:15 · patrimonio 100.00 USDT · caída 0.0 % · sin posiciones
 [2026-11-11 22:25:55] Vela 2026-11-11 22:20 · patrimonio 100.00 USDT · caída 0.0 % · sin posiciones
 [2026-11-11 22:31:00] Vela 2026-11-11 22:25 · patrimonio 100.00 USDT · caída 0.0 % · sin posiciones
+[2026-11-11 22:35:05] Vela 2026-11-11 22:30 · patrimonio 100.00 USDT · caída 0.0 % · sin posiciones
+[2026-11-11 22:40:10] Vela 2026-11-11 22:35 · patrimonio 100.00 USDT · caída 0.0 % · sin posiciones
 ```
