@@ -1,0 +1,10 @@
+{
+  "trigN": 12,
+  "pbBars": 6,
+  "pbTol": 0.002,
+  "stopAtr": 1.5,
+  "tpR": 2.5,
+  "useDaily": false,
+  "beAt": 0,
+  "maxBars": 288
+}

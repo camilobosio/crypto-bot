@@ -1,0 +1,14 @@
+{
+  "name": "crypto-bot",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Bot de trading cripto: backtest, walk-forward y paper trading. Sin dinero real.",
+  "scripts": {
+    "data": "node scripts/download.js",
+    "backtest": "node scripts/backtest.js",
+    "walkforward": "node scripts/walkforward.js",
+    "paper": "node scripts/paper.js"
+  },
+  "engines": { "node": ">=20.11" }
+}
