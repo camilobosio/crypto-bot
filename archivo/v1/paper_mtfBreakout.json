@@ -1,0 +1,23 @@
+{
+  "wallet": 148.01124171133887,
+  "positions": {},
+  "pending": [],
+  "peak": 183.29440299290548,
+  "halted": null,
+  "dayKey": "2026-11-13",
+  "dayStartEquity": 114.4365565557032,
+  "blockEntries": false,
+  "lastEquity": 148.01124171133887,
+  "lastT": 1794590700000,
+  "fees": 9.29479560057686,
+  "funding": -0.4313541170846818,
+  "cooldown": {
+    "ETHUSDT": 1794555000000,
+    "XRPUSDT": 1794543300000,
+    "LINKUSDT": 1794503100000,
+    "DOGEUSDT": 1794557100000,
+    "BNBUSDT": 1794543300000,
+    "BTCUSDT": 1794556500000,
+    "SOLUSDT": 1794545400000
+  }
+}
