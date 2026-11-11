@@ -26,6 +26,8 @@ const fresh = () => ({
   pausedUntil: 0, lastSummaryDay: null, summaries: [],
 });
 const s = fs.existsSync(STATE) ? JSON.parse(fs.readFileSync(STATE, 'utf8')) : fresh();
+// limpia un resumen vacío que generó la primera versión al arrancar
+s.summaries = (s.summaries ?? []).filter((x) => x.t - s.startedAt > 36e5);
 const log = new Logger(DIR, s);
 const risk = new Risk(cfg.risk, null, s, log);
 const ex = new Executor(cfg.executor, cfg.risk, s, log);
@@ -144,7 +146,9 @@ function sync() {
 // ---- Resumen diario (9:00 Argentina)
 function maybeSummary() {
   const now = new Date(), day = now.toISOString().slice(0, 10);
-  if (now.getUTCHours() < cfg.summaryHourUtc || s.lastSummaryDay === day) return;
+  const target = Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), cfg.summaryHourUtc);
+  // solo si ya pasó la hora del resumen de hoy Y la mesa estaba corriendo antes de esa hora
+  if (now < target || s.lastSummaryDay === day || s.startedAt > target) return;
   const since = s.summaries.at(-1)?.t ?? s.startedAt;
   const sum = log.summary(since, ex.equity());
   s.summaries.push(sum);

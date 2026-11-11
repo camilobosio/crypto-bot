@@ -23,7 +23,20 @@ export class Risk {
         continue;
       }
       p.misses = 0;
-      p.price = +pr.priceUsd;
+      let price = +pr.priceUsd;
+      // Salto de más de 25 % entre dos lecturas: se confirma con otra consulta antes de actuar
+      // (DexScreener a veces devuelve un precio erróneo aislado).
+      if (Math.abs(price / p.price - 1) > 0.25) {
+        const again = await getJson(`https://api.dexscreener.com/token-pairs/v1/solana/${p.mint}`, { minGapMs: 250 });
+        const same = (again ?? []).find((x) => x.pairAddress === p.pair);
+        const confirm = same ? +same.priceUsd : NaN;
+        if (!(confirm > 0) || Math.abs(confirm / price - 1) > 0.1) {
+          this.log.activity('RISK', `${p.symbol}: precio raro ${price.toPrecision(4)} sin confirmar → se ignora esta lectura`);
+          continue;
+        }
+        price = confirm;
+      }
+      p.price = price;
       p.liq = pr.liquidity?.usd ?? p.liq;
       p.peak = Math.max(p.peak, p.price);
       const ret = p.price / p.entry - 1;

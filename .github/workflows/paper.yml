@@ -1,14 +1,12 @@
-# Paper trading de futuros en los servidores de GitHub (gratis en repos públicos, sin tu compu).
-#
-# El horario programado de GitHub es poco confiable (puede atrasarse horas), así que cada
-# corrida queda prendida ~5,5 h revisando el bot CADA MINUTO y, al terminar, lanza la siguiente.
-# El cron de cada hora queda solo como respaldo si la cadena se corta.
+# Bot de futuros (PAPER) en los servidores de GitHub, 24/7, sin tu compu.
+# Revisa cada minuto. El estado y los datos del panel viven en la rama "futures-data"
+# (se actualiza cada minuto sin reconstruir la página). Cada corrida dura ~5,5 h y lanza la siguiente.
 # Precios: espejo público de Binance, porque Bybit bloquea servidores de EE. UU.
 name: paper-trading
 
 on:
   schedule:
-    - cron: '7 * * * *'
+    - cron: '7 * * * *'   # respaldo por si la cadena se corta
   workflow_dispatch: {}
 
 permissions:
@@ -35,51 +33,53 @@ jobs:
           path: data
           key: velas-${{ github.run_id }}
           restore-keys: velas-
-      - name: Bot (cada minuto; publica el panel al arrancar, en cada operación y cada 10 minutos)
+      - name: Traer el estado del bot
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir fx-data && cd fx-data
+          git init -q
+          git config user.name "crypto-bot"
+          git config user.email "crypto-bot@users.noreply.github.com"
+          git remote add origin "https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git"
+          if git fetch -q --depth 1 origin futures-data; then git checkout -q -b futures-data FETCH_HEAD
+          else git checkout -q --orphan futures-data; cp ../state/* . 2>/dev/null || true; fi
+      - name: Bot de futuros (cada minuto)
         env:
           DATA_SOURCE: binance
+          STATE_DIR: fx-data
           GH_TOKEN: ${{ github.token }}
           AVISAR_A: maugeperfumerie
         run: |
-          LOG=state/paper_mtfBreakout.log
+          LOG=fx-data/paper_mtfBreakout.log
           count() { grep -cE 'APERTURA|CIERRE|EVENTO' "$LOG" 2>/dev/null || echo 0; }
-          # Avisa cada operación como comentario en un hilo de GitHub (llega como notificación).
           notify() {
             ISSUE=$(gh issue list --label operaciones --state open --json number -q '.[0].number' 2>/dev/null)
             if [ -z "$ISSUE" ]; then
               gh label create operaciones --color 2563eb --force >/dev/null 2>&1
-              ISSUE=$(gh issue create --label operaciones --title "📈 Operaciones del bot (paper trading)" \
+              ISSUE=$(gh issue create --label operaciones --title "📈 Operaciones del bot de futuros (paper)" \
                 --body "Cada vez que el bot abre o cierra una operación aparece un comentario acá. Panel: https://camilobosio.com/crypto-bot/" | grep -oE '[0-9]+$')
             fi
             printf '@%s\n\n```\n%s\n```\n\nPanel: https://camilobosio.com/crypto-bot/\n' "$AVISAR_A" "$1" > /tmp/aviso.md
             gh issue comment "$ISSUE" --body-file /tmp/aviso.md >/dev/null || true
           }
-          git config user.name "crypto-bot"
-          git config user.email "crypto-bot@users.noreply.github.com"
-          publish() {
-            git add state/ docs/
-            if git diff --cached --quiet; then return 0; fi
-            git commit -q -m "paper: $(date -u +'%Y-%m-%d %H:%M') UTC"
-            git pull -q --rebase -X ours || { git rebase --abort; return 0; }
-            git push -q || true
+          sync() {
+            ( cd fx-data && git add -A && \
+              if git rev-parse -q --verify HEAD >/dev/null; then git commit -q --amend --allow-empty -m "datos bot de futuros"; else git commit -q -m "datos bot de futuros"; fi && \
+              git push -q -f origin HEAD:futures-data ) || echo "sync falló, sigo"
           }
           END=$((SECONDS + 320*60))
-          n=0
           last=$(count)
           while [ $SECONDS -lt $END ]; do
             node scripts/paper.js --once || echo "ciclo con error, sigo"
-            n=$((n+1))
+            sync
             c=$(count)
             if [ "$c" -gt "$last" ]; then
-              publish
               notify "$(grep -E 'APERTURA|CIERRE|EVENTO' "$LOG" | tail -n $((c - last)))"
               last=$c
-            elif [ $n -eq 1 ] || [ $((n % 10)) -eq 0 ]; then
-              publish
             fi
-            sleep 60
+            sleep 50
           done
-          publish
       - name: Lanzar la siguiente corrida
         if: always()
         env:

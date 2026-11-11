@@ -10,19 +10,19 @@ import cfg from '../config.js';
 import { loadCandles, loadFunding, alignCandles } from '../src/data.js';
 import { strategies, withDefaults, prepareAll } from '../src/strategies.js';
 import { FuturesPortfolio } from '../src/engine.js';
-import { writeDashboard } from '../src/dashboard.js';
+
 
 const args = new Set(process.argv.slice(2));
 const name = cfg.strategy;
 const strategy = strategies[name];
-const dir = path.resolve(import.meta.dirname, '..', 'state');
+const dir = process.env.STATE_DIR ? path.resolve(process.env.STATE_DIR) : path.resolve(import.meta.dirname, '..', 'state');
 const STATE = path.join(dir, `paper_${name}.json`);
 const TRADES = path.join(dir, `paper_${name}_trades.csv`);
 const LOG = path.join(dir, `paper_${name}.log`);
 const SUMMARY = path.join(dir, 'RESUMEN.md');
 const EQUITY = path.join(dir, `paper_${name}_equity.csv`);
 const TRADES_JSON = path.join(dir, `paper_${name}_trades.json`);
-const DASH = path.resolve(import.meta.dirname, '..', 'docs', 'index.html');
+const LIVE = path.join(dir, 'live.json');
 const paramsFile = path.join(dir, `params_${name}.json`);
 fs.mkdirSync(dir, { recursive: true });
 
@@ -35,7 +35,7 @@ const hm = (t) => new Date(t).toISOString().slice(0, 16).replace('T', ' ');
 const log = (msg) => { const line = `[${stamp()}] ${msg}`; console.log(line); fs.appendFileSync(LOG, line + '\n'); };
 
 if (args.has('--reset')) {
-  for (const f of [STATE, TRADES, LOG, SUMMARY, EQUITY, TRADES_JSON, DASH]) if (fs.existsSync(f)) fs.unlinkSync(f);
+  for (const f of [STATE, TRADES, LOG, SUMMARY, EQUITY, TRADES_JSON, LIVE]) if (fs.existsSync(f)) fs.unlinkSync(f);
   console.log('Estado, log y operaciones borrados.');
   process.exit(0);
 }
@@ -79,14 +79,41 @@ ${logTail.join('\n')}
 `);
 }
 
-function renderDashboard(s, data) {
+// Qué está mirando el bot en cada par: tendencia de 4 h y distancia al nivel de ruptura.
+function watchInfo(pf, data) {
+  return Object.keys(data).map((sym) => {
+    const x = pf.ind[sym], i = data[sym].length - 1, j4 = x.h4.i[i], j1 = x.h1.i[i];
+    const f = x.h4.f[j4], sl = x.h4.s[j4], c4 = x.h4.c[j4];
+    const trend = f > sl && c4 > sl ? 1 : f < sl && c4 < sl ? -1 : 0;
+    const price = data[sym][i].c, hi = x.dcH?.[j1], lo = x.dcL?.[j1];
+    const level = trend === 1 ? hi : trend === -1 ? lo : null;
+    const chg24 = price / data[sym][Math.max(0, i - 288)].c - 1;
+    return { sym, price, trend, hi, lo, level, dist: level ? (level - price) / price : null, chg24 };
+  });
+}
+
+// Datos del panel en vivo (docs/index.html los lee desde la rama de datos).
+function writeLive(pf, data) {
+  const s = pf.s;
   const trades = fs.existsSync(TRADES_JSON) ? JSON.parse(fs.readFileSync(TRADES_JSON, 'utf8')) : [];
-  const equity = fs.existsSync(EQUITY)
+  let equity = fs.existsSync(EQUITY)
     ? fs.readFileSync(EQUITY, 'utf8').trim().split('\n').map((l) => { const [t, e] = l.split(','); return { t: +t, e: +e }; })
     : [];
-  const prices = Object.fromEntries(Object.entries(data).map(([sym, cs]) => [sym, cs.at(-1).c]));
-  const logTail = fs.existsSync(LOG) ? fs.readFileSync(LOG, 'utf8').trim().split('\n').slice(-25).reverse() : [];
-  writeDashboard(DASH, { cfg, name, params, s, trades, equity, prices, logTail });
+  const step = Math.max(1, Math.ceil(equity.length / 800));
+  equity = equity.filter((_, i) => i % step === 0 || i === equity.length - 1);
+  const logTail = fs.existsSync(LOG) ? fs.readFileSync(LOG, 'utf8').trim().split('\n').slice(-40).reverse() : [];
+  const live = {
+    updatedAt: Date.now(), lastBarT: s.lastT, startedAt: equity[0]?.t ?? s.lastT, capital: cfg.initialCapital,
+    equity: s.lastEquity, peak: s.peak, wallet: s.wallet, fees: s.fees, funding: s.funding,
+    status: s.halted ? 'detenido' : s.blockEntries ? 'pausa diaria' : 'operando',
+    positions: Object.entries(s.positions).map(([sym, p]) => {
+      const last = data[sym].at(-1).c;
+      return { sym, side: p.side, lev: p.lev, entry: p.entry, price: last, stop: p.stop, tp: p.tp, liq: p.liq, margin: p.margin, upnl: pf.upnl(p, last), entryT: p.entryT };
+    }),
+    pending: s.pending, trades: trades.slice(-100).reverse(), equityPts: equity, watch: watchInfo(pf, data), log: logTail,
+    strategy: name, params, rules: { risk: cfg.risk.riskPerTradePct, maxDD: cfg.risk.maxDrawdownPct, maxPos: cfg.risk.maxPositions, maxLev: cfg.risk.maxLeverage },
+  };
+  fs.writeFileSync(path.join(dir, 'live.json'), JSON.stringify(live));
 }
 
 async function cycle() {
@@ -107,14 +134,14 @@ async function cycle() {
     log(`Iniciado: ${cfg.initialCapital} USDT simulados · ${name} ${JSON.stringify(params)} · ${cfg.symbols.join(' ')}`);
     fs.writeFileSync(EQUITY, `${pf.s.lastT},${pf.s.lastEquity.toFixed(4)}\n`);
     writeSummary(pf.s);
-    renderDashboard(pf.s, data);
+    writeLive(pf, data);
     return;
   }
   if (times[0] > state.lastT) log('Aviso: el bot estuvo apagado más de lo que cubren los datos.');
 
   let processed = 0;
   for (let i = 0; i < times.length; i++) if (times[i] > state.lastT) { pf.step(i); processed++; }
-  if (!processed) return;
+  if (!processed) { writeLive(pf, data); return; }
 
   if (!fs.existsSync(TRADES)) fs.writeFileSync(TRADES, 'par,lado,apalancamiento,entrada,salida,precio_entrada,precio_salida,cantidad,pnl_usdt,r,motivo\n');
   for (const t of pf.trades) {
@@ -134,7 +161,7 @@ async function cycle() {
     fs.writeFileSync(TRADES_JSON, JSON.stringify([...all, ...pf.trades]));
   }
   writeSummary(pf.s);
-  renderDashboard(pf.s, data);
+  writeLive(pf, data);
 }
 
 const run = async () => { try { await cycle(); } catch (e) { log('Error: ' + e.message); } };
