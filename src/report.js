@@ -5,7 +5,7 @@ const esc = (s) => String(s).replace(/[&<>]/g, (c) => ({ '&': '&amp;', '<': '&lt
 const day = (t) => new Date(t).toISOString().slice(0, 10);
 const hm = (t) => new Date(t).toISOString().slice(0, 16).replace('T', ' ');
 
-function chart(series, { log = false, h = 260, pctAxis = false } = {}) {
+export function chart(series, { log = false, h = 260, pctAxis = false } = {}) {
   const W = 900, P = { l: 56, r: 12, t: 12, b: 24 };
   const all = series.flatMap((s) => s.points);
   const tx = all.map((p) => p.t), ys = all.map((p) => p.v);

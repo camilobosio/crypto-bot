@@ -10,6 +10,7 @@ import cfg from '../config.js';
 import { loadCandles, loadFunding, alignCandles } from '../src/data.js';
 import { strategies, withDefaults, prepareAll } from '../src/strategies.js';
 import { FuturesPortfolio } from '../src/engine.js';
+import { writeDashboard } from '../src/dashboard.js';
 
 const args = new Set(process.argv.slice(2));
 const name = cfg.strategy;
@@ -19,6 +20,9 @@ const STATE = path.join(dir, `paper_${name}.json`);
 const TRADES = path.join(dir, `paper_${name}_trades.csv`);
 const LOG = path.join(dir, `paper_${name}.log`);
 const SUMMARY = path.join(dir, 'RESUMEN.md');
+const EQUITY = path.join(dir, `paper_${name}_equity.csv`);
+const TRADES_JSON = path.join(dir, `paper_${name}_trades.json`);
+const DASH = path.resolve(import.meta.dirname, '..', 'docs', 'index.html');
 const paramsFile = path.join(dir, `params_${name}.json`);
 fs.mkdirSync(dir, { recursive: true });
 
@@ -31,7 +35,7 @@ const hm = (t) => new Date(t).toISOString().slice(0, 16).replace('T', ' ');
 const log = (msg) => { const line = `[${stamp()}] ${msg}`; console.log(line); fs.appendFileSync(LOG, line + '\n'); };
 
 if (args.has('--reset')) {
-  for (const f of [STATE, TRADES, LOG, SUMMARY]) if (fs.existsSync(f)) fs.unlinkSync(f);
+  for (const f of [STATE, TRADES, LOG, SUMMARY, EQUITY, TRADES_JSON, DASH]) if (fs.existsSync(f)) fs.unlinkSync(f);
   console.log('Estado, log y operaciones borrados.');
   process.exit(0);
 }
@@ -75,6 +79,16 @@ ${logTail.join('\n')}
 `);
 }
 
+function renderDashboard(s, data) {
+  const trades = fs.existsSync(TRADES_JSON) ? JSON.parse(fs.readFileSync(TRADES_JSON, 'utf8')) : [];
+  const equity = fs.existsSync(EQUITY)
+    ? fs.readFileSync(EQUITY, 'utf8').trim().split('\n').map((l) => { const [t, e] = l.split(','); return { t: +t, e: +e }; })
+    : [];
+  const prices = Object.fromEntries(Object.entries(data).map(([sym, cs]) => [sym, cs.at(-1).c]));
+  const logTail = fs.existsSync(LOG) ? fs.readFileSync(LOG, 'utf8').trim().split('\n').slice(-25).reverse() : [];
+  writeDashboard(DASH, { cfg, name, params, s, trades, equity, prices, logTail });
+}
+
 async function cycle() {
   const startMs = Date.now() - LOOKBACK_DAYS * 864e5;
   const raw = {}, funding = {};
@@ -91,7 +105,9 @@ async function cycle() {
     pf.s.lastT = times.at(-1);
     fs.writeFileSync(STATE, JSON.stringify(pf.s, null, 2));
     log(`Iniciado: ${cfg.initialCapital} USDT simulados · ${name} ${JSON.stringify(params)} · ${cfg.symbols.join(' ')}`);
+    fs.writeFileSync(EQUITY, `${pf.s.lastT},${pf.s.lastEquity.toFixed(4)}\n`);
     writeSummary(pf.s);
+    renderDashboard(pf.s, data);
     return;
   }
   if (times[0] > state.lastT) log('Aviso: el bot estuvo apagado más de lo que cubren los datos.');
@@ -112,7 +128,13 @@ async function cycle() {
   const pos = Object.entries(pf.s.positions).map(([s, p]) => `${s} ${p.side === 1 ? 'L' : 'C'} ${p.lev}x ${pf.upnl(p, data[s].at(-1).c) >= 0 ? '+' : ''}${pf.upnl(p, data[s].at(-1).c).toFixed(2)}`).join(' | ') || 'sin posiciones';
   log(`Vela ${hm(pf.s.lastT)} · patrimonio ${pf.s.lastEquity.toFixed(2)} USDT · caída ${((1 - pf.s.lastEquity / pf.s.peak) * 100).toFixed(1)} % · ${pos}${pf.s.halted ? ' · DETENIDO' : ''}`);
   fs.writeFileSync(STATE, JSON.stringify(pf.s, null, 2));
+  fs.appendFileSync(EQUITY, pf.equityCurve.map((p) => `${p.t},${p.equity.toFixed(4)}`).join('\n') + '\n');
+  if (pf.trades.length) {
+    const all = fs.existsSync(TRADES_JSON) ? JSON.parse(fs.readFileSync(TRADES_JSON, 'utf8')) : [];
+    fs.writeFileSync(TRADES_JSON, JSON.stringify([...all, ...pf.trades]));
+  }
   writeSummary(pf.s);
+  renderDashboard(pf.s, data);
 }
 
 const run = async () => { try { await cycle(); } catch (e) { log('Error: ' + e.message); } };
