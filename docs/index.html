@@ -91,7 +91,9 @@ function render(L) {
     let hint;
     if (open) hint = `<span class="pos">● En posición</span>`;
     else if (!w.trend) hint = 'Sin tendencia clara: no opera';
-    else {
+    else if ((w.trend === 1 && w.dist < 0) || (w.trend === -1 && w.dist > 0)) {
+      hint = `Ya ${w.trend === 1 ? 'superó' : 'perforó'} <b class="mono">${f.price(w.level)}</b> antes: espera un cruce nuevo para entrar`;
+    } else {
       const d = Math.abs(w.dist ?? 0), prox = Math.max(0, 100 - d * 100 * 25);
       hint = `${w.trend === 1 ? 'Compra' : 'Venta en corto'} si ${w.trend === 1 ? 'supera' : 'pierde'} <b class="mono">${f.price(w.level)}</b> · a ${f.pct(d).replace('+', '')}
         <div class="meter"><i style="width:${prox}%;background:${w.trend === 1 ? 'var(--green)' : 'var(--red)'}"></i></div>`;
