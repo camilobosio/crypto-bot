@@ -1,0 +1,819 @@
+{"t":1794436122963,"type":"rechazo","mint":"BFfrW2h5CuTMHbDmXeJL5sdKAZVQDHrShwCPf2Jrpump","symbol":"Tilly (BFfr…)","reason":"puntaje 0.531 < 0.6","parts":{"presionCompradora":0.57,"impulso5m":0,"tendencia1h":1,"actividad":1,"liquidez":0,"holders":0.44,"edad":1}}
+{"t":1794436125094,"type":"descarte","mint":"FjFVmDDM3w7qVLS9uxLkXnDM4qCGsqXSow6d32phpump","symbol":"HAMSTER (FjFV…)","reason":"top 10 holders 26.9 % · dev vinculado a rugs (Creator history of rugged tokens)","top10":26.868923900007477,"lpLocked":100}
+{"t":1794436127717,"type":"compra","mint":"HzwVr7KjPhUriHK9MrJbFzbTDTPwUXGrL2Ah2wVhpump","symbol":"NIHAONOON (HzwV…)","reason":"filtros OK + puntaje 0.68","size":8,"price":0.0001996,"parts":{"presionCompradora":0.73,"impulso5m":0.47,"tendencia1h":0.62,"actividad":1,"liquidez":0.17,"holders":0.83,"edad":1},"top10":1.5655729960930804,"lpLocked":100,"volH1":376493.93,"liq":33721.81,"dex":"pumpswap"}
+{"t":1794436131356,"type":"venta","mint":"HzwVr7KjPhUriHK9MrJbFzbTDTPwUXGrL2Ah2wVhpump","symbol":"NIHAONOON (HzwV…)","reason":"stop −6 % (precio -10.7 %)","pnl":-0.9952,"ret":-0.1244}
+{"t":1794436131647,"type":"rechazo","mint":"4fm9PevKgig5y9oekTABQSMEHPTiT2p8V9UG9PWMpump","symbol":"niggao (4fm9…)","reason":"puntaje 0.306 < 0.6","parts":{"presionCompradora":0.28,"impulso5m":0,"tendencia1h":0,"actividad":1,"liquidez":0,"holders":0,"edad":1}}
+{"t":1794436132587,"type":"descarte","mint":"H3gXgvf2kza3vz3WhP3KoKdprhiu7oW6Q1ARXLy5Erhf","symbol":"STINK (H3gX…)","reason":"LP no bloqueado (0 %) · top 10 holders 28.9 %","top10":28.852938887238704,"lpLocked":0}
+{"t":1794436135121,"type":"rechazo","mint":"GsycyHWVhuKJxoXr1YtuSQXGwFoPLGd2gNP8Ns11pump","symbol":"CELON (Gsyc…)","reason":"puntaje 0.358 < 0.6","parts":{"presionCompradora":0.54,"impulso5m":0,"tendencia1h":0,"actividad":1,"liquidez":0,"holders":0,"edad":1}}
+{"t":1794436137621,"type":"compra","mint":"5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump","symbol":"Max (5qaP…)","reason":"filtros OK + puntaje 0.79","size":7.92,"price":0.008761,"parts":{"presionCompradora":0.49,"impulso5m":0.24,"tendencia1h":1,"actividad":1,"liquidez":1,"holders":1,"edad":1},"top10":8.938087460564423,"lpLocked":99.72445426389768,"volH1":22872923.47,"liq":330633.46,"dex":"pumpswap"}
+{"t":1794436140088,"type":"descarte","mint":"Gsj4msPvgEdDJ6UuYwoKT6uqfMzHUWS8B3pG5QNvpump","symbol":"mesk (Gsj4…)","reason":"top 10 holders 25.3 %","top10":25.30583126300431,"lpLocked":100}
+{"t":1794436142795,"type":"rechazo","mint":"6ut8rZUw8aroJCDwAXaGpmx2gcXvriGoTgBS6p98pump","symbol":"MANEKI (6ut8…)","reason":"puntaje 0.250 < 0.6","parts":{"presionCompradora":0,"impulso5m":0,"tendencia1h":0,"actividad":1,"liquidez":0,"holders":0,"edad":1}}
+{"t":1794436145088,"type":"descarte","mint":"Hu4eFmzw4jHDYfU9KhjPnJoJFKdT2c3hr8WENudspump","symbol":"SAXON (Hu4e…)","reason":"top 10 holders 23.4 %","top10":23.391323836851562,"lpLocked":100}
+{"t":1794436147587,"type":"descarte","mint":"89iRVoDVPd8tuRrMyhgPfe58eDneasPsdEVu5AUMpump","symbol":"LuckyCoin (89iR…)","reason":"LP no bloqueado (0 %)","top10":15.426258265833601,"lpLocked":0}
+{"t":1794436205818,"type":"descarte","mint":"5gP4Eu7G5J8aE53MDZmQFvmXN1xra5WniX7tYXB1pump","symbol":"MAX (5gP4…)","reason":"LP no bloqueado (0 %) · top 10 holders 43.6 %","top10":43.64887720438105,"lpLocked":0}
+{"t":1794436227413,"type":"rechazo","mint":"9RyENt3gJ1MEsFPiJAMyNerYYngLDuyZfVP4GBqepump","symbol":"TILLY (9RyE…)","reason":"puntaje 0.361 < 0.6","parts":{"presionCompradora":0.53,"impulso5m":0.45,"tendencia1h":0,"actividad":0.41,"liquidez":0.17,"holders":0,"edad":1}}
+{"t":1794436233094,"type":"venta","mint":"5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump","symbol":"Max (5qaP…)","reason":"stop −6 % (precio -59.8 %)","pnl":-4.7994,"ret":-0.606}
+{"t":1794436248467,"type":"rechazo","mint":"5vo6UbTfJzQRgChjefcFGs5zxcSdk48Qoh6MPPYMpump","symbol":"BYESEN (5vo6…)","reason":"puntaje 0.440 < 0.6","parts":{"presionCompradora":0.71,"impulso5m":0,"tendencia1h":1,"actividad":1,"liquidez":0,"holders":0.12,"edad":0.3}}
+{"t":1794436354760,"type":"descarte","mint":"5HF2HEFgySm7ueDktp7YJEsBPnA4XU7q3A133gS6pump","symbol":"HUNG (5HF2…)","reason":"volumen < 50k al revalidar"}
+{"t":1794436357002,"type":"rechazo","mint":"E6WcQ88tfLY6xnJH9A9cAHoRTcKNDtwjsdYDCzbqpump","symbol":"sackson (E6Wc…)","reason":"puntaje 0.513 < 0.6","parts":{"presionCompradora":0.73,"impulso5m":0,"tendencia1h":1,"actividad":1,"liquidez":0,"holders":0.11,"edad":1}}
+{"t":1794436421486,"type":"descarte","mint":"Xsc9qvGR1efVDFGLrVsmkzv3qi45LTBjeUKSPmx9qEh","symbol":"Hung (Xsc9…)","reason":"mint no revocado · freeze no revocado · LP no bloqueado (0 %) · top 10 holders 64.9 %","top10":64.86370970984447,"lpLocked":0}
+{"t":1794436443061,"type":"descarte","mint":"F3BHrF3eRQRbsEuxofn6cwxAz8ckvwindFjhBCTAhtBP","symbol":"FWIRED (F3BH…)","reason":"LP no bloqueado (0 %)","top10":11.163546211683302,"lpLocked":0}
+{"t":1794436508740,"type":"descarte","mint":"BHuVmkdS5cBSkFdGeCiUnPCCtKNxyctSEi7Jz3uRR1FH","symbol":"GONE (BHuV…)","reason":"LP no bloqueado (0 %)","top10":16.4868009134586,"lpLocked":0}
+{"t":1794436872965,"type":"rechazo","mint":"NuxMPP3ER8kJBiP3NiDTtBhzgGr2oAzZkzXHpsjzero","symbol":"zero (NuxM…)","reason":"puntaje 0.367 < 0.6","parts":{"presionCompradora":0.08,"impulso5m":0,"tendencia1h":1,"actividad":1,"liquidez":0,"holders":0,"edad":1}}
+{"t":1794436943840,"type":"descarte","mint":"CRfxwHA4pY8ZKyfocYEMqiYky5eHtNYfcWHGAgwnnVUj","symbol":"Max (CRfx…)","reason":"LP no bloqueado (0 %)","top10":17.545077890431468,"lpLocked":0}
+{"t":1794436991856,"type":"rechazo","mint":"3krGPg2yeKmVeH65YD2RMhECwAZhTbZqKtJtwcKVpump","symbol":"Madison (3krG…)","reason":"puntaje 0.288 < 0.6","parts":{"presionCompradora":0.2,"impulso5m":0,"tendencia1h":0,"actividad":1,"liquidez":0,"holders":0.45,"edad":0.3}}
+{"t":1794437040834,"type":"descarte","mint":"BFfrW2h5CuTMHbDmXeJL5sdKAZVQDHrShwCPf2Jrpump","symbol":"Tilly (BFfr…)","reason":"top 10 holders 20.7 %","top10":20.679221615559136,"lpLocked":100}
+{"t":1794437043333,"type":"rechazo","mint":"4fm9PevKgig5y9oekTABQSMEHPTiT2p8V9UG9PWMpump","symbol":"niggao (4fm9…)","reason":"puntaje 0.293 < 0.6","parts":{"presionCompradora":0.21,"impulso5m":0,"tendencia1h":0,"actividad":1,"liquidez":0,"holders":0,"edad":1}}
+{"t":1794437045572,"type":"rechazo","mint":"GsycyHWVhuKJxoXr1YtuSQXGwFoPLGd2gNP8Ns11pump","symbol":"CELON (Gsyc…)","reason":"puntaje 0.297 < 0.6","parts":{"presionCompradora":0.23,"impulso5m":0,"tendencia1h":0,"actividad":1,"liquidez":0,"holders":0,"edad":1}}
+{"t":1794437048069,"type":"rechazo","mint":"6jhUuTqbNbX9FoxUTFGJL7UGoyEMvJVLhMQ9TztRpump","symbol":"GONE (6jhU…)","reason":"puntaje 0.431 < 0.6","parts":{"presionCompradora":0.39,"impulso5m":0,"tendencia1h":1,"actividad":1,"liquidez":0,"holders":0.03,"edad":1}}
+{"t":1794437138125,"type":"rechazo","mint":"9RyENt3gJ1MEsFPiJAMyNerYYngLDuyZfVP4GBqepump","symbol":"TILLY (9RyE…)","reason":"puntaje 0.390 < 0.6","parts":{"presionCompradora":0.55,"impulso5m":0,"tendencia1h":0,"actividad":1,"liquidez":0.16,"holders":0.04,"edad":1}}
+{"t":1794437140299,"type":"descarte","mint":"5G75AAaaav5EMLjRui8XkBjhTa81xf7G5FyDrpz9DV9m","symbol":"JENSEN (5G75…)","reason":"LP no bloqueado (0 %)","top10":9.9504683298902,"lpLocked":0}
+{"t":1794437162472,"type":"rechazo","mint":"5vo6UbTfJzQRgChjefcFGs5zxcSdk48Qoh6MPPYMpump","symbol":"BYESEN (5vo6…)","reason":"puntaje 0.557 < 0.6","parts":{"presionCompradora":0.51,"impulso5m":0,"tendencia1h":1,"actividad":1,"liquidez":0,"holders":0.7,"edad":1}}
+{"t":1794437187021,"type":"descarte","mint":"TTWofwAge91oFhZs7kpQdyrVRkmevgM88xijGvQFbKo","symbol":"TTWO (TTWo…)","reason":"mint no revocado · freeze no revocado · LP no bloqueado (0 %) · top 10 holders 24.8 %","top10":24.782353658333257,"lpLocked":0}
+{"t":1794437234834,"type":"descarte","mint":"E6WcQ88tfLY6xnJH9A9cAHoRTcKNDtwjsdYDCzbqpump","symbol":"sackson (E6Wc…)","reason":"top 10 holders 22.2 %","top10":22.20792330395247,"lpLocked":100}
+{"t":1794437237085,"type":"rechazo","mint":"9RyENt3gJ1MEsFPiJAMyNerYYngLDuyZfVP4GBqepump","symbol":"TILLY (9RyE…)","reason":"puntaje 0.497 < 0.6","parts":{"presionCompradora":0.55,"impulso5m":0.72,"tendencia1h":0,"actividad":0.94,"liquidez":0.21,"holders":0.05,"edad":1}}
+{"t":1794437239587,"type":"rechazo","mint":"NuxMPP3ER8kJBiP3NiDTtBhzgGr2oAzZkzXHpsjzero","symbol":"zero (NuxM…)","reason":"puntaje 0.401 < 0.6","parts":{"presionCompradora":0.04,"impulso5m":0.28,"tendencia1h":1,"actividad":1,"liquidez":0,"holders":0,"edad":1}}
+{"t":1794437295959,"type":"descarte","mint":"AU1kR6qhGHB3eaBb1oZMX5ZuKf36nFWyLzinVyiCzdeN","symbol":"DISHWASHER (AU1k…)","reason":"LP no bloqueado (0 %)","top10":7.897561569974501,"lpLocked":0}
+{"t":1794437298182,"type":"descarte","mint":"BMnkLBLF8P4fj84rE2ndXrgoD5y1kscyCD5CwyboacAj","symbol":"Max (BMnk…)","reason":"LP no bloqueado (0 %)","top10":11.378765431476733,"lpLocked":0}
+{"t":1794437300681,"type":"descarte","mint":"Qfib9Fb4EyJ3W1R9ZwGsabmW5DRxUZcn5UwK81CcG5X","symbol":"BYESEN (Qfib…)","reason":"LP no bloqueado (0 %)","top10":7.9395346035055825,"lpLocked":4.026352854984135e-11}
+{"t":1794437303179,"type":"descarte","mint":"6tNu3cZHPWKdYTwusb91RUTx7m6xcJKZVQzFyZX2R6GN","symbol":"JENSEN (6tNu…)","reason":"LP no bloqueado (0 %) · top 10 holders 93.4 %","top10":93.37025388783768,"lpLocked":0}
+{"t":1794437337469,"type":"descarte","mint":"SPCXxcqXj6e5dJDVNovHN8744zkbhM2bYudU45BimGb","symbol":"SPCX (SPCX…)","reason":"mint no revocado · freeze no revocado · LP no bloqueado (0 %) · top 10 holders 43.6 %","top10":43.582314337086316,"lpLocked":0}
+{"t":1794437358411,"type":"descarte","mint":"43EEAnb1JBKYG6gbn3JdGtGU45ys6mS7QaSHopTzpump","symbol":"DISHWASHER (43EE…)","reason":"volumen < 50k al revalidar"}
+{"t":1794437442103,"type":"descarte","mint":"FUFnM5u1fjEgc2RkrYw4p1LCsTRZ7UyCBYWHuVLioWw8","symbol":"mihao (FUFn…)","reason":"LP no bloqueado (0 %) · top 10 holders 26.2 %","top10":26.2170907034339,"lpLocked":1.0955632587772948e-9}
+{"t":1794437592022,"type":"descarte","mint":"FZfN3QJH6wAc4MYnLXen5So9tCqzMRLTHSEFDurMQ4i5","symbol":"JUNG (FZfN…)","reason":"LP no bloqueado (0 %) · top 10 holders 86.5 %","top10":86.46625276473267,"lpLocked":0}
+{"t":1794437635217,"type":"descarte","mint":"85qvSdoRLoLCUKvzLtg6YEdWY4myLTKDZQhERiT8V72F","symbol":"PENIS (85qv…)","reason":"volumen < 50k al revalidar"}
+{"t":1794437637514,"type":"descarte","mint":"XsCPL9dNWBMvFtTmwcCA5v3xWPSMEBCszbQdiLLq6aN","symbol":"COOKED (XsCP…)","reason":"mint no revocado · freeze no revocado · LP no bloqueado (0 %) · top 10 holders 72.8 %","top10":72.8007518964413,"lpLocked":0}
+{"t":1794437745745,"type":"descarte","mint":"D6sHWHCEe4vs1efuYiNvED3WJNRjtA2t7Ns2y8QztqVe","symbol":"Max (D6sH…)","reason":"LP no bloqueado (0 %)","top10":7.81752732589,"lpLocked":1.1292143286372877e-9}
+{"t":1794437747971,"type":"descarte","mint":"AGZrSkm5LtkGcv78ptciqHZ7C8EQuaig2zdbwiMCgg63","symbol":"DISHWASHER (AGZr…)","reason":"LP no bloqueado (0 %)","top10":8.69037909440932,"lpLocked":0}
+{"t":1794437767849,"type":"descarte","mint":"2bX18XMZuyhETkUhWhrtdBmz4rHucnmNjuxBrYMyAtcE","symbol":"NVIDIH (2bX1…)","reason":"LP no bloqueado (0 %) · top 10 holders 22.9 %","top10":22.8584158041877,"lpLocked":0}
+{"t":1794437836216,"type":"descarte","mint":"42K6eiMMaRQxqJUEChXu5wUj9y68fr9cUKYR2K11gkTZ","symbol":"Max (42K6…)","reason":"LP no bloqueado (0 %)","top10":3.810289553413521,"lpLocked":0}
+{"t":1794437926941,"type":"descarte","mint":"258m54vLSKP8b4f9yvVsPK4ebx3hxz2ka4mqkL5zCJae","symbol":"JHM (258m…)","reason":"LP no bloqueado (0 %) · top 10 holders 87.5 %","top10":87.51204646916543,"lpLocked":0}
+{"t":1794438137277,"type":"descarte","mint":"43eNXzw1WybUgzJMJZ6JHXEz1GuHxLFAcDec9bCfHRoh","symbol":"Max (43eN…)","reason":"LP no bloqueado (0 %)","top10":5.2420136787776865,"lpLocked":0}
+{"t":1794438160617,"type":"rechazo","mint":"9RyENt3gJ1MEsFPiJAMyNerYYngLDuyZfVP4GBqepump","symbol":"TILLY (9RyE…)","reason":"puntaje 0.400 < 0.6","parts":{"presionCompradora":0.56,"impulso5m":0,"tendencia1h":0.01,"actividad":1,"liquidez":0.16,"holders":0.08,"edad":1}}
+{"t":1794438162860,"type":"rechazo","mint":"NuxMPP3ER8kJBiP3NiDTtBhzgGr2oAzZkzXHpsjzero","symbol":"zero (NuxM…)","reason":"puntaje 0.358 < 0.6","parts":{"presionCompradora":0.04,"impulso5m":0,"tendencia1h":1,"actividad":1,"liquidez":0,"holders":0,"edad":1}}
+{"t":1794438184393,"type":"descarte","mint":"75PAKuPLhPcQp8bKtd3p8rU8CDp6gxfomwXHqPnXpump","symbol":"MAX (75PA…)","reason":"top 10 holders 25.4 %","top10":25.414546556615935,"lpLocked":100}
+{"t":1794438186625,"type":"descarte","mint":"87VfUD8kzRn8Jv3W8XaSZ4VLiGqLfkeLeDsJNehz4kUE","symbol":"GONE (87Vf…)","reason":"LP no bloqueado (0 %)","top10":5.3821557224198004,"lpLocked":0}
+{"t":1794438231189,"type":"descarte","mint":"6f5SxGEGqvgiYY8aa34U6UDXj65Ja8oiKDSmv19ogxAr","symbol":"BERNIE (6f5S…)","reason":"LP no bloqueado (0 %)","top10":7.005478508637206,"lpLocked":1.1292143286372877e-9}
+{"t":1794438255067,"type":"descarte","mint":"Ax3AbYo4Wk5JVpgF4PpV1gFQRnMY29KfeU9dyERKpump","symbol":"GONE (Ax3A…)","reason":"top 10 holders 20.9 %","top10":20.890423720918665,"lpLocked":100}
+{"t":1794438257331,"type":"descarte","mint":"ncjdyoupvaUPymwS71xKSY1tsvu887AG7GVrEfMoo1c","symbol":"Suoding (ncjd…)","reason":"LP no bloqueado (0 %)","top10":9.1389351619766,"lpLocked":0}
+{"t":1794438302987,"type":"rechazo","mint":"7r3Hcmzzko9UrCvbCAN3QhUfojs2RqpnzH8tfeyRpump","symbol":"Mustache (7r3H…)","reason":"puntaje 0.512 < 0.6","parts":{"presionCompradora":0.68,"impulso5m":0,"tendencia1h":1,"actividad":1,"liquidez":0,"holders":0.17,"edad":1}}
+{"t":1794438305103,"type":"descarte","mint":"7AKhFqygZBwZmSbR2jz1tWoCajnMibn2uxFBcj5UGB16","symbol":"Suoding (7AKh…)","reason":"LP no bloqueado (0 %)","top10":6.71477477924405,"lpLocked":0}
+{"t":1794438327679,"type":"descarte","mint":"Czo8fd7imbaYz9XsHitiQ45NmM4e8s4uGTQp3FEwhZ7p","symbol":"civetcat (Czo8…)","reason":"LP no bloqueado (0 %)","top10":15.5221764044738,"lpLocked":7.792319173085473e-10}
+{"t":1794438329506,"type":"descarte","mint":"FZH5X1o2jcUjS9AmegfiyqwujeWV9SZ7mSRVipPqatHn","symbol":"Penthouse (FZH5…)","reason":"LP no bloqueado (0 %)","top10":7.224721307639858,"lpLocked":7.141778489984105e-10}
+{"t":1794438423660,"type":"descarte","mint":"pumpCmXqMfrsAkQ5r49WcJnRayYRqmXz6ae8H7H9Dfn","symbol":"PUSSY (pump…)","reason":"LP no bloqueado (0 %) · top 10 holders 59.5 %","top10":59.45224815151098,"lpLocked":0.0000021256218442308835}
+{"t":1794438521130,"type":"descarte","mint":"GeK4M94zkqwEjp4Yv4MAVVBuRR3ubnM8TAivJXfbpump","symbol":"PUSSY (GeK4…)","reason":"top 10 holders 30.9 %","top10":30.946556490741727,"lpLocked":100}
+{"t":1794438546235,"type":"descarte","mint":"6FRfCbNVj1ed1ScJ5WatmGbXarqiNDT2TyP1qdyy3Vih","symbol":"GONE (6FRf…)","reason":"LP no bloqueado (0 %)","top10":6.062421708820657,"lpLocked":0}
+{"t":1794438548469,"type":"descarte","mint":"GFo3eC3pZjgoeeobTmfGzvnVke2cd791pgZbCfP9oCae","symbol":"Dave (GFo3…)","reason":"LP no bloqueado (0 %) · top 10 holders 87.2 %","top10":87.1911715816061,"lpLocked":0}
+{"t":1794438550969,"type":"descarte","mint":"By8FSWLmgbtRJLkNa8A24xyhsYEvPu2C56GSCxXJqccs","symbol":"Mustache (By8F…)","reason":"LP no bloqueado (0 %)","top10":7.816371779236299,"lpLocked":0}
+{"t":1794438553470,"type":"descarte","mint":"2G9kGFNcLQFChmAMDKFvrestdbCt9CB7rofcuzbDfX19","symbol":"GONE (2G9k…)","reason":"LP no bloqueado (0 %)","top10":4.023615729671568,"lpLocked":0}
+{"t":1794438596053,"type":"descarte","mint":"8xMxrxPTCYJRwumZEpMfkRjNry4UJoRy75J4B96eJTkM","symbol":"vibeshift (8xMx…)","reason":"LP no bloqueado (0 %)","top10":13.9427021617228,"lpLocked":1.0992330021117272e-9}
+{"t":1794438598291,"type":"descarte","mint":"DJHAsk73pzh66uW1odRyG4KBxStZs6Wcw7MuyQ4kKu7N","symbol":"Mustache (DJHA…)","reason":"LP no bloqueado (0 %)","top10":10.451400639090199,"lpLocked":0}
+{"t":1794438620976,"type":"descarte","mint":"7HB2PxYkX9qhxggiXH84getvZZrScXoK78CtCugvpump","symbol":"Horny (7HB2…)","reason":"top 10 holders 20.3 %","top10":20.32959160895662,"lpLocked":100}
+{"t":1794438721477,"type":"descarte","mint":"95xS5kk3EWV3s38SBoedZW1234hMBFhH82hQcfFREH1Y","symbol":"PUSSY (95xS…)","reason":"LP no bloqueado (0 %)","top10":5.1772378329515,"lpLocked":0}
+{"t":1794438747188,"type":"descarte","mint":"DM4EPsJa6HULZR6pf2o6YdNcx5bZfTYxE3yqvbwqxJyt","symbol":"牛马 (DM4E…)","reason":"LP no bloqueado (0 %)","top10":16.5159918083767,"lpLocked":0}
+{"t":1794438772359,"type":"descarte","mint":"DTxQLAGPF6G3ap15tkJUaey6nEXLjWAU4MmWdmS27BQ6","symbol":"Horny (DTxQ…)","reason":"LP no bloqueado (0 %)","top10":4.193210431724579,"lpLocked":0}
+{"t":1794438798062,"type":"descarte","mint":"DigcAvMHuejFPYJqy6NTdRjVxM4t8iAQS8VsK9JP7WkC","symbol":"Horny (Digc…)","reason":"LP no bloqueado (0 %) · top 10 holders 23.1 %","top10":23.114922963981,"lpLocked":0}
+{"t":1794438900116,"type":"descarte","mint":"AQQUt5TDRhMULBxXBjW9kVgDyeTGujspw4MY2T6aQp8c","symbol":"BLOB (AQQU…)","reason":"LP no bloqueado (0 %)","top10":10.056229686106,"lpLocked":5.398291508149825e-9}
+{"t":1794438981920,"type":"descarte","mint":"5GKpiT7CuipBFxWyf286a3BafejPACuNynoSqGfCyN6a","symbol":"AUDACOIN (5GKp…)","reason":"LP no bloqueado (0 %)","top10":2.106843615181,"lpLocked":0}
+{"t":1794438984143,"type":"descarte","mint":"5fsjAtE9PeZRtmTxbxwVLGwB1zVmqv3a3w2WuQCMEx1k","symbol":"TILLY (5fsj…)","reason":"LP no bloqueado (0 %)","top10":6.2608791390624425,"lpLocked":0}
+{"t":1794439033878,"type":"descarte","mint":"Eo4sStU5brMdnZ8A8kmQaLitmEHMqdZiW9ET3jRajbzF","symbol":"PIRATE (Eo4s…)","reason":"LP no bloqueado (0 %)","top10":16.9117798791144,"lpLocked":7.839120309633429e-10}
+{"t":1794439036126,"type":"descarte","mint":"GM9YbcgQ8gtXvDbxZx5barWbsbT8s2KEVw36SfkK51ax","symbol":"would (GM9Y…)","reason":"LP no bloqueado (0 %)","top10":7.214676851490099,"lpLocked":0}
+{"t":1794439060487,"type":"descarte","mint":"Gmnqcvn8htG86VADtqDEZjWkmyooLCv8MkhNGnqeVu6b","symbol":"Penthouse (Gmnq…)","reason":"LP no bloqueado (0 %)","top10":8.59465501288709,"lpLocked":7.213917666649936e-10}
+{"t":1794439062648,"type":"descarte","mint":"5UVMVYMSufH1xu2TcsFbK1GJEe7CsD6uGVzox5ddztNf","symbol":"BERNIE (5UVM…)","reason":"LP no bloqueado (0 %)","top10":7.3120713907863,"lpLocked":1.1292143286372877e-9}
+{"t":1794439064928,"type":"descarte","mint":"92QN87vDYV5vCW3LDTEnp3HaWhWN5D123pCv5bMwbkZq","symbol":"Audacoin (92QN…)","reason":"LP no bloqueado (0 %)","top10":10.6457549401715,"lpLocked":0}
+{"t":1794439086488,"type":"rechazo","mint":"9RyENt3gJ1MEsFPiJAMyNerYYngLDuyZfVP4GBqepump","symbol":"TILLY (9RyE…)","reason":"puntaje 0.525 < 0.6","parts":{"presionCompradora":0.67,"impulso5m":0,"tendencia1h":1,"actividad":1,"liquidez":0.17,"holders":0.11,"edad":1}}
+{"t":1794439088670,"type":"descarte","mint":"7fRe9jK2e81QBPbAbPuhA7UkbX78uq8V3ZAkGS4bndQV","symbol":"Audacoin (7fRe…)","reason":"top 10 holders 24.6 %","top10":24.60305734205919,"lpLocked":100}
+{"t":1794439218797,"type":"rechazo","mint":"7r3Hcmzzko9UrCvbCAN3QhUfojs2RqpnzH8tfeyRpump","symbol":"Mustache (7r3H…)","reason":"puntaje 0.512 < 0.6","parts":{"presionCompradora":0.48,"impulso5m":0,"tendencia1h":0.63,"actividad":1,"liquidez":0.08,"holders":0.6,"edad":1}}
+{"t":1794439221936,"type":"descarte","mint":"767e8TYtbMhATgf755zYDbmLiDfaUNi8Xiv7pLMxU77v","symbol":"ANSEM (767e…)","reason":"LP no bloqueado (0 %)","top10":8.5574992075571,"lpLocked":6.974645819747244e-10}
+{"t":1794439223481,"type":"descarte","mint":"DcftnBsDQ456bj41hYeT5hSDHPNiAa5Pdbsy5ESkufah","symbol":"jeff (Dcft…)","reason":"LP no bloqueado (0 %)","top10":10.025606244570401,"lpLocked":4.039999999998384e-9}
+{"t":1794439326087,"type":"descarte","mint":"7tivmBpk1kRH17DRsbsKWqJiiht1ST3Kj4tbgombrTXn","symbol":"Audacoin (7tiv…)","reason":"LP no bloqueado (0 %)","top10":8.5128887937059,"lpLocked":0}
+{"t":1794439409046,"type":"descarte","mint":"DSNKJNcibBxFbTE3aDXKME536rs14fZ4qQdzj7xH3NbZ","symbol":"ANCHOR (DSNK…)","reason":"LP no bloqueado (0 %)","top10":4.263186299048828,"lpLocked":0}
+{"t":1794439573507,"type":"descarte","mint":"6efgSi7kPLXJjhQkKi2CedK1HcHtFXn4r4qKnudMVUvV","symbol":"SPCX (6efg…)","reason":"LP no bloqueado (0 %)","top10":8.922424751623302,"lpLocked":0}
+{"t":1794439715024,"type":"rechazo","mint":"CjdWpihFWiUfETEmVY68t2NkFD3UH62FpoH5v1Hopump","symbol":"stachecat (CjdW…)","reason":"puntaje 0.428 < 0.6","parts":{"presionCompradora":0.56,"impulso5m":0,"tendencia1h":1,"actividad":1,"liquidez":0,"holders":0.24,"edad":0.3}}
+{"t":1794439743242,"type":"descarte","mint":"3maYPyXCwP4bnFnBYSxDvujoG7LbHSjGsTFXzUoPR9Nn","symbol":"JENSEN (3maY…)","reason":"LP no bloqueado (0 %) · top 10 holders 95.1 %","top10":95.11998413926749,"lpLocked":0}
+{"t":1794439859018,"type":"descarte","mint":"5Hp2aM3Rd8jZCZgz4qThwmtbPjk8XkLpxdoJJEmNUte6","symbol":"HUNG (5Hp2…)","reason":"LP no bloqueado (0 %)","top10":3.3133927265188996,"lpLocked":6.588513537839719e-10}
+{"t":1794439888211,"type":"descarte","mint":"GtVPjJU4ez3P9NUW9ayU8KwcnSk3g58z4Y3pywKwpump","symbol":"NIO (GtVP…)","reason":"top 10 holders 22.1 %","top10":22.122719231098497,"lpLocked":100}
+{"t":1794439890409,"type":"descarte","mint":"3XMbDjgDoJyoaM7WthstgTBRkWQv9c5pgvbStB1ioyJP","symbol":"MAC (3XMb…)","reason":"LP no bloqueado (0 %)","top10":17.6007001015436,"lpLocked":0}
+{"t":1794439892909,"type":"descarte","mint":"7SK1n5vvjQ1Y7TzB7TgAwoPhHVfSeLugLFYj34X3kwjp","symbol":"mihao (7SK1…)","reason":"LP no bloqueado (0 %) · top 10 holders 27.1 %","top10":27.0631249705195,"lpLocked":1.0955632587772948e-9}
+{"t":1794439895409,"type":"descarte","mint":"NnacmMELr9tjRMMZdryEX5zKtuLjV8NaC6n6VrsTYvk","symbol":"MAC (Nnac…)","reason":"LP no bloqueado (0 %)","top10":3.9135612113508778,"lpLocked":0}
+{"t":1794439936860,"type":"descarte","mint":"ErTBzXHZ1Gqss99KEq4QwaBqHrUZt7dHzgd89t7TwU7d","symbol":"","reason":"volumen < 50k: no llegó en 45 min","source":"dexscreener","volH1":0}
+{"t":1794439936861,"type":"descarte","mint":"JWPJqgdNkWNU4AgVY66RuAyzroaDSz5prFEHWtqpump","symbol":"","reason":"volumen < 50k: no llegó en 45 min","source":"dexscreener","volH1":16713.96}
+{"t":1794439936861,"type":"descarte","mint":"CwtSdMshGkq7SdYFaHjhDk9rRKRSQq331RzMVMePpump","symbol":"","reason":"volumen < 50k: no llegó en 45 min","source":"dexscreener","volH1":2604.88}
+{"t":1794439936861,"type":"descarte","mint":"6JtU6hRisYEBw3PHo7kh8GuA2d66rcPeLGrGHE6Epump","symbol":"","reason":"volumen < 50k: no llegó en 45 min","source":"dexscreener","volH1":10813.04}
+{"t":1794439936861,"type":"descarte","mint":"3e4KNV6aPTtGks2cd7HNN6UFxPC3u2PC93WyFFcSpump","symbol":"","reason":"volumen < 50k: no llegó en 45 min","source":"dexscreener","volH1":29283.92}
+{"t":1794439936861,"type":"descarte","mint":"13tLLeS22DEdfw96bf4xwYrdtJWj2RFF6CedUp3opump","symbol":"","reason":"volumen < 50k: no llegó en 45 min","source":"dexscreener","volH1":0}
+{"t":1794439936861,"type":"descarte","mint":"E62E76nz7iRK4hmyDW2wcd38mp1xtisAxmzg4LGZpump","symbol":"","reason":"volumen < 50k: no llegó en 45 min","source":"dexscreener","volH1":1426.91}
+{"t":1794439936861,"type":"descarte","mint":"3zXyZuZiqmWXMrtAh4Jh89RX36PadH4sv6diwAS9pump","symbol":"","reason":"volumen < 50k: no llegó en 45 min","source":"dexscreener","volH1":9703.63}
+{"t":1794439936861,"type":"descarte","mint":"CgDpxjtoZoM2yWxN2FaRsZtfa9Tksep55AMbx56Apump","symbol":"","reason":"volumen < 50k: no llegó en 45 min","source":"dexscreener","volH1":0.02}
+{"t":1794439936861,"type":"descarte","mint":"4fm9PevKgig5y9oekTABQSMEHPTiT2p8V9UG9PWMpump","symbol":"","reason":"volumen < 50k: no llegó en 45 min","source":"dexscreener","volH1":5.4}
+{"t":1794439936861,"type":"descarte","mint":"D3dztueGGYwCwghS4WriSwQN6TAov4cEnYYUVRUDpump","symbol":"","reason":"volumen < 50k: no llegó en 45 min","source":"dexscreener","volH1":12.8}
+{"t":1794439936861,"type":"descarte","mint":"GsycyHWVhuKJxoXr1YtuSQXGwFoPLGd2gNP8Ns11pump","symbol":"","reason":"volumen < 50k: no llegó en 45 min","source":"dexscreener","volH1":0.26}
+{"t":1794439936861,"type":"descarte","mint":"BetzJU2X9UEgG2qdo8UKbJ6q1iiFGs23axh8vRqEpump","symbol":"","reason":"volumen < 50k: no llegó en 45 min","source":"dexscreener","volH1":12722.49}
+{"t":1794439936861,"type":"descarte","mint":"JEGkcMuGqV2j8nwPbgALifAHzegFLVbwYMX1TbH3pump","symbol":"","reason":"volumen < 50k: no llegó en 45 min","source":"dexscreener","volH1":163.48}
+{"t":1794439936861,"type":"descarte","mint":"DnBRTTXfwF7xPShEpvYHvY3hEun4YqUmeQnFQiYGpump","symbol":"SATINU","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":139.55}
+{"t":1794439936861,"type":"descarte","mint":"GzT6NtEWA8qLDpdXqVve2erboY3pzALzx6EmxYvcpump","symbol":"DISHWASHER","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":2773.14}
+{"t":1794439936861,"type":"descarte","mint":"ABVUhDwGUPbfUJw551DMFikJDGE9VXU1V7amR3nkpump","symbol":"DISHWASHER","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":0}
+{"t":1794439936861,"type":"descarte","mint":"4MU8RM1K48RmgJ6V2uW2fGgpr7fCmTP48eyfJzJipump","symbol":"DISHWASHER","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":20479.94}
+{"t":1794439936861,"type":"descarte","mint":"bvWPRW6iJmgxVkk6t4gHUS7X6MoeVmZsA158645h1UN","symbol":"JHM","reason":"volumen < 50k: no llegó en 45 min","source":"meteora-damm-v2","volH1":4660.57}
+{"t":1794439936861,"type":"descarte","mint":"FE2tzLoDip6ZngW8z3qsMtbSW7A61XStmCDVdmNfpump","symbol":"BGWRK","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":3600.19}
+{"t":1794439936861,"type":"descarte","mint":"5SCp9VEyZFsMW2mBt6gZJRQaKf2U9y94GkoVSmDZs1Va","symbol":"Max","reason":"volumen < 50k: no llegó en 45 min","source":"pumpswap","volH1":0}
+{"t":1794439936861,"type":"descarte","mint":"A4dSW4t9yRMoGrmG9RyfVJW2MPPtywzMjFwoNNsbpump","symbol":"PUSSY²","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":1286.13}
+{"t":1794439936861,"type":"descarte","mint":"BixXpvt1yknS5LGWoQh1rC3oHHpQfYri6QnBW9aVpump","symbol":"JENSEN","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":597.07}
+{"t":1794439936861,"type":"descarte","mint":"DAjf1QonSjdWFHwphumKjiCUdXZ6F3kpzFD1FSwKpump","symbol":"kkat","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":2186.12}
+{"t":1794439936861,"type":"descarte","mint":"8tchPB5ntSqhPGGnh7L78Hcvr7aAEAUcWZhQrPu3pump","symbol":"DENNYS","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":4706.43}
+{"t":1794439936861,"type":"descarte","mint":"4BKMTh9PdFjeRDRWJMd7tkup6oF4YXCVtQASJaHppump","symbol":"JONK","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":831.65}
+{"t":1794439936861,"type":"descarte","mint":"JCTgv6pqxJt4VC8AeJCfttHjKztssfSdHk6ktFwLpump","symbol":"LETS GO","reason":"volumen < 50k: no llegó en 45 min","source":"meteora-damm-v2","volH1":0}
+{"t":1794439936861,"type":"descarte","mint":"F5KCFUgbcd5CehqqS531t4iiTZ4Gvgcr6FuD1YnMpump","symbol":"DENNYS","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":5707.78}
+{"t":1794439936861,"type":"descarte","mint":"GxmcPsiGE7t2fXew9rrukYaq3LckNe85oUwpuGeWraCE","symbol":"RACE","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":2737.46}
+{"t":1794439936861,"type":"descarte","mint":"EcCpMnjc3wJQrCKSsyrzyJiXRwY6AZPLzSaWR2bPpump","symbol":"","reason":"volumen < 50k: no llegó en 45 min","source":"dexscreener","volH1":544.09}
+{"t":1794439936861,"type":"descarte","mint":"GWxceEVSTHLvhFi9z6pbwgUNYRgXBMrwCXTXcS1Upump","symbol":"","reason":"volumen < 50k: no llegó en 45 min","source":"dexscreener","volH1":4004.04}
+{"t":1794439936861,"type":"descarte","mint":"F2xQeTCTqnczXxXQaBWAfDpUnpxn4wQHRPSqvUYJpump","symbol":"","reason":"volumen < 50k: no llegó en 45 min","source":"dexscreener","volH1":9411.13}
+{"t":1794439936861,"type":"descarte","mint":"GrVhtVS6jBY2pAUd6UWS6mrNF1XrP52Ad9E8bRXJpump","symbol":"","reason":"volumen < 50k: no llegó en 45 min","source":"dexscreener","volH1":0}
+{"t":1794439936861,"type":"descarte","mint":"J8uZpXLyrmaPawRFdu81byzRSLqnurTvhQ9nd2ZLVQvE","symbol":"","reason":"volumen < 50k: no llegó en 45 min","source":"dexscreener","volH1":6117.63}
+{"t":1794439936861,"type":"descarte","mint":"7gKKy2p1SaMkRFPX7caF96YpfuMMpDj82ZpjaffuvaU5","symbol":"","reason":"volumen < 50k: no llegó en 45 min","source":"dexscreener","volH1":2577.22}
+{"t":1794439936861,"type":"descarte","mint":"9gwWShujxRbk3qMSWbtwubgi8ZYy9CPYjLtqRKqzpump","symbol":"","reason":"volumen < 50k: no llegó en 45 min","source":"dexscreener","volH1":92.11}
+{"t":1794439936861,"type":"descarte","mint":"3Tkm68nyJdiB8SejbhjufSWg1Kry4yG4xhvFD6W8pump","symbol":"","reason":"volumen < 50k: no llegó en 45 min","source":"dexscreener","volH1":695.84}
+{"t":1794439936861,"type":"descarte","mint":"74dTmNukXtgSzbesgJNpTJoTt6cygyt8XgJVQRb8pump","symbol":"","reason":"volumen < 50k: no llegó en 45 min","source":"dexscreener","volH1":81.06}
+{"t":1794439936861,"type":"descarte","mint":"5BjfgmtfqvNpAWx1CnZynoWLWNMnrwHLhTFzQ81vkEc8","symbol":"","reason":"volumen < 50k: no llegó en 45 min","source":"dexscreener","volH1":6723.93}
+{"t":1794439936861,"type":"descarte","mint":"BTCk1ZAAGrbSq7e4L7mg8oiRKRqafkUbeLQpXeGq9BTC","symbol":"","reason":"volumen < 50k: no llegó en 45 min","source":"dexscreener","volH1":328.01}
+{"t":1794439936861,"type":"descarte","mint":"6WrFRgPTkvA1U9vGX9mdbvTsne3AteJ9azvrGweUpump","symbol":"","reason":"volumen < 50k: no llegó en 45 min","source":"dexscreener","volH1":5099.61}
+{"t":1794439936861,"type":"descarte","mint":"bn5DhJnkB8EVDoAgV9qCV3Kbv7XmEEp7mxW4npDpump","symbol":"","reason":"volumen < 50k: no llegó en 45 min","source":"dexscreener","volH1":17.74}
+{"t":1794439936861,"type":"descarte","mint":"octo2TrsXkN6ErP7Gz1T7Vn5fySnPgbUuT6cjovCB55","symbol":"","reason":"volumen < 50k: no llegó en 45 min","source":"dexscreener","volH1":61.33}
+{"t":1794439936861,"type":"descarte","mint":"Z5ijNneoDubKBEhzTumUgfm18m6PjUDred4gp7Xpump","symbol":"","reason":"volumen < 50k: no llegó en 45 min","source":"dexscreener","volH1":11831.67}
+{"t":1794439936861,"type":"descarte","mint":"22rWiyDiY9GgxSrFiWC2vX1GxNxjkvrRPmZJDzv9pq6X","symbol":"","reason":"volumen < 50k: no llegó en 45 min","source":"dexscreener","volH1":614.32}
+{"t":1794439936861,"type":"descarte","mint":"Big1krPP8QUkgg5fsfEZQmeuwAViNajzAxNhNYvXaSS1","symbol":"","reason":"volumen < 50k: no llegó en 45 min","source":"dexscreener","volH1":5692.43}
+{"t":1794439936861,"type":"descarte","mint":"53ta1BvDf63JjXA5nW6EAhXDcMwngEE5AN5GPNbFPMRc","symbol":"","reason":"volumen < 50k: no llegó en 45 min","source":"dexscreener","volH1":646.78}
+{"t":1794439936861,"type":"descarte","mint":"82dtJko6zzyFvDBCUxQ13tCZejSFqkfdPbhTv2Rtpump","symbol":"","reason":"volumen < 50k: no llegó en 45 min","source":"dexscreener","volH1":1342.66}
+{"t":1794439936861,"type":"descarte","mint":"34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump","symbol":"","reason":"volumen < 50k: no llegó en 45 min","source":"dexscreener","volH1":4290.32}
+{"t":1794439936861,"type":"descarte","mint":"BoRsyzgtFw56gHqWgqb7wL45bMr9vQMF564j1Gvtcash","symbol":"","reason":"volumen < 50k: no llegó en 45 min","source":"dexscreener","volH1":3093.17}
+{"t":1794439936861,"type":"descarte","mint":"AKrw6VbXiScJqZydENKhjJyJYXGsKJCVLmui95ngt1EK","symbol":"","reason":"volumen < 50k: no llegó en 45 min","source":"dexscreener","volH1":1900.13}
+{"t":1794439936861,"type":"descarte","mint":"3MTRCXmasCTTp1qrvFVE1apSfKYqnGJQ3biw7wRLfdZM","symbol":"","reason":"volumen < 50k: no llegó en 45 min","source":"dexscreener","volH1":0}
+{"t":1794439936861,"type":"descarte","mint":"BK8ZXzXsVLJzsDdy1paM8Dbcd3qAhMQWcSWq3M6Ypump","symbol":"","reason":"volumen < 50k: no llegó en 45 min","source":"dexscreener","volH1":0}
+{"t":1794439936861,"type":"descarte","mint":"Eyo1o3QYKQwdvP6UtK9dQLTZj2BBtoJdN4tMWB2Dpump","symbol":"","reason":"volumen < 50k: no llegó en 45 min","source":"dexscreener","volH1":23617.18}
+{"t":1794439936861,"type":"descarte","mint":"3acwjGXW9U6FDUkNwrZHo5MG7UhWdcZf5rUUigSsUFc3","symbol":"GME","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794439936861,"type":"descarte","mint":"X2wB1rhcg8rV1ZNBADtNDiUTCE3xSd8C2f5dtEAv2e3","symbol":"AMD","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":1634.53}
+{"t":1794439936861,"type":"descarte","mint":"5BR4m1aLYVHpJANdp1jAFZAkKSARV2juR6RDLsTapump","symbol":"KneeHao","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":903.69}
+{"t":1794439946344,"type":"descarte","mint":"GyQu1hsWCmCvVEbmN4pnU9CyDrwD3VUmv7focdCApump","symbol":"MAC (GyQu…)","reason":"top 10 holders 26.0 %","top10":26.031946046079327,"lpLocked":100}
+{"t":1794439965449,"type":"descarte","mint":"BkLkCxURarTppEAPL47eisAh42pPx4fSYt7hxLN2m8h4","symbol":"HUANG","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":16.16}
+{"t":1794439994312,"type":"descarte","mint":"2hLh735Qnm1oEzyiLfy6sL75X3y1kvpSutzfa6AQpump","symbol":"KneeHao","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":10060.86}
+{"t":1794439994312,"type":"descarte","mint":"35YEYPaYrAsjnNL3VensF1rzexGr259E8CXhmCxdneg5","symbol":"AMD","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":2229.16}
+{"t":1794439994312,"type":"descarte","mint":"CV9UdJoWR2ehTSHfDD8GZQNxMcwY6gtqDh8SnzWdpump","symbol":"DOGE PAID","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":219.7}
+{"t":1794439994312,"type":"descarte","mint":"HGKBW3mmZTgm6aLedgPqECiRAqpn1y9gvDPapqJjpump","symbol":"kem","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":1172.16}
+{"t":1794439994312,"type":"descarte","mint":"AVtuGi6WLTwLKKGUo3Mvs6awyR7VBAoKaojs5QM2pump","symbol":"MAX2","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":198.42}
+{"t":1794439994312,"type":"descarte","mint":"9bbEacDk7dN3GAzhx9osPtxDFrjJPpTHE6W47zg6pump","symbol":"911","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":36}
+{"t":1794439994312,"type":"descarte","mint":"HAAJN4Ssu9MM1JXWeVvZxD4ycefQKXpVkuJYEx2zxC6X","symbol":"DISHWASHER","reason":"volumen < 50k: no llegó en 45 min","source":"meteora-damm-v2","volH1":30196.21}
+{"t":1794439994312,"type":"descarte","mint":"Br7XoAaavSZ28JcCgaPWoe49PsQNTCiLUWWsG3Vspump","symbol":"DISHWASHER","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":4158.89}
+{"t":1794439994312,"type":"descarte","mint":"9eq1SBDVPJbkRpJt8xfjB79pvPHNE4k1982vXMCbpump","symbol":"JENSEN","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":845.26}
+{"t":1794439994312,"type":"descarte","mint":"E3JuHbBAvM2wAzGQrUxPDUsA7z2SVmzvfhfhtBZWpump","symbol":"MEMES","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":1355.32}
+{"t":1794439994312,"type":"descarte","mint":"AYw3uY4wxsccWhboHrc41tqSJTDg7DmRKn5n23Dnpump","symbol":"KneeHao","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":983.57}
+{"t":1794439994312,"type":"descarte","mint":"8rurJq5ZEvLB2SnMxXPLBbfJjkUotrfijPi5kfoSpump","symbol":"DISHWASHER","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":0}
+{"t":1794439994312,"type":"descarte","mint":"HAthGbxzNEpVGx9CFVZkFUjzo9rXo8ZB9b6zrG24pump","symbol":"CHINK","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":60.07}
+{"t":1794439994312,"type":"descarte","mint":"EKSxgMZQiBZWDcghWDrrY3xfs3NKNZYD2BRCEGPTpump","symbol":"CEFULI","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":14.51}
+{"t":1794439994312,"type":"descarte","mint":"76HhvYWVtRBKABxwbRLZ6ucssfmJY536f5waDrFXpump","symbol":"DISHWASHER","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":0}
+{"t":1794439994312,"type":"descarte","mint":"Fynrw2yDmg4pyf7thF4tYW2bU79t8ikzoNk9Kz7Wpump","symbol":"LMC","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":556.78}
+{"t":1794439994312,"type":"descarte","mint":"B1XKJNBbaGPYynQVJ3cfCoS4trbw1v8ENQ7cHnskpump","symbol":"LAND","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":5.16}
+{"t":1794439994312,"type":"descarte","mint":"8ZtLWszfsjGhNigg3o6Hkt1dYFZbimqvaqHD9wGKMM7h","symbol":"HODL","reason":"volumen < 50k: no llegó en 45 min","source":"meteora-damm-v2","volH1":4362.5}
+{"t":1794439994312,"type":"descarte","mint":"HRdQE33Yau5vxHCBDYaVnyTAKqbPsCETAtzMEpwHYxBY","symbol":"AIRFORCEHUAN","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":1306.99}
+{"t":1794439994312,"type":"descarte","mint":"Fsr1jWLH7ZpryJsgCzWJLo7FhWVG6dncRDd4HkFppump","symbol":"aodff","reason":"volumen < 50k: no llegó en 45 min","source":"meteora-damm-v2","volH1":0}
+{"t":1794439994312,"type":"descarte","mint":"3twyZ8VKeGSjD4YRQE8bya7EA3kGox3PG2LMiP8fpump","symbol":"$GRANDE","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":872.78}
+{"t":1794439994312,"type":"descarte","mint":"A7VS47uUKfrvzkx7EbMKofErRcADDkA8zwk5qCDr9GUT","symbol":"OOPSBIRD","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794439994312,"type":"descarte","mint":"GaKZszUT8EVNMEy7i96Nh9fqLCraHMANu6F3xxziZG84","symbol":"KneeHao","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794439994312,"type":"descarte","mint":"FDsB4NqjofjjZovEim5ZotAZGK1RH2Gs5XJnEbt9ofEc","symbol":"TRENCHY","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":110.54}
+{"t":1794439994312,"type":"descarte","mint":"2kLHZB7Mex6c8iUYYwmEw1bxzBVrzQ2JYVZhjMFUUWE6","symbol":"wif","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794440003599,"type":"rechazo","mint":"9RyENt3gJ1MEsFPiJAMyNerYYngLDuyZfVP4GBqepump","symbol":"TILLY (9RyE…)","reason":"puntaje 0.407 < 0.6","parts":{"presionCompradora":0.64,"impulso5m":0,"tendencia1h":0,"actividad":1,"liquidez":0.06,"holders":0.13,"edad":1}}
+{"t":1794440022878,"type":"descarte","mint":"H8j76nX2AkLFaaqafsNBAX3duZswiTRCrVB4pXJBYRRT","symbol":"AFFAIR","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":1.58}
+{"t":1794440022878,"type":"descarte","mint":"2rnWruNyqP6pZdpiwHqtgxobhbr5Mc21UNWiqJMghQVr","symbol":"LIGER","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794440022878,"type":"descarte","mint":"ApMHBMwj52pN89KnBmUvTZedWwV6ZK8MHCWTNKeoY5t3","symbol":"MAX","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":1496.79}
+{"t":1794440022878,"type":"descarte","mint":"2aag4fau58yZPaPKPmGSp6PusnP3TuLpfcfVMNBZB77Q","symbol":"PENIS","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794440022878,"type":"descarte","mint":"99xsCNmSLMa1qXvfnMsCVsf3pLG3CQrZA4K2yPVCDP5X","symbol":"NVIDIHA","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794440022878,"type":"descarte","mint":"H5rnKJ8AfHPwafGWzs9PGeGQuYfCJqKChKNhJZa9pump","symbol":"inu hao","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":200.13}
+{"t":1794440022878,"type":"descarte","mint":"EK8WwbbRCEZs2wZHzLKGknq13EkztwZtDskkaKFvzfef","symbol":"PENIS","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794440051432,"type":"descarte","mint":"AEiNzNgGb62EPZqH9ZmbaXjrPctb9UMRxSkuTh4zpump","symbol":"JobEND","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":19.18}
+{"t":1794440051432,"type":"descarte","mint":"3MdeDzUkxvBme1yxeh2d2JSbAo1i98m5ox2SRMGfpump","symbol":"FHC","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":74.24}
+{"t":1794440051432,"type":"descarte","mint":"GmB3o819eeXcbxaFdoiMD7sRnnq6G2Rbuyj9A3GKpump","symbol":"MUSKYMUSK","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":269.23}
+{"t":1794440051432,"type":"descarte","mint":"CubGbX82WHgpCRzBPXM4SpREZiubUoAHqMsDBvMgpump","symbol":"Max","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":102.15}
+{"t":1794440051432,"type":"descarte","mint":"6kqErWEWwd83VQzr4oqrzaoVvmd1Lag7FnpKL9yhpump","symbol":"att","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":231.04}
+{"t":1794440051432,"type":"descarte","mint":"5int8zL8RejVUwwFPbEZFwU6SoyoGTpADShKzz9gpump","symbol":"GO","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":5.46}
+{"t":1794440051432,"type":"descarte","mint":"AtPkCrpgCC4u1AVWf6d6eMXhpEB9oo9h9S8yqYZ8pump","symbol":"wif","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":1794.75}
+{"t":1794440051432,"type":"descarte","mint":"5oKMb7LEx6wZehhsRHN3KbseDe1NDsbkWF97aLz2pump","symbol":"LMAO","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":520.87}
+{"t":1794440051432,"type":"descarte","mint":"EuP9Qg14FqbwPugh77Pf9YqABZrPGY3xcKARtE7zpump","symbol":"STENKS","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":1159.3}
+{"t":1794440051432,"type":"descarte","mint":"E77iJNdcCj1cormySJGyZ5XQYykAym7cikrFAFQ4pump","symbol":"HUANG","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":3159.3}
+{"t":1794440051432,"type":"descarte","mint":"7Uadc953MWFnF3WtTGH8XrTFB4PFNJz6PAohV2Czpump","symbol":"SOOTS","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":565.77}
+{"t":1794440051432,"type":"descarte","mint":"D1hsgmcT4oGTuyh3kTmDfKeZZW7uoJZbMMiruYKpump","symbol":"DICE","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":203.1}
+{"t":1794440051432,"type":"descarte","mint":"FUxKNYL3T9R81VEpnzZHwF48Vi9dwYQWEdCVPSGwpump","symbol":"TREMP","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":1147.58}
+{"t":1794440051432,"type":"descarte","mint":"E77TEoJzGLmSt8JspuPRewc9kW7bmkexMW3eBPBdpump","symbol":"DISHWASHEr","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":1.65}
+{"t":1794440051432,"type":"descarte","mint":"B9cMUichwY8ayuAtvsDX8A869A3tUXKSTPccVQyuXN7N","symbol":"AI","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794440051432,"type":"descarte","mint":"2ZRfhUajH8Mbgr9DGo18vaeTocJiUT6tvDR8uyTduoVE","symbol":"HUNG","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794440079996,"type":"descarte","mint":"4C6xhRCT3pn48SbxdmG6zd4cEgwzAXxhNvZBSJuCpump","symbol":"PENIS","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":2085.29}
+{"t":1794440079996,"type":"descarte","mint":"Fby8dbZ3qY6opobNgErWkbsoF1dCTeSv1psPMkmPpump","symbol":"NVIDIHA","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":412.9}
+{"t":1794440079996,"type":"descarte","mint":"J8A62R5sxRNALLDFXzHm3mLi8cHFShuv5cokCZJXnwH3","symbol":"NVIDIAVDA","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794440079996,"type":"descarte","mint":"7KHh9vT6VtF2vYGZwH5B9URzZ8CSwWeBqMCyLXWJuxiV","symbol":"JUNG","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794440108557,"type":"descarte","mint":"3Ys42iEjdtYqjYUMqu1FPjs71vkhJaHKvJKbxaAm7dR9","symbol":"HUNG","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794440108557,"type":"descarte","mint":"DqTSDMgKmAvVEvENGWhxanffFWHawRu728hAoTiNpump","symbol":"AFFAIR","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":1079.91}
+{"t":1794440108557,"type":"descarte","mint":"EMBKYmBTe13mPv2TsbMk2x1LGdm5JAt6zk9ADhHupump","symbol":"boner","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":0}
+{"t":1794440108557,"type":"descarte","mint":"E3k2tb9Ex9Yn4QR65jztMHb29bXsWUwSk4BJJArspump","symbol":"ELIZABETH","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":41.43}
+{"t":1794440108557,"type":"descarte","mint":"7nE6KoDnPDgA9NFaAvyXzTbnnuWaa1dtYELAEGHtpump","symbol":"cap","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":168.81}
+{"t":1794440108557,"type":"descarte","mint":"5ozAxN6PBTjtipM4u4MUor3HyTtNPuzwAeTeg4AMpump","symbol":"Xmax","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":0}
+{"t":1794440108557,"type":"descarte","mint":"HnoEKbVxSsKdGXXpBgmrQMF8CdALG9mgd48iiV1mkPYN","symbol":"PENlS","reason":"volumen < 50k: no llegó en 45 min","source":"raydium-launchlab","volH1":0}
+{"t":1794440108557,"type":"descarte","mint":"9WddotWk2vELNRrafrhccvgazodj7x1mwF4CmiADpump","symbol":"DISHWASHER","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":1978.21}
+{"t":1794440108557,"type":"descarte","mint":"AEc3X1DWVYucdWEVoFy6LMEzbUXDQtyeqcAMswv7pump","symbol":"AFFAIR","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":2880.63}
+{"t":1794440108557,"type":"descarte","mint":"B624YhdNLENNTGwHi9haoY7eQQC45VbZySbbAHhtpump","symbol":"PENIS","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":12219.45}
+{"t":1794440108557,"type":"descarte","mint":"3RA1bg4ARdFX1cZHNV89qSWDNG1WmVrCtfYHBhJvpump","symbol":"JENSEN","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":0}
+{"t":1794440108557,"type":"descarte","mint":"9jLKgS9xvJjMSHoN9b2BcKHYne7BKYGFM6fnUu7v5itP","symbol":"LARP","reason":"volumen < 50k: no llegó en 45 min","source":"meteora-dbc","volH1":3501.23}
+{"t":1794440108557,"type":"descarte","mint":"2yQpFwraWC6VRupmBmMhoDW29zDPnTFtpcnaCc3zpump","symbol":"LMAO","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":242.89}
+{"t":1794440108557,"type":"descarte","mint":"FJKtHP9NbWswFZzVBCcNbK1qYmMwfvg7XMjvghYCpump","symbol":"AFFAIR","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":6928.11}
+{"t":1794440108557,"type":"descarte","mint":"6qpHaFdwAWN7ugKRCXrEVa91oA5odxJzKbnkYQUbpump","symbol":"MONY","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":196.55}
+{"t":1794440108557,"type":"descarte","mint":"EZN3VKVai2WWa6YevxpfGcmYeSS5Ed8n1yHTeKippump","symbol":"NVIDIHA","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":8069.36}
+{"t":1794440108557,"type":"descarte","mint":"Yh79A55m8CSeSXSGU4TnM8AtWN2rTJuudWSjWfvpump","symbol":"AFFAIR","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":3244.84}
+{"t":1794440108557,"type":"descarte","mint":"9EsiiN4SJvFEzWMceqktNNpWNhFmsLk479kEVQkWpump","symbol":"DIG","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":2155.35}
+{"t":1794440108557,"type":"descarte","mint":"Eatkivp5uZHyHaJ6iBmHzvbQeE4vEjJmAfLjhi18pump","symbol":"FAMILY","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":4.95}
+{"t":1794440108557,"type":"descarte","mint":"FbsX53R45HqnYhavPsoxc74zbJBLUrpvK7PQE1A3pump","symbol":"DIPPY","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":436.81}
+{"t":1794440117552,"type":"descarte","mint":"CHSQvj9FMcwcHtL8DyQ1kkU8yngTTdnWis9bCtyQKPx2","symbol":"COOLETTE (CHSQ…)","reason":"LP no bloqueado (0 %)","top10":2.7674239210568525,"lpLocked":0}
+{"t":1794440137103,"type":"descarte","mint":"Fg2E4MU3JLYzXrQyHU4fMcdTBH72nWafXavv8eS7pump","symbol":"HUNG","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":49.5}
+{"t":1794440137103,"type":"descarte","mint":"4mGJ7ZtpJJ5c8s64ETD9uhZdBPXpcURpegfmvFLmHVUu","symbol":"NVDX","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":2629.25}
+{"t":1794440137103,"type":"descarte","mint":"4kx56kKiuBaYUetj2xug4MKGeXEW4kRZp8u4LiLbGY2M","symbol":"NOVIDIA","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":2787.16}
+{"t":1794440137103,"type":"descarte","mint":"7mcfzTi8d1ueQaAzEEBJvB1e8QbXQQ1BAy3hDdxN9LPB","symbol":"NOVIDIA","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":2290.09}
+{"t":1794440137103,"type":"descarte","mint":"HA3PoFDWiqDUxJfbV9iY4CBwwcppamqBW8uS743XvxHu","symbol":"NOVIDIA","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":992.96}
+{"t":1794440146380,"type":"rechazo","mint":"7r3Hcmzzko9UrCvbCAN3QhUfojs2RqpnzH8tfeyRpump","symbol":"Mustache (7r3H…)","reason":"puntaje 0.536 < 0.6","parts":{"presionCompradora":0.47,"impulso5m":0,"tendencia1h":0.87,"actividad":1,"liquidez":0.05,"holders":0.65,"edad":1}}
+{"t":1794440148571,"type":"descarte","mint":"Hoj12BZpzk3vsx3MeACJbtwqTWnjgd7Hbrn4CNkQjtMG","symbol":"SPCX (Hoj1…)","reason":"LP no bloqueado (0 %)","top10":5.2524432653144,"lpLocked":0}
+{"t":1794440151068,"type":"descarte","mint":"AMD8XwJXgQ9WV45Wyj9yFLejxzf2J6VM1PJY8bJEjeES","symbol":"AMD (AMD8…)","reason":"mint no revocado · freeze no revocado · LP no bloqueado (0 %) · top 10 holders 51.9 %","top10":51.93738469780615,"lpLocked":0}
+{"t":1794440165647,"type":"descarte","mint":"GwLgJT3ToqL4eanjUPqMNBv7faGptDj5HyMdcyuJ8RKk","symbol":"","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794440165647,"type":"descarte","mint":"6kkm5HbLMD8Y6Re2afG19ULC9iQr592ij3tJCeSUpump","symbol":"WPD","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":292.27}
+{"t":1794440165647,"type":"descarte","mint":"3zTPZwmVX7TzYTRHTZffttHjCASDzP3ygT6a4Brq18fn","symbol":"PENIS","reason":"volumen < 50k: no llegó en 45 min","source":"pumpswap","volH1":0}
+{"t":1794440165647,"type":"descarte","mint":"27mtYUHJjUmt7dyLF8x8hyKbukUQT7W21ZypdSw4pump","symbol":"#LoveSpys","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":26.6}
+{"t":1794440165647,"type":"descarte","mint":"C8KXxiRg7vD5RErd1zNqhMLKnrJm6GgCBggqGsFspump","symbol":"Nigga","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":57.81}
+{"t":1794440165647,"type":"descarte","mint":"FdZhfnnP6JuVUhqpYWD6nYK3f71zkUczL6fQnr4Wpump","symbol":"SATINU","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":52.86}
+{"t":1794440165647,"type":"descarte","mint":"7Efnoixq9hp3WTGydro7inpnE4CskwS3yMb3289vpump","symbol":"HUNG","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":0}
+{"t":1794440165647,"type":"descarte","mint":"5t53MjxesP5RqMrNyRECHKupi6aLdDbeX7goQpnWpump","symbol":"HUNG","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":0}
+{"t":1794440165647,"type":"descarte","mint":"2agYYdQCMthYf4Fgx7vfkgPMooVJEoF6znGZrN9Vpump","symbol":"BRAINROT","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":572.79}
+{"t":1794440165647,"type":"descarte","mint":"bfJydjqCpDdZifJwNfn8Xn6ZDHvfDMsTo4w5TR3pump","symbol":"nvda","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":2424.02}
+{"t":1794440165647,"type":"descarte","mint":"E7N378t78mzsHvtF8845W3KMaVQHV6uJyYBDwyjRpump","symbol":"JUNG","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":0}
+{"t":1794440165647,"type":"descarte","mint":"6gTDHTW8vGjj3KqgQY2iTctZPaLyPM4JskSCUKDbpump","symbol":"NVIDIAVDA","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":3255.21}
+{"t":1794440165647,"type":"descarte","mint":"E7KggPqu8PyMAvkr5NaGgeocQLKmceaFCYTGeyQmpump","symbol":"Nvidih","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":1726.86}
+{"t":1794440165647,"type":"descarte","mint":"BRTwY529dsFAFepRm1Er3919RUBJE2NETY6riqGipump","symbol":"MAX2","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":881.21}
+{"t":1794440165647,"type":"descarte","mint":"GdWzFYqGpH2RH8waqPwH6Kczp1uLv3qMUUQ8WDuCpump","symbol":"PENIS","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":0}
+{"t":1794440165647,"type":"descarte","mint":"EDKt5JVtNqXKHKugQZSSWwd4z47YQqJvpmTkvo4Hpump","symbol":"Ldog","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":140.41}
+{"t":1794440165647,"type":"descarte","mint":"gC3utHRDCFDu6x9jYLjqcemyjDbM4iPo6aX6ztJpump","symbol":"anglosax","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":77.82}
+{"t":1794440165647,"type":"descarte","mint":"4SH6MZt7pqFAVcPtT5Ea8NE9Yvkqij3wbDtgDqngtcWd","symbol":"DARBYCAS","reason":"volumen < 50k: no llegó en 45 min","source":"bags-fm","volH1":1562.62}
+{"t":1794440165647,"type":"descarte","mint":"7ZvbtzUkpETsJmYBByYe8VwF1SkGP8CGXPpEsEwfpump","symbol":"NVIDIHA","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":3098.75}
+{"t":1794440175026,"type":"descarte","mint":"AB3RhqLgAZ8GSqEPLCR3pYXzccK4QxrJhLzWwEc8FsN1","symbol":"GTA6 (AB3R…)","reason":"LP no bloqueado (0 %)","top10":12.203052232400543,"lpLocked":1.362007546672264e-9}
+{"t":1794440194148,"type":"descarte","mint":"H9fQgieooLSdskuP65Uyuoef2Y7be4XMtFETGwYt37iz","symbol":"SGI","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794440203154,"type":"descarte","mint":"27eBxDUftadPScNTvYXXfNgmy7p13KS2ERZ19DG4aKYR","symbol":"GIF (27eB…)","reason":"LP no bloqueado (0 %)","top10":3.0429396452969,"lpLocked":6.778676157661345e-10}
+{"t":1794440222704,"type":"descarte","mint":"DW9vigXfnTFzGSPqW7c7GvVaKofiibmYZcN3L5zcpc8r","symbol":"AFFAIR","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794440222705,"type":"descarte","mint":"9FGKxz1bEEPfZ8XJqT4TWS2RnVFMX1ESKhRYkXpFpump","symbol":"Sackson","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":560.1}
+{"t":1794440222705,"type":"descarte","mint":"4mQMUsPQxjWnxSCjwXRvbfCdsJTD1HRvALAdWqpTdy2i","symbol":"DISHWASHER","reason":"volumen < 50k: no llegó en 45 min","source":"meteora-dbc","volH1":0}
+{"t":1794440222705,"type":"descarte","mint":"BnYVrYjRhQ5SJAXsvqWAGk4v1NvnsKcqPAufR987pump","symbol":"PENIS","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":0}
+{"t":1794440222705,"type":"descarte","mint":"E2K3pKrBffEVztJ9uPFGThiQq2oKYqsitnzvtz54pump","symbol":"BurnApe","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":583.08}
+{"t":1794440222705,"type":"descarte","mint":"BKpc9qBrKPt59BRqMouvWFJk1ooNfvtSrUM2Qi3wpump","symbol":"Max","reason":"volumen < 50k: no llegó en 45 min","source":"meteora-dbc","volH1":0}
+{"t":1794440222705,"type":"descarte","mint":"8AhUVwau7Aa653oUBW585ud4BxNLL9SFCGxot4QJpump","symbol":"sol","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":943.08}
+{"t":1794440222705,"type":"descarte","mint":"7ZyiAhkzC5eJomcoVWQLdECtp3WQQjVVHJBR47c9pump","symbol":"LMAO","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":420.42}
+{"t":1794440222705,"type":"descarte","mint":"6jcFzgRBo4X6pakHJ947aPuNi5kxF6KRDLPog7LJpump","symbol":"PENIS","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":382.92}
+{"t":1794440222705,"type":"descarte","mint":"79jEbQTnVqrBgThndohZPsPNdE87vcdxNCxMrQ4Cpump","symbol":"SCRVAN","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":214.62}
+{"t":1794440222705,"type":"descarte","mint":"Gs84W1wwinTn2nhACgG6VhNpitgyMQi4BDSv7yoApump","symbol":"Memes","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":162.67}
+{"t":1794440222705,"type":"descarte","mint":"6KH6PfovcFf3SEcNhkrikKqP8bKNtpttFwp2PCMQpump","symbol":"$SLJK","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":1045.14}
+{"t":1794440222705,"type":"descarte","mint":"A9wo5Ftv1L2AFa6QRcahw2voESJxHg9Q5GFgz4yx8NFh","symbol":"PENIS","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":2716.78}
+{"t":1794440222705,"type":"descarte","mint":"CAkxSXuaiH5vck3dyDAAEDjUnErVhv6VpPCty1PMqpGg","symbol":"JOHNSON","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794440222705,"type":"descarte","mint":"GX2125orpCW2XuakkPvtxFyzTt524a8ZuyMPyAqy6Mdt","symbol":"TILLY","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794440232850,"type":"descarte","mint":"3UgSUXcST759g4rUrNWhwmyUYiNTJvvJZhon1YBeQem5","symbol":"catalyst (3UgS…)","reason":"LP no bloqueado (0 %)","top10":8.7721534341568,"lpLocked":0}
+{"t":1794440235023,"type":"rechazo","mint":"55TB1G3TedWG1kdeZeBjTpGUq7C1Kk917j4cdmaDpump","symbol":"CHICK (55TB…)","reason":"puntaje 0.454 < 0.6","parts":{"presionCompradora":0.56,"impulso5m":0,"tendencia1h":0,"actividad":1,"liquidez":0,"holders":0.61,"edad":1}}
+{"t":1794440252322,"type":"descarte","mint":"A9dCuzGnE5A5Zd7M6xT13HvaUtQgA5QkWdPZtwjUpump","symbol":"JOHNSON","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":165.67}
+{"t":1794440252323,"type":"descarte","mint":"4Pdtx2gLrw5yGYcsVGqgtppDrAwCrzDSpjX6AUPSouUN","symbol":"CARROT","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794440252323,"type":"descarte","mint":"GWKw27d8mYA2TnnrE5jDdksEVCmMsGnDsi6FzqWgVmHq","symbol":"","reason":"volumen < 50k: no llegó en 45 min","source":"migración","volH1":24718.22}
+{"t":1794440252323,"type":"descarte","mint":"6Keb2AwXhcfmnc46Pa3wq3qK3sxE4bR5oGAf1N8Lx4Du","symbol":"REDVIDIA","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794440252323,"type":"descarte","mint":"GcdRfvmuvUzYavmDaZW8sJFUooQ88WSsh7MVsptNpump","symbol":"","reason":"volumen < 50k: no llegó en 45 min","source":"migración","volH1":0}
+{"t":1794440252323,"type":"descarte","mint":"A4RpbFHui4jpPp2zT2rcdbXVp7fuoEkBejL5DWVNAp43","symbol":"精美瓷器","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794440261329,"type":"descarte","mint":"BxB8izREoTAQMi78y3qr4ziiLaMkajoPA2X3SP9pmup","symbol":"PMUP (BxB8…)","reason":"top 10 holders 26.2 %","top10":26.207336418678842,"lpLocked":100}
+{"t":1794440280863,"type":"descarte","mint":"5B3QvpPcB7zJfrLB9nD8BLEGPEk988PC1q6w4etypump","symbol":"PENIS","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794440280863,"type":"descarte","mint":"65dmub6yZrfNhpGZzmWe778RN5h6fNnGJtoiwyotpump","symbol":"kem","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":510.63}
+{"t":1794440280863,"type":"descarte","mint":"7cqw1Z3fcGrVwttV6wARoY44aHfJeCjDBr4zPVaHpump","symbol":"CARROT","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":5926}
+{"t":1794440280863,"type":"descarte","mint":"4oYNNoEa6desSP5H98fmSMQJxs9T4PYkGHewsPgprGG7","symbol":"DISHWASHER","reason":"volumen < 50k: no llegó en 45 min","source":"pumpswap","volH1":0}
+{"t":1794440280863,"type":"descarte","mint":"HQp6omYDzaQtNhLGeZbi6YuBnG7wGrYxsWhD2QU4Uoc6","symbol":"SGI","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":4712.5}
+{"t":1794440280863,"type":"descarte","mint":"FHLLaXFoT9MN9cazoeRM1CnaVVNkfDsgPkLpoysMpump","symbol":"COLETTE","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":995.84}
+{"t":1794440280863,"type":"descarte","mint":"BwQRXJKe4tx49FBP2qcECwhdSbGmfdRa7JQdwweApump","symbol":"Max","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":0}
+{"t":1794440280863,"type":"descarte","mint":"5GzB3zYaboBLb9NaWUWBmn9xg3PwbFN2yTJwnGa7pump","symbol":"CHAD HUNG","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":34.38}
+{"t":1794440280863,"type":"descarte","mint":"DVPoYMj5wgV1ZNfnR1e7f8NcSMPUWpc6iDmX9vcNpump","symbol":"DISHJENS","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":994.96}
+{"t":1794440280863,"type":"descarte","mint":"F4QSPhzfDc8cNzBkfHy2PBdf3pBsRJsM2FxUhBPDpump","symbol":"CHRIS","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":1837.06}
+{"t":1794440280863,"type":"descarte","mint":"HnHynPTFk7rQEKs1qJghbDvJPjxawSkFo4E8LCnhpump","symbol":"SXSN","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":111.98}
+{"t":1794440280863,"type":"descarte","mint":"F8ju39mbgV7goKYuNXeq5tZZjQ8M2wL1GJgLg8owpump","symbol":"DOGE PAID","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":495.87}
+{"t":1794440280863,"type":"descarte","mint":"EcYdfBwhjD2GpMaB7k2tbm2FQp6STVn6BqmkNtMwZr7K","symbol":"Corona","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":0}
+{"t":1794440280863,"type":"descarte","mint":"CXe9J7fukzpLZbJaqob4Sii8p8zEpQQRiY8Rbazspump","symbol":"OCN","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":1139.97}
+{"t":1794440280863,"type":"descarte","mint":"FBEFRg8dWifrAiVpoyBUvcaaSz2Wo2xn89hWx6Bhpump","symbol":"CEO","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":89.52}
+{"t":1794440280863,"type":"descarte","mint":"9DKTdvJzE1vc2yyFjCj6RJy4UALGoepWk1QmPVg6pump","symbol":"AGI","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":2874.39}
+{"t":1794440280863,"type":"descarte","mint":"25jJP4s9CDTQUYAGjVWcEwcbMWfHrABiiR6esy8Gpump","symbol":"TAO","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":258.4}
+{"t":1794440280863,"type":"descarte","mint":"6zgFaECxPYKnMrPNgoJ8kMwbGFiriHLt2cNf18NCpump","symbol":"AGI","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":4277.58}
+{"t":1794440280863,"type":"descarte","mint":"EgSyT9wWvYfwAntz5j1Jbgzed2hoUVJfLnFekfdae1R9","symbol":"HUNG","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":19.11}
+{"t":1794440290053,"type":"descarte","mint":"4RexdXB2rd1bJ2t7zVRFXumMNC5puUsXsuvaCdtQWv3V","symbol":"PMUP (4Rex…)","reason":"LP no bloqueado (0 %)","top10":10.297106008998702,"lpLocked":0}
+{"t":1794440309434,"type":"descarte","mint":"5nD82gK7dEmsiWqdX6qGDdTk7vqxvBKY1WFxT9Vpump","symbol":"Cuffed","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":3185.52}
+{"t":1794440309434,"type":"descarte","mint":"6HJC1zeGBby6BPxy7nMSD8nSfrAs4YF4SbC2pb2oiyvF","symbol":"YO","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0.87}
+{"t":1794440309434,"type":"descarte","mint":"9eShDtVakJtLLJQgkHwuZiraaKCEsZ15GyW1f73c1D2H","symbol":"YO","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794440309434,"type":"descarte","mint":"EBP5BDUasxksLyvXL5kQbMA64gUu2MFcd4S44xyWuVKn","symbol":"YO","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794440309434,"type":"descarte","mint":"3FYG7U8QVaXxz5BRQwcc8FB97Fs6AYaJeUyxdNiPFaf3","symbol":"YO","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794440309434,"type":"descarte","mint":"HEoVgNb4MQZxFwvTXGpj2Nx4EcrkMruTKf5XTvvdFHKQ","symbol":"YO","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794440309434,"type":"descarte","mint":"8FiHUp8bAHwU17kPEzJSoctv7M36qZhTMVjiHzGuAt9W","symbol":"YO","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794440309435,"type":"descarte","mint":"A1KZdaU47WGjQepii85p9wTPedqLJcjMJuJ5Vsuo8nLG","symbol":"YO","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794440309435,"type":"descarte","mint":"HdZwGgRKpss2Uw9DyF418BBEcuLdjtrSf4jDA6nNhjQu","symbol":"JHM","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794440309435,"type":"descarte","mint":"4cu2ktRFo88Z3R5d2jeq1GGzvChH7HX82f9F3AhMyftg","symbol":"YO","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794440309435,"type":"descarte","mint":"5TPZFD4Dfqrx7j5qRkYBzoaQoQTt12UHREonhj1r4Tpe","symbol":"PAWM","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":182.83}
+{"t":1794440309435,"type":"descarte","mint":"7MhLKMEpoNfpEZFzfGePvfd871KEPFk6JZc1skmkBMss","symbol":"YO","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794440339055,"type":"descarte","mint":"4MAfPAKUgbS2J2VVaGDrMgZxxXRCVGZcwv8E313A3r9c","symbol":"YO","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794440339056,"type":"descarte","mint":"AdodhWYTmEXJsWDmRiTuwYu8KFobBjKZpKU3qpSKAviJ","symbol":"YO","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794440339056,"type":"descarte","mint":"5b64D87DLJVKwABib9n9geVRTiTaVHmA6hgZRRMsoCsn","symbol":"YO","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794440339056,"type":"descarte","mint":"DUd9hnkXdUbVscBmj7F1gCE984uBaWvVTenuWrNpA5j1","symbol":"YO","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794440339056,"type":"descarte","mint":"FoxAeh4qJ7FLX1VrpSqDyVC8Qo67w93f4TsC65tzpump","symbol":"hngh","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":0.09}
+{"t":1794440339056,"type":"descarte","mint":"49CyyS6SpnsumGKfrpX3k75w8SVgrFvF9qT8m7bNpump","symbol":"night","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":26.51}
+{"t":1794440339056,"type":"descarte","mint":"5wbuybLtrwyEopDoUtKWDSecQXXjpn53m2W7cuuWpump","symbol":"DERP","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":344.59}
+{"t":1794440339056,"type":"descarte","mint":"E7Np3RGk3jyapGb9zMTH2QDmCU3UdsZmMumAbrMapump","symbol":"WIENER","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":42.82}
+{"t":1794440339056,"type":"descarte","mint":"AqNUoATFCKMoYET1LPdUNTbJh4GpbXGWmxzX2eeh28XW","symbol":"CHEATER","reason":"volumen < 50k: no llegó en 45 min","source":"stonkfun","volH1":0}
+{"t":1794440339056,"type":"descarte","mint":"EaaAXZRAysB7HSQcswLH29TUfxtmFQhZPW3fTnkhaSE5","symbol":"NVDA","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":1499.64}
+{"t":1794440339056,"type":"descarte","mint":"DQnH1gjMRah5icoJS7Swu1kPCTLJQpAYiRzg9jefLoat","symbol":"PLAYBOY","reason":"volumen < 50k: no llegó en 45 min","source":"raydium-launchlab","volH1":0}
+{"t":1794440339056,"type":"descarte","mint":"4sExe8jwrXw24dnhvQzGzPnyFAQ4mjsTyBE3JkBKpump","symbol":"JEA","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":0}
+{"t":1794440339056,"type":"descarte","mint":"EDk2iamUSuhnQJdTfNHv9R474oBWN4xNTBwpsiJxpump","symbol":"DIHWASHER","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":28.09}
+{"t":1794440339056,"type":"descarte","mint":"2Z7DNmqiuTP9hpMJwHTvKizCoRuaNcisxjE8DAwJpump","symbol":"jog","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":164.46}
+{"t":1794440339056,"type":"descarte","mint":"EAAhr4rHQMW7LxBa3eas17eWjPvRHtqYrLjCQXsMpump","symbol":"LilJensen","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":12.06}
+{"t":1794440339056,"type":"descarte","mint":"GMJUtn7neJhH6mM5So2H5DR7tSh1hAR6nCKgHySZpump","symbol":"精美瓷器","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":1678.35}
+{"t":1794440339056,"type":"descarte","mint":"ARo71XYgARNDpA2akGfnHfXV6QViz6NFZ2f9Kqeppump","symbol":"PENIS","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":8.11}
+{"t":1794440339056,"type":"descarte","mint":"G8GUQ2b4BPyQQxMajr5Kvh6FZmieWy9CmwEwWmvjuWgw","symbol":"HUNG","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":997.71}
+{"t":1794440339056,"type":"descarte","mint":"7UhdbrnuFC6NpRPdrp5DtsysVMpeisPFC7iV45PTpump","symbol":"NIO","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":833.95}
+{"t":1794440339056,"type":"descarte","mint":"B6chaeWp9aQZQX9TcEBA4TFsCYRionHXgMAif25pVn9K","symbol":"REDVIDIA","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":0}
+{"t":1794440339056,"type":"descarte","mint":"FF2TqwUj781jorYhwSM8ikbnqf9ywdFQFKrDMexLam2A","symbol":"YO","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794440339056,"type":"descarte","mint":"8kKyZNVaDf63CU67hT692kXyUkjZRHHXgcFJqmTKSVGr","symbol":"YO","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794440339056,"type":"descarte","mint":"DBr94CB4HsxUMQaUFLbrroSywiQQtvqkMWHsAa7M5Efg","symbol":"YO","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794440367380,"type":"descarte","mint":"37J6HbRbt7g3hCF6SmkyHhtmfCDfFi5T9HN158zR3Jwm","symbol":"AMD","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":535.54}
+{"t":1794440367380,"type":"descarte","mint":"3c26kNtQ6Ld8VVuX5DrxuUd9ZUNPfJtvKNALLDNKqa1i","symbol":"YO","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794440367380,"type":"descarte","mint":"6Gv9oUgf9Q9Q3Cchp8iC3xNFgTVFwXAvzg91RU8vf4qr","symbol":"YO","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794440367380,"type":"descarte","mint":"G4dDLWRtRPcksr97mfTMZGBkX3hoeS4N6qKLfrjvBLAF","symbol":"YO","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794440367380,"type":"descarte","mint":"ETQmQYhCUYkvKGX5kR1h8kNSAbmBMc5eX5Qneyk79WjZ","symbol":"YO","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794440367380,"type":"descarte","mint":"3qnAZhXj7b1GdCmDQY5pTeArsM82EYntcC49aUoSpDQb","symbol":"YO","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794440367380,"type":"descarte","mint":"8uXWxgrZQnG61Fs5yDFU1v2qPASyz5ZPRfBKJjQS8WY2","symbol":"YO","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794440367380,"type":"descarte","mint":"D9C2mXxXEqQ74YWos6ZpAW4dR8hRUzFpTdRgn4QwJjrQ","symbol":"YO","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794440367380,"type":"descarte","mint":"FAwLRpUFJV915wPEDrLKJpx5qcLvitvPdGDeVPT8TGRz","symbol":"YO","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794440367380,"type":"descarte","mint":"5kiR9N3y1AyLtDw9bMXNqWLMshWSm7foamxbfZmihYHL","symbol":"YO","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794440367381,"type":"descarte","mint":"ATTSfHy5X6agVaKHfac76xsvQm6BVL32rS72j5mNhiFo","symbol":"YO","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794440376275,"type":"descarte","mint":"5zv89QjHj4TscCDyVrz2vQsSxSFjgmoCieZtf9yh6RDQ","symbol":"WAR (5zv8…)","reason":"LP no bloqueado (0 %) · top 10 holders 89.5 %","top10":89.48564055718833,"lpLocked":0}
+{"t":1794440378537,"type":"descarte","mint":"6FCjyktg6199Yz2oL5oZZcpqzqWGP1vE5sQQrEX92wYb","symbol":"DLSS (6FCj…)","reason":"LP no bloqueado (0 %)","top10":4.151757971663984,"lpLocked":0}
+{"t":1794440395700,"type":"descarte","mint":"GRT2SEt1G6dKfey3Ht4Yq9S3vWx1LgoD44d4JZC1pump","symbol":"nihuang","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":16.46}
+{"t":1794440395700,"type":"descarte","mint":"Fz1S3PZcWmukQ5UuHZeZssdBPuME8J88wvGpX1Ce9pcY","symbol":"ZUDE","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":414.99}
+{"t":1794440395700,"type":"descarte","mint":"9i4PCPpo1kvTxWusYEkUcAu8KZjfuSazHTp8ELzZ6xPb","symbol":"CARROT","reason":"volumen < 50k: no llegó en 45 min","source":"meteora-dbc","volH1":0}
+{"t":1794440395700,"type":"descarte","mint":"dxJbUQGr6LhGm7REMRG3v92khtByMW5wri1dLuPpump","symbol":"COOKED","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":2821.82}
+{"t":1794440395700,"type":"descarte","mint":"2Y1uGfCEQMT2bNW4gRL2rikwmC178RmMvCauFhTKpump","symbol":"dodge","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":1705.64}
+{"t":1794440395700,"type":"descarte","mint":"5BA6wHmpx7P1WCkr7sxX5AiPdDdCJomUfdHhh77Rpump","symbol":"JHM","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":1195.43}
+{"t":1794440395700,"type":"descarte","mint":"CUqgawPVrr1gkH4KTJ2o7TbdzBreoTqELwRjgaJnpump","symbol":"SOOTS","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":285.64}
+{"t":1794440395700,"type":"descarte","mint":"5Pr17ooVfQpMFdrtD7kk1Gt8wr2GtnEp1TeAeXaP6jPt","symbol":"DISHWASHER","reason":"volumen < 50k: no llegó en 45 min","source":"pumpswap","volH1":0}
+{"t":1794440395700,"type":"descarte","mint":"D7nCtrmQquVJ2pajWLksjj2FXExf6rXAe51Pd8yEpump","symbol":"NIO","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":1759.6}
+{"t":1794440395700,"type":"descarte","mint":"7hZe1WNhPJAzeTRPLLJMXT9csusnhNA1oPnmwc5Epump","symbol":"STENKS","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":65.18}
+{"t":1794440395700,"type":"descarte","mint":"9rPVZQu4HGYRgdf6eGJMMGpz8ngJUueg89CwD8Tjpump","symbol":"NVDA","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":40.52}
+{"t":1794440395700,"type":"descarte","mint":"BeNMZqsiqA1GduEQW124Q5Gz88vUTSTc8bG5mLMpump","symbol":"Dick","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":575.77}
+{"t":1794440395700,"type":"descarte","mint":"BZZ8dkx8oezxFwGL35NCw3iM9XE3dWGApbJBmPaTpump","symbol":"Bernie","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":237.57}
+{"t":1794440395700,"type":"descarte","mint":"GcScXiGUVvhCMSyxbJqJU7HPoXtqa6VWnh2tTbMRkzJq","symbol":"DacityCoin","reason":"volumen < 50k: no llegó en 45 min","source":"pumpswap","volH1":41120.9}
+{"t":1794440395700,"type":"descarte","mint":"3m2vai4Bf5uAcRUXKyWkXYv2hFLrb7FHrkrup7wXpump","symbol":"TIBÚRCIO","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":368.56}
+{"t":1794440395700,"type":"descarte","mint":"8omUtzEmv7EJrjDYWc5BBshS5huLHtyvHhDN91yVnavs","symbol":"COOKED","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":2450.7}
+{"t":1794440395700,"type":"descarte","mint":"CCgzynvMsoEyeoRp7jjCT6af2RcSpxbQWkEDiUwHpump","symbol":"RE","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":0}
+{"t":1794440395700,"type":"descarte","mint":"4ACqAKSdPYDQxEP6NcSkwfVNv1okPcuQwoj5wu3KF9Ph","symbol":"NIO","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":664.91}
+{"t":1794440412361,"type":"descarte","mint":"25B3eyNPukxZZ2ztYzuzvKNjJF5B3M33EpgSFwGTKfjH","symbol":"civetcat (25B3…)","reason":"LP no bloqueado (0 %)","top10":6.405168317711399,"lpLocked":7.792319173085473e-10}
+{"t":1794440414623,"type":"descarte","mint":"8Vihqyjt55FJ68QTrfm443c7goqBcEXuiLZ34xmHuBWG","symbol":"Max (8Vih…)","reason":"LP no bloqueado (0 %)","top10":2.2660281704602,"lpLocked":7.839120309633429e-10}
+{"t":1794440431658,"type":"descarte","mint":"4qCWwS5AkTUWuXvgwcqEVxFQmVhF6sq6F5vNTpJ9Echk","symbol":"applecat","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794440431659,"type":"descarte","mint":"EavF7KhG5WQTMJj5MRQfkVTC5aeNFfjTAhmenNmHpump","symbol":"CTO","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":2115.29}
+{"t":1794440431659,"type":"descarte","mint":"EVPquHKVJhrNZH74FE9wLoPCzufCaKvNBDyoRASgpump","symbol":"CCNPC","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":1204.26}
+{"t":1794440459981,"type":"descarte","mint":"C9rXB6wrm8xtBJTUFQ3AEA88krEqmNySCKugHP9vXDQR","symbol":"","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0.08}
+{"t":1794440459981,"type":"descarte","mint":"8u4Z73vsrpSBMtqJ9vAkwQgGbE4HgasUAvphe6y2nNeo","symbol":"","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0.08}
+{"t":1794440459981,"type":"descarte","mint":"4z7mUqAaFWe3gFt682PCT3d5xsYCfAiJ1RXeEte6T9bC","symbol":"","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0.08}
+{"t":1794440459981,"type":"descarte","mint":"DME7YoYJEkF5uSgf3RWc2Kk4sigqi7CFRzvSCKu7sujP","symbol":"","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0.08}
+{"t":1794440459981,"type":"descarte","mint":"AVBqumF2jvpxzUbpJ4iJLDUtf7csRJ3HnNBCfrJaBSG4","symbol":"","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0.08}
+{"t":1794440459981,"type":"descarte","mint":"9syXSmS81gVnDTBf699sXUaabTwBZYyGf2kbiYeS7RPJ","symbol":"","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0.08}
+{"t":1794440459981,"type":"descarte","mint":"8FHawzKB284hTpQ6PMTh6rnFBcj1Nu9tNYa5Czwt7pox","symbol":"Cake","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":7858.15}
+{"t":1794440459981,"type":"descarte","mint":"BRtg1ynWSr9maUpr4i1SL8GGeEaQERr9JdfXHYRcgxsk","symbol":"SAIKA","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794440459981,"type":"descarte","mint":"75PZ4ur9dEiJ5ZyMgJESSknUhLzyeHjauHHYJXEeYhKn","symbol":"Cake","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794440459981,"type":"descarte","mint":"DkHZhZiPgpZqp2Zro7aRsbtaW8DPigAyexH6H3GwvBx7","symbol":"DISHWASHER","reason":"volumen < 50k: no llegó en 45 min","source":"meteora-dbc","volH1":0}
+{"t":1794440459981,"type":"descarte","mint":"4CCHjWgJevqUqceoRRewYgHkS43x2ZwwqKdQPGFupump","symbol":"applecat","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":10895.18}
+{"t":1794440459981,"type":"descarte","mint":"Ea92tqLUDb6Msdm62i38joSqsT4rDnTd91ogVz73pump","symbol":"JHM","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":2565.43}
+{"t":1794440459981,"type":"descarte","mint":"Eoag4tZdQiULpztc4t4MZug9D6V1x7DvNnMGSAqMpump","symbol":"BERNIE","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":297.47}
+{"t":1794440459982,"type":"descarte","mint":"BZThL1AaoYUUG1vfcsdadAztYaofcFdeMk5A2zyCVrm","symbol":"PAINMAX","reason":"volumen < 50k: no llegó en 45 min","source":"raydium-launchlab","volH1":0}
+{"t":1794440459982,"type":"descarte","mint":"Hcx6QFFDxHRb5eLkk5e2dudFor13SL278tS4pMMfpump","symbol":"$MFRG","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":293.65}
+{"t":1794440459982,"type":"descarte","mint":"4Ei7WRCSBKU8bfPejUNZWn4XrGU8kq36KHanpKiEpump","symbol":"OTTER","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":313.91}
+{"t":1794440459982,"type":"descarte","mint":"UZ6j96iSTH1U7H3nQ3AsnBdpbykJySaybG6ipBupump","symbol":"djraccoon","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":759.72}
+{"t":1794440459982,"type":"descarte","mint":"9gGzX7DWN7rrJTTxBJDAXtu1wXC2tyDFyzigTD3fpump","symbol":"GPU","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":1131.1}
+{"t":1794440459982,"type":"descarte","mint":"9WxzVbp6YB6MrhzHiB6ZM4XVFGaSqgS9GYpFWcf7r3pE","symbol":"erection","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":0}
+{"t":1794440459982,"type":"descarte","mint":"G7NfNjtPjApt4F4a5uG3QNRPvF4MrnZ2qzDimazjpump","symbol":"XRP","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":375.84}
+{"t":1794440459982,"type":"descarte","mint":"Fx4QMMEjdo47GZ9JaQZ3TFhUL2DTQUrvdW5KZuhGpump","symbol":"$DICE$","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":14.53}
+{"t":1794440459982,"type":"descarte","mint":"3R5XN9N542iui1TJmREuqWCKNQh4Mikx63KNrvRkpump","symbol":"WAAAH","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":8.33}
+{"t":1794440459982,"type":"descarte","mint":"7qrX4QcYZk2dmBQtdMM9rVWjgE8GEnXaZd8Utm8Tpump","symbol":"JHM","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":0}
+{"t":1794440459982,"type":"descarte","mint":"CYpXBjR5WxV15Arj3bQwNr5Mzw9aEikvJ8ZTWGSH85zn","symbol":"Max","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":6.36}
+{"t":1794440459982,"type":"descarte","mint":"5dSXYXBnUAXmt4jMqscR4CUz27E7fTkD4LpxytWpump","symbol":"JHM","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":1442.61}
+{"t":1794440459982,"type":"descarte","mint":"8eduB4MwKDt7MM9P3LRsgj2fpHwP6CM2wvm1r14bwneU","symbol":"CAKE","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794440459982,"type":"descarte","mint":"92enyzqvMMUXA5TEk1ooboRsmbXc6QzEtsrTHn7ihVnG","symbol":"Flacid","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794440488870,"type":"descarte","mint":"6hhpBwkvojZgS4GSTf1BgX12seN7wPo2yp3guw4TbJaZ","symbol":"","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":1.87}
+{"t":1794440488870,"type":"descarte","mint":"7iPLaHD5Fu4MiS6wfTwjWqspZUZ51gHF1wp3Mx3smWrL","symbol":"","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0.08}
+{"t":1794440488870,"type":"descarte","mint":"9MSUp6t76jDyA2mmkbNsWqU3eY8fGpjhmkoo9kwfnF6v","symbol":"","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0.08}
+{"t":1794440488870,"type":"descarte","mint":"52vAgdXBWQbzTK7gnNkqnKNMVv8beuCD3qAnaVjbr3pt","symbol":"","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0.08}
+{"t":1794440488870,"type":"descarte","mint":"7NhmD5aaMtPhApt18YkozLELyUZJFQdy5VB9Z6edQNYs","symbol":"","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0.08}
+{"t":1794440488870,"type":"descarte","mint":"6p1aA43rHyQgFP5YTipPCLNkRhnJKjo1FhGxLaKN4MRv","symbol":"","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0.08}
+{"t":1794440488870,"type":"descarte","mint":"FzuBfiuEynGop97b9Gw8KwkckkGVJqqmNDeAqWzdnoQh","symbol":"IGNORE","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794440488870,"type":"descarte","mint":"7cQHjKJ46PprMv8isAGHKhefaP7c5GkL9WqmwFCvRRLi","symbol":"HAMSTER","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":58.13}
+{"t":1794440488870,"type":"descarte","mint":"5ZxcqYKEaPYCnveeHtNWHQ2EmcV3kSDXrX5VMtoEpump","symbol":"YIELD","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":16993.37}
+{"t":1794440488870,"type":"descarte","mint":"2k2R1v1XuEHXzPZYYna5Hy9ERANGes8rErkQCA48sf2R","symbol":"YIELD","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794440488870,"type":"descarte","mint":"4Z8eEZHGFVmDqLa4WPBabF8ift2oLvXX1nuLir66fRgh","symbol":"WIN","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":2300.23}
+{"t":1794440488870,"type":"descarte","mint":"F35Dw8ZmXfKhugUA68usoEAbkAcd9VdpnoBdwxT4P9Mg","symbol":"CPU","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0.16}
+{"t":1794440488870,"type":"descarte","mint":"D78nYV94qsE9nwn1YUbzWAtQiyWwLtRSLLRGGj6tp82s","symbol":"WIN","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794440516943,"type":"descarte","mint":"547FX2Eib2EunovdmVCqZJCJg7UQxoTnt4rTHFja1dCo","symbol":"COOKED","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794440516943,"type":"descarte","mint":"F6LAVymhHsDnY2FwfW6VfnbkppUQxMQS8yoTba4upump","symbol":"Cake","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":211.15}
+{"t":1794440516943,"type":"descarte","mint":"7w6MgD3H1fy4NToDWpHpamahkTXwyRR2UhiCydGtpump","symbol":"ME","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":438.6}
+{"t":1794440516943,"type":"descarte","mint":"VZaHfCUx6Jvk6VG4s53oVFVdmXhpK3NjiJzXXLtpump","symbol":"Flacid","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":0}
+{"t":1794440516943,"type":"descarte","mint":"8kvr7nhDLG6it2wsuksM9dZp4CaJDFjisCpPMASnpump","symbol":"SOOTS","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":147.49}
+{"t":1794440516943,"type":"descarte","mint":"4HjvYhat4uiUUGTWA5W6eA1o89y2sajnV6GZSMkUpump","symbol":"SHADY","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":2019.82}
+{"t":1794440516943,"type":"descarte","mint":"FTdANrUZi4kocAQWKVfCuYxDZM7mv78AA6sHzs4NtZXR","symbol":"CAKE","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":5077.51}
+{"t":1794440516943,"type":"descarte","mint":"4Mrxt2NB9GWg2DM8uJ2fBg84bUNXMKEpridqrK2LjC9X","symbol":"PUSSY","reason":"volumen < 50k: no llegó en 45 min","source":"meteora-dbc","volH1":0}
+{"t":1794440516943,"type":"descarte","mint":"HhZutVNyGJU6pWZqLNwuDhB5HuH52eJLi4QtMwZSpump","symbol":"SAIKA","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":2324.69}
+{"t":1794440516943,"type":"descarte","mint":"D2zw8xBcb6JapJqDznXswtrGLYwvkF4B3PqMYKg2pump","symbol":"RICK","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":18.55}
+{"t":1794440516943,"type":"descarte","mint":"BPRxcJ7Z9hUUQMRRo3sHiWH7DCB2rTf1wU2iAoxtpump","symbol":"$MFRG","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":305.97}
+{"t":1794440516943,"type":"descarte","mint":"52iD3Zc6mpFuS9BjZnvpasohADFEFfB2cAbj5zzcpump","symbol":"TOAD","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":37.24}
+{"t":1794440516943,"type":"descarte","mint":"EGw3LcBBrgUPiWyyDe5rBKT7hgP8EUJkJCbuERBfyZP4","symbol":"TOMBGUARD","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":446.34}
+{"t":1794440545253,"type":"descarte","mint":"AVh2yvQ8cDQQo94b8ZH68KVDKWuXhBGD8ToJQeTgpump","symbol":"MZD","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":311.82}
+{"t":1794440545253,"type":"descarte","mint":"EFZhh44Gz8yDQHXQeYNykc57SxACJ6VMmkU2Nps3pump","symbol":"mibull","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":635.28}
+{"t":1794440545253,"type":"descarte","mint":"8AfQgQZRRGTg1BMsHabpU3PcQCvoRY77Lu6SpgQ9dej9","symbol":"MZD","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794440554210,"type":"descarte","mint":"21k9SRvauGxZHhHvxxhtmnTnrRAemmysJUybeEHoujtT","symbol":"SEXLESS (21k9…)","reason":"LP no bloqueado (0 %)","top10":11.492411768997698,"lpLocked":0}
+{"t":1794440573551,"type":"descarte","mint":"BAKb6UrAoRt4hQGJRQ5YFqMroD1jBCmXuams24DTpump","symbol":"wagmihao","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":0}
+{"t":1794440573551,"type":"descarte","mint":"7NVQDMg8Dqdwo56o7ZtaLWmwX4e2jFxsMFasaPrbpump","symbol":"SIN","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":22.64}
+{"t":1794440573551,"type":"descarte","mint":"CvFjxnPuW5rEZCQsCPU2HP7UNKQHxmykNrANmV3Vpump","symbol":"wind","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":211.68}
+{"t":1794440573551,"type":"descarte","mint":"E1dDLGiEvRNLrjSUPSUiDVJ99RKYF3wM1FwxpYGypump","symbol":"Thuang","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":82.92}
+{"t":1794440573551,"type":"descarte","mint":"DaeqQBQGg4mCFHzprNBpANr3crbknj9pPwy5MMpEpump","symbol":"JesenTape","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":0}
+{"t":1794440573551,"type":"descarte","mint":"6cjMfxBjvec1EiBefzEh8h3nN5QgSb2XTaZRxbHupump","symbol":"JA2","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":180.75}
+{"t":1794440573551,"type":"descarte","mint":"7Uc8tjFKEih8NDQHNKuqqtFhdUYG9yEm56W3eM8Tpump","symbol":"MZD","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":2103.71}
+{"t":1794440573551,"type":"descarte","mint":"Euoh98gF8xtTC7cKafTueB5ZMBapgnyYTWsqETNUpump","symbol":"fg","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":253.23}
+{"t":1794440573551,"type":"descarte","mint":"869wGDMtrZUD7bB4YM3fGr5TXDD3J9gXjPUiq5BQpump","symbol":"$RUP","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":12.49}
+{"t":1794440573551,"type":"descarte","mint":"EjajKC8T85ttXDj2stpx157RmhttGzj9NjASi9rbpump","symbol":"SirenHead","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":120.8}
+{"t":1794440573551,"type":"descarte","mint":"3FE61WzcZpRhUyCwm71RQEHL29tpJ9UTw5h9ohm2pump","symbol":"SXSN","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":717.3}
+{"t":1794440573551,"type":"descarte","mint":"4BbyCDmQhTpg2dEX9LW6LuB5e7Mcarfg74LgPQkjpump","symbol":"$MFRG","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":1405.53}
+{"t":1794440573551,"type":"descarte","mint":"DaHRhmqS5LFhfB21xyWmdtAXvmT9JTZshvKiw38vpump","symbol":"HUNG","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":3081.4}
+{"t":1794440573551,"type":"descarte","mint":"3FANzKuZxujbG1YyHyz8r6vvQmUUi8LxiLFxEAsupump","symbol":"Chill.vyb","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":201.18}
+{"t":1794440573551,"type":"descarte","mint":"5XMvWkVXb9uPgWxzr2Scpwy9KcvrTjzW9fFW1ub2YLq9","symbol":"DISHWASHER","reason":"volumen < 50k: no llegó en 45 min","source":"pumpswap","volH1":0.04}
+{"t":1794440573551,"type":"descarte","mint":"5RneJVAEmmb3RLYwZJbHsgdeRb5XMKgctiVF7ePgpump","symbol":"Thuang","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":81.78}
+{"t":1794440573551,"type":"descarte","mint":"6L6s9KEaNq7MXj2pmS5PUJg1fS42t61spvnTKBiepump","symbol":"dddddark","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":123.79}
+{"t":1794440582903,"type":"descarte","mint":"JBPitngThsY6vvrU5GhVn6zV9KZiPCwfz1mynmEeqXq","symbol":"SEXLESS (JBPi…)","reason":"LP no bloqueado (0 %) · top 10 holders 96.6 %","top10":96.6406156059953,"lpLocked":0}
+{"t":1794440602209,"type":"descarte","mint":"AhqZqGmGqmnJim4vm1wpHaMbm4MZiEjJU6Rcne3Pcpnf","symbol":"黃麥迪","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794440602209,"type":"descarte","mint":"9ER13QxyyFhfWHncsW21YLAXMXGWrrupFsVkQFXspump","symbol":"CARROT","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":12.34}
+{"t":1794440602209,"type":"descarte","mint":"Chux7KPhCSugqnyFPT7rszdto8iw4pYGgQj5Y3DzwPu5","symbol":"MADTITSON","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794440630522,"type":"descarte","mint":"HQMBKUraG7RyTFAYgPuEZi5uEiz9wK532t6BUhT3xV7V","symbol":"Mills","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":6140.64}
+{"t":1794440630522,"type":"descarte","mint":"7TLMBzjyRTGesgP5TrW7G9YuwhpdgVsvVXfmWbGKXXny","symbol":"Mills","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794440630522,"type":"descarte","mint":"CGUM4nVWY97fscBDB6CuN4pe8vGwcFzLmQN2kXgxqUq8","symbol":"titcoin","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794440630522,"type":"descarte","mint":"FLRFZFGqPBRXhwN3dxnBLoFgYWM74Na2xkrvpLmSHc5q","symbol":"ANUSCOIN","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794440630522,"type":"descarte","mint":"Dkc49o5EzhH68UggV5cXCZ5J2gqXdVdkZYmqEk9Qpump","symbol":"LMC","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":1041.75}
+{"t":1794440630522,"type":"descarte","mint":"znooqy3n4ezBfqBDBwg7NqokzNRpjjTDvFAxxT6pump","symbol":"booey","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794440630522,"type":"descarte","mint":"HVTVC2z2mS36UTjgfQ7v1otqJDYLTDSs6iQ7f3yVnTt1","symbol":"SRLOCK","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0.07}
+{"t":1794440630522,"type":"descarte","mint":"FBqTqLmASYBpa83hg1dnghVyEabkk8fCTrudJnqSR6FH","symbol":"HUNG","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794440640015,"type":"rechazo","mint":"CjdWpihFWiUfETEmVY68t2NkFD3UH62FpoH5v1Hopump","symbol":"stachecat (CjdW…)","reason":"puntaje 0.326 < 0.6","parts":{"presionCompradora":0.29,"impulso5m":0.09,"tendencia1h":0,"actividad":1,"liquidez":0,"holders":0.04,"edad":1}}
+{"t":1794440659412,"type":"descarte","mint":"F5owFvaskiZjHBALHuWvvEvWtS8p6U8S7jQeXtSFkrNU","symbol":"HODL Pump","reason":"volumen < 50k: no llegó en 45 min","source":"meteora-dbc","volH1":6512.22}
+{"t":1794440659413,"type":"descarte","mint":"6v1cD9nfehWBwZQ17jSK87iQTdbcN7HhL7q1GTfZpump","symbol":"AFFAIR","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":27.95}
+{"t":1794440659413,"type":"descarte","mint":"3nc2Pe5zRMeyDdD5wptHN2CmWRUoK7j2JQaCCRft6Vp4","symbol":"DISHWASHER","reason":"volumen < 50k: no llegó en 45 min","source":"meteora-damm-v2","volH1":0.04}
+{"t":1794440659413,"type":"descarte","mint":"CtVLEmsyL69cktaCLeXPmnTSnFMBUTZPrVz2NGEEp34P","symbol":"wagmihao","reason":"volumen < 50k: no llegó en 45 min","source":"meteora-dbc","volH1":3930.26}
+{"t":1794440659413,"type":"descarte","mint":"ErMTLSAgZF1E2b12gNLKTdfU2fFim1qQb29P2X3Gpump","symbol":"MADTITSON","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":1859.1}
+{"t":1794440659413,"type":"descarte","mint":"AbFrWUvo8CvmqucMdevZytpKFGpYQPquGM1S6JJ7pump","symbol":"Horde","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":0}
+{"t":1794440659413,"type":"descarte","mint":"GkvCsqu6bfkmX4mkMwidQwXuKHdfwfNnbiQnUCqrpump","symbol":"RICK","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":61.18}
+{"t":1794440659413,"type":"descarte","mint":"3fRKw99im6Lxpu8TK1kNBfVMH6eKJKV4Movp3GKppump","symbol":"OTTER","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":12.97}
+{"t":1794440659413,"type":"descarte","mint":"hEWsTdGs74esFecUgd4gqRoPEzmWUbfj7w6L6hX4ULQ","symbol":"wagmihao","reason":"volumen < 50k: no llegó en 45 min","source":"meteora-damm-v2","volH1":38162.78}
+{"t":1794440659413,"type":"descarte","mint":"42FeD2awU1518gjp7TpiWwnUP4V67MSLYEUGAkcJpump","symbol":"FERSPE","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":36.91}
+{"t":1794440659413,"type":"descarte","mint":"AfA1iYn9KE13z5NtTNGWFXLj5RUpHuNoMSzhkyZx7BUL","symbol":"HUNG","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":1702.82}
+{"t":1794440659413,"type":"descarte","mint":"4C2biFijgwyJSvS6d2ykwrR2Svp1y29GeKxysVe7pump","symbol":"MADTITSON","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":2384.39}
+{"t":1794440659413,"type":"descarte","mint":"Hpp4h7n5ti3MKGUczVZDTaVPBNhjDmAYrdbSc6Fwpump","symbol":"sol","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":459.35}
+{"t":1794440659413,"type":"descarte","mint":"7J1ASpk9CwhZw15Wy4FyBB1XStHcs28rfQXazsXLSjZj","symbol":"黃麥迪","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":0}
+{"t":1794440659413,"type":"descarte","mint":"Bx9pdMrpGaUuDVSyoS3JZxy5ovSr9nbJcge7C4hXpump","symbol":"AMD","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":884.9}
+{"t":1794440659413,"type":"descarte","mint":"6YAq1SN6jbw31jySBJzS1VPNTbSmBEYhN87i4Ydxpump","symbol":"WIN","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":660.88}
+{"t":1794440659413,"type":"descarte","mint":"9nyYF14Nw8NQKfwoQ7EtbVQL6dfm32KHfYjqKEC4pump","symbol":"JOUT","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":6.49}
+{"t":1794440659413,"type":"descarte","mint":"C91ezC1Q95JGnsAhk2nLzE83ZcSwog8YnKQ6LfFx89Xg","symbol":"PUSSY","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794440659413,"type":"descarte","mint":"HXGMTvMsY9sBnBbcvCyJRPeL2FsHuW1RWjdSkWWk7wwW","symbol":"TITTY","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794440659413,"type":"descarte","mint":"AvUY42PpbiAeyRk5TGWPMXUefmQ1j3hUz6WTp9yquWDW","symbol":"GONE","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794440659413,"type":"descarte","mint":"DTN69vkY663FW8ehnhcsLShRyJitS3XUjgFeUXpFpump","symbol":"KAIRO","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":4497.73}
+{"t":1794440659413,"type":"descarte","mint":"6m3iSdteXYS3rG6oe9qFX37XpFMqhtB1JaomH9E6pump","symbol":"HUNG","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794440687710,"type":"descarte","mint":"3Em4pPgKm2zDjhvKMd4r7Dy6tRQfW8zmfnb6KpGhpump","symbol":"FETTERMAN","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":148.21}
+{"t":1794440687710,"type":"descarte","mint":"Kb1TyG4bTeTaNY5RcFAX2kcdrm6ZGWTTkUTsaU7pump","symbol":"HUNG","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0.16}
+{"t":1794440687710,"type":"descarte","mint":"J1bpVV1Dfz3ow94Y3Ta9weVLv4ssXbaLKRxVudHF3cds","symbol":"PENGUIN","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794440697554,"type":"descarte","mint":"8vnjNnTAmSn9ezc3tsq7z8Wc8aTv4rimsAP3A9UJ1xcD","symbol":"COCK (8vnj…)","reason":"LP no bloqueado (0 %) · top 10 holders 88.5 %","top10":88.5312567677063,"lpLocked":0}
+{"t":1794440716594,"type":"descarte","mint":"6LiKF7tWxPLoAYXd6kTVYiT1uBvZm5iUzvDDvv19pump","symbol":"EPAD","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":843.22}
+{"t":1794440716594,"type":"descarte","mint":"2BaoabVoyWCWhBpfXycQUfg8gZoWyPj6HxdMgoE5pump","symbol":"PUSSY","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":0}
+{"t":1794440716594,"type":"descarte","mint":"2gPoM4eMFBbXDJv95GvpdZPQiMBgNUc5teWhAewupump","symbol":"winu","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":267.89}
+{"t":1794440716594,"type":"descarte","mint":"89g88aFFvxKcjQSa75P9XtXmFVdojUteoFdrfdQyJdU1","symbol":"TITTY","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":6080.95}
+{"t":1794440716594,"type":"descarte","mint":"E98ZmCcZrCeVkaGVh6Uo31Aq4JF6EtTBjZBMfP5Tpump","symbol":"STENKS","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":201.28}
+{"t":1794440716594,"type":"descarte","mint":"D3U9CLa1MV5Q9yTEXnS7YTMRiEgZJcdhakrt7ZFbpump","symbol":"HUNG","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":3972.52}
+{"t":1794440716594,"type":"descarte","mint":"BCfbLAVMEukKm88bgBo81HpXiCDNfBh2BapsTyDmpump","symbol":"MZD","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":374.88}
+{"t":1794440716594,"type":"descarte","mint":"3zxTR89HqN3gaYUhKsjENQiN6NoZfTYMCMyiBWoupump","symbol":"M10dD","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":3.53}
+{"t":1794440716594,"type":"descarte","mint":"Cpbfx58rxwdrTGUW26eK78cYSVcbfGK1QayRN26ypump","symbol":"GONE","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":1909.95}
+{"t":1794440716594,"type":"descarte","mint":"6mvHVE3dz4R2L2Fvfi2kzVjz6uH8uEdB74HRSoubpump","symbol":"精美瓷器","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":828.41}
+{"t":1794440716594,"type":"descarte","mint":"3V5AvaL4sBfUQubQE66r3VKqTaR8JeYSzfoDFhFupump","symbol":"INUX","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":104.35}
+{"t":1794440716594,"type":"descarte","mint":"GmiKWdN78yjkZiRik2juVWXexMfDF2qj6nq73ekQpump","symbol":"Cheatoor","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":259}
+{"t":1794440716594,"type":"descarte","mint":"2LsXiZyAYZfKt44Pw471wEP5DKdSovt2xSoH8w56BULL","symbol":"BULLCARD","reason":"volumen < 50k: no llegó en 45 min","source":"meteora-dbc","volH1":911.08}
+{"t":1794440716594,"type":"descarte","mint":"EJwb7XEkjHHd17N1CAcNFcpk8vw4AxcF7dB6oXqzpump","symbol":"titcoin","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":40744.8}
+{"t":1794440716594,"type":"descarte","mint":"EfQdBkBAPGZ1cvue3GAQNqZ7Hd29w8PLEi5R8RCBpump","symbol":"ANUSCOIN","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":0}
+{"t":1794440716594,"type":"descarte","mint":"B2iZ5tu6DywmeAqxzJQG21gAs1p1qUnb1NGBsiJ9pump","symbol":"STENKS","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":122.21}
+{"t":1794440716594,"type":"descarte","mint":"8W9ThAxt4ragcMkNw5shtrM5uQzjpjNULLd7WXdxpump","symbol":"$UNDO","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":778.51}
+{"t":1794440716594,"type":"descarte","mint":"ae7Mt8M9dwZEyeSRHpZTs6pxKXKZi3hY3GR1YdMpump","symbol":"JENSEN","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":13.17}
+{"t":1794440716594,"type":"descarte","mint":"PZWi3bEMY3yKfBVyYATFf4Q3JqCkdtF8d2WpHMmpump","symbol":"BIGMO","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":911.51}
+{"t":1794440716594,"type":"descarte","mint":"BiPKkiRXkpVTBtwNVNNkbp4QgV7o4a9KwGrLEBtspump","symbol":"","reason":"volumen < 50k: no llegó en 45 min","source":"migración","volH1":0}
+{"t":1794440716594,"type":"descarte","mint":"CZFTVYNr3j6E1zhfTaGE6MFWGMLXEDnXWv3V1trFqKAR","symbol":"jimmy","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794440716594,"type":"descarte","mint":"H1FkA4bDsTS6eKAgvEpDyJmAAX4iBxWN7LBc6MU7pump","symbol":"CJCRY","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":5.26}
+{"t":1794440744880,"type":"descarte","mint":"GpD1Qg8LmDeacTQXjKprbfc169mq94QC9788rsHsDDaA","symbol":"WEDGE","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794440773898,"type":"descarte","mint":"CYqgz3S8QX31THe8priYU5zXGEkCUEr152ihXLmLpump","symbol":"GARUDA","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":3124.42}
+{"t":1794440773898,"type":"descarte","mint":"3VV7ebAJYtSgdHqG3PGNK4RYvgZdGUB7izC49TeyZDFF","symbol":"GARUDA","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794440773898,"type":"descarte","mint":"EaFvRPqiCWWC4Uw7G7pbBnngipNnWuiVtifG7ZpKvcUU","symbol":"ZAZA","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":1616.81}
+{"t":1794440773898,"type":"descarte","mint":"13R3nKL7dUCSorWn4W3gsyFY5NRQPMc9onKRwDVYpump","symbol":"Suoding","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":12600.85}
+{"t":1794440773898,"type":"descarte","mint":"7bv4SnQuPqAyTk8E9NBYp3uzUzxTTm6r8444Jds46SjC","symbol":"Suoding","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794440773898,"type":"descarte","mint":"ANtQDjjsmqtwBudV785xKFuM3fPxzrhEnK8EFKWdpump","symbol":"BEARDDOG","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":53.47}
+{"t":1794440802221,"type":"descarte","mint":"4Z81TbpRpkT2hCmhD8nQZsyafPmJ1M4FvLYwMGwvM9Yu","symbol":"","reason":"volumen < 50k: no llegó en 45 min","source":"migración","volH1":0}
+{"t":1794440802221,"type":"descarte","mint":"GvUsbQ3Vqi21QTi3BeGGA8zo17bKywmuDZdw5odCpump","symbol":"","reason":"volumen < 50k: no llegó en 45 min","source":"migración","volH1":1355.07}
+{"t":1794440811031,"type":"descarte","mint":"3g1UUEofTYnAyGa2P8KRLyCK2EcELrNAcbfxYEHtHA6d","symbol":"NEX Ai (3g1U…)","reason":"LP no bloqueado (0 %)","top10":6.912332136632235,"lpLocked":7.004942490746336e-10}
+{"t":1794440813257,"type":"descarte","mint":"9f6uegXAm4URMJQ9g3U9xRcPDw9KYeyzxqkWzzWSmUWB","symbol":"SEXLESS (9f6u…)","reason":"LP no bloqueado (0 %)","top10":14.929827441208683,"lpLocked":0}
+{"t":1794440815758,"type":"descarte","mint":"3WmupeYTto6aUWB7dx9sTNPvp6i9Gq2Mj2rM5xu5H6LZ","symbol":"COOK (3Wmu…)","reason":"LP no bloqueado (0 %) · top 10 holders 97.4 %","top10":97.41588851054807,"lpLocked":0}
+{"t":1794440818256,"type":"descarte","mint":"9S2wfaBqnceu7DATepnnB5eQuiQXf75dArjEC6b1rQ26","symbol":"COCK (9S2w…)","reason":"LP no bloqueado (0 %)","top10":6.0797785702234295,"lpLocked":0}
+{"t":1794440830531,"type":"descarte","mint":"oV5oRbVGAWTGSjkyLmWhPbtHJqCFUABiLbwKpX2pump","symbol":"jimmy","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":5909.58}
+{"t":1794440830531,"type":"descarte","mint":"ABJt4TauS15WkCEfvSG5BEqW6coVcN8a9PBBEZ8epump","symbol":"$STC","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":0}
+{"t":1794440830531,"type":"descarte","mint":"3PY1RRRHzFK3CJGvWv6GsXaY1xW8yUBppztR41f5pump","symbol":"vrl","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":77.23}
+{"t":1794440830531,"type":"descarte","mint":"HhX3o68YjsDC81iUPdZcEiwM8LDTX5WxBctTEMhmpump","symbol":"MZD","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":106.07}
+{"t":1794440830531,"type":"descarte","mint":"EAzY4fdxL43zr6SHH9261tsXyfwmJGSzBPiiFmdN3Sr1","symbol":"wagmihao","reason":"volumen < 50k: no llegó en 45 min","source":"meteora-damm-v2","volH1":2041.17}
+{"t":1794440830531,"type":"descarte","mint":"3MrYJA1WEwcm9iJgquGu5rZjeYStRYX7d8HfBauVpump","symbol":"Kimberly","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":5.06}
+{"t":1794440830531,"type":"descarte","mint":"F4X67bf1BSnTe4kc31F3oaWWLweQCpTZqCz6GGEspump","symbol":"SATOSHI","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":8.16}
+{"t":1794440830531,"type":"descarte","mint":"88YoDBU98S1gAEcg7jeWmJTwPebSVWUM2TSz2bjgpump","symbol":"BULLHUNG","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":127.06}
+{"t":1794440830531,"type":"descarte","mint":"EZzUGJz1jzxzUHagkQpxQXtceeheCuU8xZKAqSi9pump","symbol":"JAY","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":2639.72}
+{"t":1794440830531,"type":"descarte","mint":"JBC5E5DkUcFD4hMgtFNRor7Jy17c8ZUH3NaieGWypump","symbol":"SirenHead","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":561.53}
+{"t":1794440830531,"type":"descarte","mint":"HLZAZv32Ep4hSQPUCt8ZWE5iwkmHvdPstAPoUqvQpump","symbol":"EVIL","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":547.26}
+{"t":1794440830531,"type":"descarte","mint":"8Rz58rabNP1jcpmfMyVsL7MuE1TGLddhcMrnafVEpump","symbol":"GONE","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":65.96}
+{"t":1794440830531,"type":"descarte","mint":"3WFfyWcP7QeQ3fdKrBVsL6arfA7DQtz2k5qXHrLRpump","symbol":"Denny's","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":14.64}
+{"t":1794440830531,"type":"descarte","mint":"EeiHv69y8a3U3PFNtJHvhKkddmfhpqLtYDQfo9ktpump","symbol":"JOHNSON","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":1025.75}
+{"t":1794440830531,"type":"descarte","mint":"2XZBsVfRqLeSof9oAKN62YUvRzVtjLh9RRHSvhoJpump","symbol":"BPCATE","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":21.59}
+{"t":1794440830531,"type":"descarte","mint":"C98rAQ2AmrnJbN5HYLoP4hAwiwgeUkNJiSYotFYpump","symbol":"MonkeyInu","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":280.06}
+{"t":1794440830531,"type":"descarte","mint":"5j1DczaDxPh5YKq4cH8qJMGrQ3dsw33eeQ57xRtLpump","symbol":"NOTMAX","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":84.36}
+{"t":1794440858854,"type":"descarte","mint":"EizF5CY4vFd55R65oczd35Hi2hQ9o23xRixfsrWZJUzZ","symbol":"Blackwell","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794440888713,"type":"descarte","mint":"NuxMPP3ER8kJBiP3NiDTtBhzgGr2oAzZkzXHpsjzero","symbol":"zero (NuxM…)","reason":"volumen < 50k: no llegó en 45 min","source":"dexscreener","volH1":29}
+{"t":1794440888713,"type":"descarte","mint":"ET1kLnxca8pKbzyCD5h2MRHTcePY2UVGVApPZSApmawU","symbol":"Suoding","reason":"volumen < 50k: no llegó en 45 min","source":"meteora-damm-v2","volH1":9.61}
+{"t":1794440888713,"type":"descarte","mint":"98onXuMQWqByEgcm7v9tTz59hsadiBGM7kroEUbRKDDj","symbol":"UNDERWARE","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":0}
+{"t":1794440888713,"type":"descarte","mint":"8KKFeT39k27su99HVdCq1wS4exuYzVCnfrnHLcQQpump","symbol":"Kim","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":986.93}
+{"t":1794440888713,"type":"descarte","mint":"8ANuh2LCyA4YtyLrLLjsFE42feGx2qbeBARoYp6Bpump","symbol":"STENKS","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":4113.95}
+{"t":1794440888713,"type":"descarte","mint":"AnvbJ1pAUDwgy7iLkazxQnsucxBi9wbpcQFVCz2hpump","symbol":"KIMBERLY","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":0}
+{"t":1794440888713,"type":"descarte","mint":"ZkZsBuU5yCJEwWPDgpuZnB9z3pXHRhHpmz5hh2Epump","symbol":"Eywa","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":178.89}
+{"t":1794440888713,"type":"descarte","mint":"2BY1fGaG8yctomZ7aWPqKThvoJqiXXQgWxUjQFoGpump","symbol":"RMN","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":192.46}
+{"t":1794440888713,"type":"descarte","mint":"HvgwtM6ua5q44h9nvq7uZXFvktyFLrBEdDfwVYGXfork","symbol":"CLOAK","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":0.16}
+{"t":1794440888713,"type":"descarte","mint":"7ejPRYrsrEmc8FudCky31rdAh646vbBkmsMiTFWJpump","symbol":"HUNG","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":1017.72}
+{"t":1794440888713,"type":"descarte","mint":"AfbMNveknKcBsnTqwDeE7dKPgjmALLuv8mFf1fGwpump","symbol":"JOHNSON","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":900.93}
+{"t":1794440888713,"type":"descarte","mint":"CfA9icKJADCko7TowRiuDjdM6Ssf3jsJg68jM1hHpump","symbol":"[invalid]","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":20.16}
+{"t":1794440888713,"type":"descarte","mint":"D627qNFyydqEBwUUBqTACFCMf2espoUnh6B7iJLpj9Xr","symbol":"GONE","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":4633.46}
+{"t":1794440917000,"type":"descarte","mint":"5UxY6Av95x8eshSX2vo1SmXEgi8Vfp6x2CKZh5tLjAbZ","symbol":"MAX","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794440917000,"type":"descarte","mint":"3FBCYhHDTAt1Yu9i3Px1VGQJggd65eFKZ2gWidzFpump","symbol":"","reason":"volumen < 50k: no llegó en 45 min","source":"migración","volH1":0}
+{"t":1794440926213,"type":"rechazo","mint":"9RyENt3gJ1MEsFPiJAMyNerYYngLDuyZfVP4GBqepump","symbol":"TILLY (9RyE…)","reason":"puntaje 0.559 < 0.6","parts":{"presionCompradora":0.65,"impulso5m":0.95,"tendencia1h":0,"actividad":1,"liquidez":0.1,"holders":0.14,"edad":1}}
+{"t":1794440945292,"type":"descarte","mint":"EgqrNrq5JugtwkL9TFKSRSyH7Jwf5h8GYbopPW8Zpump","symbol":"MH","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":3.4}
+{"t":1794440945292,"type":"descarte","mint":"9FhetyfEdH32QfDfGhdzzG2ntDo5dTvkCsDxAXSjpump","symbol":"FHC","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":35.67}
+{"t":1794440945292,"type":"descarte","mint":"G5t2MDHDmfrq1uF9ARwYnYerQ3SgUmaAPjtb2TGrpump","symbol":"GONE","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":23142.07}
+{"t":1794440945292,"type":"descarte","mint":"4HT5uean2wtaeVmbfsmj2LroERd7ympDHpNimMV3pump","symbol":"Blackwell","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":3631.37}
+{"t":1794440945292,"type":"descarte","mint":"2saJTV3X2ZFa4aXoqUpzNzp7YUxFpdfvsspt3RgSFSSG","symbol":"GONE","reason":"volumen < 50k: no llegó en 45 min","source":"pumpswap","volH1":0}
+{"t":1794440945292,"type":"descarte","mint":"JCtYQarwaaJ4h4Mk9nA1PLbXMTqi9zfB2mPPry1ypump","symbol":"huang","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":0}
+{"t":1794440945292,"type":"descarte","mint":"78WrL8Rp2AKrpPWF9UtgUsRxpji5AFBk3tRjEFdwpump","symbol":"[invalid]","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":0}
+{"t":1794440945292,"type":"descarte","mint":"HLPnjvt58jvQdoXKyRu2U7GectUavQ4ek8QLCE7Hpump","symbol":"POPELON","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":0.48}
+{"t":1794440945292,"type":"descarte","mint":"3MqCcaMCmsDuWfucSRhMfMztMeJTTyvSZX45kWw5pump","symbol":"sink","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":752.07}
+{"t":1794440945292,"type":"descarte","mint":"B1jmAc4orVM4dMtY4QhoipNxLWzVmzo6tppM37nrpump","symbol":"GTA6","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":4992.63}
+{"t":1794440945292,"type":"descarte","mint":"umbyWHYNRUVPBajwpwRfaYxB9aiMi3YnyeZXmX5wYU7","symbol":"NVDA","reason":"volumen < 50k: no llegó en 45 min","source":"stonkfun","volH1":0}
+{"t":1794440945292,"type":"descarte","mint":"CmyAEFkaVij38cHj8nToB6B5a1uKYiDjwB5J193Epump","symbol":"Eywa","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":100.43}
+{"t":1794440945292,"type":"descarte","mint":"9cv4mc1N2pEwD1ijnvYEvi7kVrQKX13trc76CFh1pump","symbol":"$SLJK","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":91.69}
+{"t":1794440945292,"type":"descarte","mint":"5za7xct5vVTo6i5Dyd5cBpcKSV7Tmc9gn49FR38ipump","symbol":"KELLER","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":162.35}
+{"t":1794440945292,"type":"descarte","mint":"27mtk1oWnzVQ7SmNA8ykNX2mMtXHA9BH4xmziEjHpump","symbol":"FIREBALL","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":28.79}
+{"t":1794440945292,"type":"descarte","mint":"D4urMU67d5Ae78Ckm9DGzbkjGad8TXCQUS7xV5uipump","symbol":"att","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":369.99}
+{"t":1794440945292,"type":"descarte","mint":"ELPugkmsfbU3aPAYEnpr4R4oi4KuTMfkBunQcbGipump","symbol":"gay","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":166.12}
+{"t":1794440945292,"type":"descarte","mint":"FhNGYRZaABF5GATU5qWRnWkNzr9vrHfSjvFhdaXapump","symbol":"$DEVE","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":2.99}
+{"t":1794440945292,"type":"descarte","mint":"EcjE8LBCxomLY5npgqXkpQ9yqXyxKM3A9gyZQtYVpump","symbol":"PMUP","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":165.53}
+{"t":1794440973608,"type":"descarte","mint":"6C4edPhmAb91EfGoT5tf5QgBohz5uknrf8L25XzLGHzN","symbol":"JAMMY","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":435.03}
+{"t":1794440973609,"type":"descarte","mint":"22NrYmX1rGwjHa9pLrh34dAHKRobwKU6YNbuATMmpump","symbol":"FADE","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":1288.93}
+{"t":1794440973609,"type":"descarte","mint":"DqGrZfdQWTiPJRyJvkhtV7fc33EMWYTPaZrqPt9Lpump","symbol":"OPAD","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":621.34}
+{"t":1794441001927,"type":"descarte","mint":"ARXeSmSNL7tgWMMeunbpywgjm3TSC8Z6HnLHCAygwvBL","symbol":"Clitoris","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794441001927,"type":"descarte","mint":"FAFToP3jxhCSK8dMZVmtx57rjzzb61k3AN1GR5BEpump","symbol":"$🚨$","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":82.3}
+{"t":1794441001927,"type":"descarte","mint":"3fgzWJZCJJX9mFN29hudyzczWGFthAzViH8fMVZFpump","symbol":"JAY","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":981.83}
+{"t":1794441001927,"type":"descarte","mint":"3P8xaNoX3ASwrXogSPhi9h1S7RtQs2DkfRSuHmeQpump","symbol":"NRAI","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":162.95}
+{"t":1794441001927,"type":"descarte","mint":"27mux3Kc8n6DmUYhon1aY4fTk45gVwdooKzb3592pump","symbol":"HungCao","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":48.84}
+{"t":1794441001927,"type":"descarte","mint":"8Mi9E1V2bdPeAaRkR5yxUsAvpzP6UBUEEUrYmgKNpump","symbol":"WEALTH","reason":"volumen < 50k: no llegó en 45 min","source":"manifest","volH1":30849.8}
+{"t":1794441001927,"type":"descarte","mint":"4c6zMSPGbudBsqTAr9sqoeqbyrAjA5XpHZ6imRLypump","symbol":"INJ","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":3018.9}
+{"t":1794441001927,"type":"descarte","mint":"Ektf2vt2sjoBoenKCQLH7K6KvBKCqsPBtzhJtMuGpump","symbol":"cap","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":248.47}
+{"t":1794441001927,"type":"descarte","mint":"FSQXQ2Rhbe43JrKYChwZJpRYkyWVmH3iuK44412Ypump","symbol":"2Huang","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":164.59}
+{"t":1794441001927,"type":"descarte","mint":"77QASgpgRg3Qo8H4sjx1PCR9M2Xz3Mzyta1XpRkPpump","symbol":"KELLER","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":1369.51}
+{"t":1794441001927,"type":"descarte","mint":"2Vwx2tASaXa4YFHubx2bQFTM8Pgz8PX5JQ81ZamdtY4H","symbol":"Max","reason":"volumen < 50k: no llegó en 45 min","source":"pumpswap","volH1":0}
+{"t":1794441001927,"type":"descarte","mint":"Zqx6ukMzqUKv4e2DvKwZJFH6sxdNrWtphrzsovZBAGS","symbol":"Cwcld","reason":"volumen < 50k: no llegó en 45 min","source":"pumpswap","volH1":18954.53}
+{"t":1794441001927,"type":"descarte","mint":"Fh39QD5fV232X3y8CJZSso1jzV8AJmSjM7T1eEaDpump","symbol":"Huang Le","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":0}
+{"t":1794441001927,"type":"descarte","mint":"EYAgUCk8cFLEmS7anykd1jVGQuWeo9ZR77o6zHULpump","symbol":"GONE","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":0}
+{"t":1794441001927,"type":"descarte","mint":"AjQHtLCbfb4sRXYDFUmdwokPcc8YznzPQ8pD5tUWpump","symbol":"GONE","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":167.16}
+{"t":1794441001927,"type":"descarte","mint":"27muq8ur8sG6HpnFgQayfp6G4NxYzGTDRiAJuuT6pump","symbol":"$HXG","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":24.55}
+{"t":1794441001927,"type":"descarte","mint":"Fm9fHEiwxowLCwCKU9dsoG1przf6Hs4brKtgxxhmpump","symbol":"GONE","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":5.67}
+{"t":1794441001927,"type":"descarte","mint":"4tyLfcHN3XnuMQ1aYjwWhZdwkh397U3n1xRGXKhhpump","symbol":"NVIDIACEO","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":689.98}
+{"t":1794441010911,"type":"descarte","mint":"D6iUaDUtr5f3t9DwTo9KqsEHiLN85YiA36eTn3JS49r","symbol":"COCK (D6iU…)","reason":"LP no bloqueado (0 %)","top10":17.1066733608911,"lpLocked":0}
+{"t":1794441030247,"type":"descarte","mint":"92LPLjiad5mGmJW5UZkxpqXxCTkcQMW82BmKYxgspump","symbol":"KAIRO","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":3064.87}
+{"t":1794441030248,"type":"descarte","mint":"EodiUWr62GU14zA7rBebBkwrSFijKGQPscNfZJKMpump","symbol":"BAC","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":91.44}
+{"t":1794441030248,"type":"descarte","mint":"3VKRbwnWTKpNAwoztrKBm4jA1beudJhNJ4SRRpYzpump","symbol":"ALETH","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":331.35}
+{"t":1794441030248,"type":"descarte","mint":"2i3wmaWDpNyCsYwpB4cZKebbnYmgdas5y5Fnpodbpump","symbol":"Buy$GOODTIME","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":446.1}
+{"t":1794441058318,"type":"descarte","mint":"2Pf9UD1tUMtsENGi1UfBSaCgwcggGPSwRvVriVpX7ZFK","symbol":"TILLY","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":61.01}
+{"t":1794441058318,"type":"descarte","mint":"BvoxKdb52doZ44EnTc1iVRsbCiX3vcKs3zXsHCz3pump","symbol":"GONE","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":2458.11}
+{"t":1794441058318,"type":"descarte","mint":"DSqADbAaHQXfhDTte979weAXRpbaZnJy2JmwK9U5pump","symbol":"NVIDIACEO","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":123.26}
+{"t":1794441058318,"type":"descarte","mint":"6KH9ALQtaaTtkT75TYVGPT364iEKSrDkKmTEoUwzpump","symbol":"trench","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":259.25}
+{"t":1794441058318,"type":"descarte","mint":"9yPctxwAiZvTMTPbFeWDwSJNGamfNBWBnKUPX5R2fWzF","symbol":"Mustache","reason":"volumen < 50k: no llegó en 45 min","source":"meteora-damm-v2","volH1":355.27}
+{"t":1794441058318,"type":"descarte","mint":"2mwR3iXH9vgnc25MSZcUHeDk5pJG7g85agCGQ4r9pump","symbol":"$LUNA","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":644.83}
+{"t":1794441058318,"type":"descarte","mint":"JCCeQ9x6hC6dwvvM9ZSmGXwkD9XYKqw3L57vB6nspump","symbol":"APPLE","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":2861.33}
+{"t":1794441058318,"type":"descarte","mint":"A2LWHbDMMB5UaaxbvcGuPX9dgjtnrK1Wh34HKcdBpump","symbol":"BullGone","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":623.46}
+{"t":1794441058318,"type":"descarte","mint":"5uFt1ZCSWLkYZKeT6RsbQEJnStFj5YWphTzSrZcwpump","symbol":"$CCOW","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":58.82}
+{"t":1794441058318,"type":"descarte","mint":"BQQbPtbgR5VRSYqxU5vXUzA4kPeBkRXL5rozdqCMpump","symbol":"DICE","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":32.97}
+{"t":1794441058319,"type":"descarte","mint":"3W5oMMMrQL3bN41WyxXe8oLc8L4KJZN5Y8CuypRgpump","symbol":"Nhashem1111","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":0}
+{"t":1794441058319,"type":"descarte","mint":"27mvSnbwugFLCVcRofiAXJo7pP6DDjn71e33bF5opump","symbol":"China$Spy","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":72.6}
+{"t":1794441058319,"type":"descarte","mint":"9fWcAtMpHbTfifRmMoEWuEoHs6qt29kezttnqC9qfork","symbol":"WANGCAI","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":0.1}
+{"t":1794441058319,"type":"descarte","mint":"5SAgdh72xaQBAbaRhdx38q4aESiKbe3rWC4gfx9PrhwQ","symbol":"APPLE","reason":"volumen < 50k: no llegó en 45 min","source":"stonkfun","volH1":0}
+{"t":1794441058319,"type":"descarte","mint":"6XVwYV4JPwW3feXtdTUXFPYsLKFnG6zUZgTnAzEppump","symbol":"Clitoris","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":15862.96}
+{"t":1794441058319,"type":"descarte","mint":"6VjeEU39TutsgwApwDir52nswcaN7wXU8ob7P43tiN6z","symbol":"Retardkid","reason":"volumen < 50k: no llegó en 45 min","source":"raydium-launchlab","volH1":0}
+{"t":1794441058319,"type":"descarte","mint":"2TXqi7ZrY3GWkyPEUkqcJhJaSSX3q7ii93DkBGqyDt2t","symbol":"Tim Apple","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":510.87}
+{"t":1794441058319,"type":"descarte","mint":"Znd6WNJ2F7ycMbx8XLG9Q194HwDSuppAeC9RyCupump","symbol":"MIHAOGOAT","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":0}
+{"t":1794441058319,"type":"descarte","mint":"D5gpjEaFHxDSezeSWiyqVaG2SeXHJeXmWmC9QcMrpump","symbol":"SirenHead","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":1095.13}
+{"t":1794441067385,"type":"compra","mint":"7r3Hcmzzko9UrCvbCAN3QhUfojs2RqpnzH8tfeyRpump","symbol":"Mustache (7r3H…)","reason":"filtros OK + puntaje 0.69","size":7.54,"price":0.00008057,"parts":{"presionCompradora":0.47,"impulso5m":0.95,"tendencia1h":1,"actividad":1,"liquidez":0.01,"holders":0.71,"edad":1},"top10":14.08822034515939,"lpLocked":100,"volH1":320050.71,"liq":20869.52,"dex":"pumpswap"}
+{"t":1794441086558,"type":"descarte","mint":"G2TotRzCy73g2K3XYxKDibduWvTT32woA1QMsWtRpump","symbol":"trenchpal","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":16598.43}
+{"t":1794441086558,"type":"descarte","mint":"Bx7BwivhSSjm6NVN1uw69ZE7r3WjUfrAEev9FiiCpump","symbol":"SPY","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":928.47}
+{"t":1794441086558,"type":"descarte","mint":"HzTgYbfFqkdnzWt1zvbN1SQEQi2umB1rNshVvsXTpump","symbol":"SPY","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":1157.17}
+{"t":1794441086558,"type":"descarte","mint":"9EZDczLNGWQ4hgwkHWsSkdazS8GjpGWcMaYt7FHspump","symbol":"SPY","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":273.63}
+{"t":1794441086558,"type":"descarte","mint":"GMiuSXLyhaTvutRHQg8EDcK8Em7rKYpK4Wy1qdbXpump","symbol":"SPY","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":53.93}
+{"t":1794441086558,"type":"descarte","mint":"4uc3bfUow8Y2cnZypECJMndeqvZvAQ4aHNstjnuzpump","symbol":"SPY","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":51.1}
+{"t":1794441086558,"type":"descarte","mint":"GCyNeAJc3CPoLGCqjiSyYRqjzGrpvivapBKaLpUNpump","symbol":"COIN","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":58.65}
+{"t":1794441086558,"type":"descarte","mint":"FzTUwB5fcbdawdrRSa9cPXsbQR9Dw7MMq8rsoCZcpump","symbol":"OPAD","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":4166.86}
+{"t":1794441114876,"type":"descarte","mint":"7V78dK5n4ToTomxrnZaD1ZJGo2KjnsjVhptPBbuWpump","symbol":"GONE","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":0}
+{"t":1794441114876,"type":"descarte","mint":"8vci7MAvPb5qr32LcXAd8E4zQ7WRLUEj3nz7fbuWpump","symbol":"GONE","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":0.17}
+{"t":1794441114876,"type":"descarte","mint":"8dG3ZBgyD9DJbdjNDDp9cm8nxEgxWSxhP6iuJ3pypump","symbol":"unspyable","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":0}
+{"t":1794441114876,"type":"descarte","mint":"GQ848uuKDU69v9vrHu1BQDyuHCGe4KLpb6YKFeTdpump","symbol":"GONE","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":0}
+{"t":1794441114876,"type":"descarte","mint":"GE8ZMpSyGjTzVpwe5PgCWNg3xfXtbBAdv8XXFeEWpump","symbol":"ore","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":448.99}
+{"t":1794441114876,"type":"descarte","mint":"GADCf1M35XH6KyVbo7bpEtF2avnopi69FQ79Qt9mpump","symbol":"GONE","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":1429.81}
+{"t":1794441114876,"type":"descarte","mint":"9hDVknwWTdERG6RrZ1L3dZcTEcgPc4wetnez2TFepump","symbol":"BRSUN","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":0}
+{"t":1794441114876,"type":"descarte","mint":"9Nz389imU8i8XRvxKEPYAseDSVw5avzsCj3ZsDmipump","symbol":"Halal","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":2885.32}
+{"t":1794441114876,"type":"descarte","mint":"HqEziT2f7qDXmbPhUWTgZSrE1zRestKFAkgb1MBCpump","symbol":"ORGASM","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":692.53}
+{"t":1794441114876,"type":"descarte","mint":"12HQt1FAGasFBtU883qimA3MhCvAK3ae59Q9MPreFPfg","symbol":"HUANGSHALLAH","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":699.17}
+{"t":1794441114876,"type":"descarte","mint":"7utPDufXC5egvQpBuAxVnPsrL5vfsziVoL7JAaGjebG9","symbol":"HUANGSHALLAH","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":583.7}
+{"t":1794441114876,"type":"descarte","mint":"EWbTPuU5CTRRZRhNNeBXCzGJoVhPJjSASnezvRcNpump","symbol":"Dave","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":43983.35}
+{"t":1794441114876,"type":"descarte","mint":"3J2M3tWDJzApwyL9DwBLMxjYsAK7w3v42wna6aBSpump","symbol":"Cupsey","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":83.61}
+{"t":1794441114876,"type":"descarte","mint":"4ZJ9xsr8vmtK5esmwgWmZqjc89X4Qgrjkv28ByDbpump","symbol":"$DRM","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":3.52}
+{"t":1794441114876,"type":"descarte","mint":"2yH7TNBfJh9Gr1wmLpUMrauHoqP2tyCsLuwmAmdedYNa","symbol":"HUANGSHALLAH","reason":"volumen < 50k: no llegó en 45 min","source":"stonkfun","volH1":0}
+{"t":1794441123701,"type":"descarte","mint":"Cy3bFG4L4ZjZydoV7Ak4QRihRR1PZCNBjsMqgs9upKQR","symbol":"POKE (Cy3b…)","reason":"top 10 holders 20.7 %","top10":20.658338490550218,"lpLocked":100}
+{"t":1794441126014,"type":"descarte","mint":"Bm7nAJJvn9DACd2PJyK8Bmnoagv3hQiG4cQAPSCr66Zx","symbol":"CEO (Bm7n…)","reason":"volumen < 50k al revalidar"}
+{"t":1794441128465,"type":"descarte","mint":"Dc71xEvX1GgZdRGCKhsHsmBZMJvgpdWcFoykd6nkQEJb","symbol":"CEO (Dc71…)","reason":"LP no bloqueado (0 %)","top10":3.5832232400893895,"lpLocked":0}
+{"t":1794441130963,"type":"descarte","mint":"ABXvsrmk4s2WsCvWfRLFv447cHz1ZqMGytnSkzWjJ6q","symbol":"CEO (ABXv…)","reason":"LP no bloqueado (0 %)","top10":10.9597597748681,"lpLocked":0}
+{"t":1794441143220,"type":"descarte","mint":"86TuRvwiGi9Zf9V4RdxmcpwPKaRVhvBk4U4Ty6Rwpump","symbol":"SACKED","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":136.7}
+{"t":1794441143220,"type":"descarte","mint":"AYvn2pa4x685K7X33sNA1krMot1RfKvoTdcHFLb2pump","symbol":"PUMP","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":1575.96}
+{"t":1794441143220,"type":"descarte","mint":"DcHHkjGtj9S7ADHCVnLX8ZsFLcNUKguvs5dFpSEZhnwL","symbol":"MEOWST","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":3.32}
+{"t":1794441143220,"type":"descarte","mint":"CCM4DxKH1mLY3kBhVvGGPAP85vqLZsiMUqXt1zuKbZWx","symbol":"JAY","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794441143220,"type":"descarte","mint":"7NN6VqSJpTuzMgv6GBFjfWcc5T46c7FJS6UFvtoCpump","symbol":"Buy$GOODTIME","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":407.91}
+{"t":1794441152438,"type":"rechazo","mint":"55TB1G3TedWG1kdeZeBjTpGUq7C1Kk917j4cdmaDpump","symbol":"CHICK (55TB…)","reason":"puntaje 0.472 < 0.6","parts":{"presionCompradora":0.53,"impulso5m":0,"tendencia1h":0,"actividad":1,"liquidez":0,"holders":0.78,"edad":1}}
+{"t":1794441171563,"type":"descarte","mint":"2Cv34p3Chzdkg3Yd75srZVZpbq5Xm5KnaT3gxAwKpump","symbol":"FAMILY","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":320.8}
+{"t":1794441171563,"type":"descarte","mint":"48csbYHzSHvdSmfqJWKNLD9eQdzUe3LFDba8f985yUC6","symbol":"JENSEN","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":263.05}
+{"t":1794441200228,"type":"descarte","mint":"E7QvUqj6o7rHX6tpq1jA9V1pQUooofswDEpNFqnjpump","symbol":"Dave","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":3.93}
+{"t":1794441200228,"type":"descarte","mint":"3gkZHQtKNaq29bNquXGCcdHXju2jNiRBRwU1y5nQpump","symbol":"GTABABY","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":1998.95}
+{"t":1794441200228,"type":"descarte","mint":"5a32PMHbDcrduTP4DJniQ1qcJ2ZtTgxw1vNJY41xpump","symbol":"JAY","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":18457.15}
+{"t":1794441200229,"type":"descarte","mint":"4PASc2BHm2DmpzK2E7pTh5RW3qNwnoSNSenhpDSxpump","symbol":"DOOB","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":174.66}
+{"t":1794441200229,"type":"descarte","mint":"6aatW27DAggvS81fzxRSRT9nvCAoGfjznZpDhoS3ve5X","symbol":"PUSSY","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":0}
+{"t":1794441200229,"type":"descarte","mint":"vzNp23tn7XZabnfodBhXdazzk5nLSH7hJ2g5YvaBAGS","symbol":"LV","reason":"volumen < 50k: no llegó en 45 min","source":"bags-fm","volH1":298.69}
+{"t":1794441200229,"type":"descarte","mint":"84c7FRxeZmDBm3HTCoWuB3mPwSTN5LUdpz26oKZepump","symbol":"BullGPU","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":111.76}
+{"t":1794441200229,"type":"descarte","mint":"3egGJpL2wv2pxgGgvwzMh9CXjEmzoshLgvzCdornpump","symbol":"RETJENSEN","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":162.64}
+{"t":1794441200229,"type":"descarte","mint":"9XggrKmqrb8JuVLzat719LdVipAH6L94CDB54VFd644f","symbol":"Max","reason":"volumen < 50k: no llegó en 45 min","source":"pumpswap","volH1":0.04}
+{"t":1794441200229,"type":"descarte","mint":"DgnvdQ8aYzaKmwy58GtfDTed16Wkxfa3Eg1Y4TGGpump","symbol":"PURPLE","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":795.61}
+{"t":1794441200229,"type":"descarte","mint":"d22QUvJZZ1cQYBdTypCDv7QWqG9kiYS4cDGjGczpump","symbol":"Dave","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":0}
+{"t":1794441200229,"type":"descarte","mint":"BdBtWrKpnYb1vAVp8nfXSPn2Hd2prGzFYrKUUW5Epump","symbol":"GummiBear","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":55.41}
+{"t":1794441200229,"type":"descarte","mint":"BbSJMBi6tFmqQYwMeyAwkDPHzQKJUtp4ZNgJsWe1M5Ys","symbol":"LETS GO ","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794441200229,"type":"descarte","mint":"CDgWg15sTXj4REWianLbKwqn5gxX9SFPjpumeJFgho7V","symbol":"Lust","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":1104.42}
+{"t":1794441200229,"type":"descarte","mint":"2CkbgtrqrbJWFi7dUC1g83NLtmbBBxgJKoZ1aUBmd3Lu","symbol":"Horny","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794441200229,"type":"descarte","mint":"4n2qssjZMvACKHB3EjuH6uKqJhtFjjLGCyndoPP5RsW7","symbol":"Horny","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794441210812,"type":"venta","mint":"7r3Hcmzzko9UrCvbCAN3QhUfojs2RqpnzH8tfeyRpump","symbol":"Mustache (7r3H…)","reason":"stop −6 % (precio -9.8 %)","pnl":-0.8736,"ret":-0.1159}
+{"t":1794441228556,"type":"descarte","mint":"AH2wn5nkvKWdCna4U2tTz9WrtnmPoYw4EyiYteUMpump","symbol":"VICEBERG","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":373.67}
+{"t":1794441228556,"type":"descarte","mint":"DAQ8RXmQ7RohM8gn9uinFSaFdc8r1TPTcKPF8mQEpump","symbol":"Hi","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":308.85}
+{"t":1794441228556,"type":"descarte","mint":"8dRLFspw78reCpDTR5DPVPnWVeuuiz6zQPhkAMMef9rW","symbol":"MINECRAFT","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":1.55}
+{"t":1794441228556,"type":"descarte","mint":"HKw5821XZ2VkQ8oahtRLrRshApnNfjvjfcf9KyQbDQjR","symbol":"Intrepid","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794441228556,"type":"descarte","mint":"7uSow6kCgM1JZjzeSPEBvFgh2W5njBWritHYZtShYn2R","symbol":"Koah","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794441228556,"type":"descarte","mint":"7iog2r3CdFHmjNjvo434E3hcvXVo9YismipFwDrLhN4i","symbol":"CR7","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794441258170,"type":"descarte","mint":"L2yA5x67RmZgcJRFe3xLK8gnNrMznS8gi9xf4rApump","symbol":"JAY","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":25499.43}
+{"t":1794441258170,"type":"descarte","mint":"8rTut1jfPxqm6Vfd36xSkyqsLFi8w8fPSyreMvJm1mFT","symbol":"Jensen","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794441258170,"type":"descarte","mint":"GExYyTXGmTuxxQgDQWYmiLxobfVLxPZCTsEYLZCXpump","symbol":"HUNG","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":2.75}
+{"t":1794441258170,"type":"descarte","mint":"G8chSaaiLEmWQgvDdT7JUuoUgKXo9iKKa1crYKsWpump","symbol":"SirenHead","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":191.98}
+{"t":1794441258170,"type":"descarte","mint":"27mw6Hhi1XyDffPgccEhxmabiXRHHBwkXgmwdDWCpump","symbol":"$JBG","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":166.29}
+{"t":1794441258171,"type":"descarte","mint":"AQ8K2RThrBwcYLVASXVS6pjjyt1XxdQjqNqrg63pump","symbol":"DOOB","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":128.62}
+{"t":1794441258171,"type":"descarte","mint":"CVgKb13eugKNGTRSXzBf16uk9EFgXscoXj7P3vyRpump","symbol":"SPONGEBOB","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":0}
+{"t":1794441258171,"type":"descarte","mint":"4haYmCza2rZwFamAzw8k898Rfo3MShMjdr18WHzLpump","symbol":"SI","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":1257.84}
+{"t":1794441258171,"type":"descarte","mint":"54kX6MK5A3W9S1VPkPVs2C8ZvhYkh5tdtpbpKWEkpump","symbol":"JHM","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":81.58}
+{"t":1794441258171,"type":"descarte","mint":"4oARmuTXZy3xrs6hJ9YhAhrbXKtNuTE5LxWaHdCopump","symbol":"CAR","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":4866.01}
+{"t":1794441258171,"type":"descarte","mint":"J9qex3LX3xNQbmXA45pgC8ikK4LyikP1MwoMpedPpump","symbol":"MAXCOININSIDE","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":166.89}
+{"t":1794441258171,"type":"descarte","mint":"9P31fBKsexRThzdMvHPisV8cX4Xiop9MAugeEEBRpump","symbol":"NVDA","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":8.13}
+{"t":1794441258171,"type":"descarte","mint":"8C62vqiJMQ7Qp7hABggkgXKoPGLTx2nc8DWCnXbKpump","symbol":"song","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":129.03}
+{"t":1794441258171,"type":"descarte","mint":"DQwzpNEdGWmYiFppLxznXEbpzf5hurm3hVDgCU6fLoat","symbol":"","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794441258171,"type":"descarte","mint":"5RButvg6hEun2WvccShuLUfDgqXXbciYDGXCrnCcPM8s","symbol":"PVE","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":8287.02}
+{"t":1794441258171,"type":"descarte","mint":"XHoc4oeX9Lb2vsDBe6qp7vXiST6u3oBuVmaothzbUsb","symbol":"PVE","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794441286234,"type":"descarte","mint":"B31iaJ7kw4bo92Cjzx89t8iVnQbrJ6XZrR5uPLGkpump","symbol":"JOFA","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":83.37}
+{"t":1794441286234,"type":"descarte","mint":"89Ef3xm89gRD5K8eDn1oPENhuPGG72djahcsAE72pump","symbol":"NVIDIA","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":41843.43}
+{"t":1794441314897,"type":"descarte","mint":"7iv8mZyK7PUabjsvymhsvmP8a2JGonaPMysbHEnppump","symbol":"Zane","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":27210.24}
+{"t":1794441314897,"type":"descarte","mint":"H7UM3dVL2sihawnDP9iPK41v2got4cMWh744Yi35Y5Rf","symbol":"Discipline","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794441314897,"type":"descarte","mint":"AVHTK9ysoTHBAb92CqAHiFgwmPCX4fQSB9ddkBS7f86z","symbol":"Zane","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":340.27}
+{"t":1794441314897,"type":"descarte","mint":"D2nLnnB9r6a5G4pYJdRyVQFnCj7tyCiz7RjYcPbypump","symbol":"DIAMOND","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":1360.55}
+{"t":1794441314897,"type":"descarte","mint":"27mxeybtB7VAaHSYjrEQDLUKYFNM84YZj9mEEQ3Lpump","symbol":"JoeRogan","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":396.53}
+{"t":1794441314897,"type":"descarte","mint":"4p5vxCsro2rtQb5jKBJnNCWufUESkc8GdRCtMVsApump","symbol":"PURI","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":1143.9}
+{"t":1794441314897,"type":"descarte","mint":"27mxWa4CwegNoeBzw7sz3Cm2vR72rQRv9qQGL7sVpump","symbol":"$Nugget","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":250.08}
+{"t":1794441314897,"type":"descarte","mint":"5TvwcgbP9nWS2AEg3EVWk1Ms9BvqCTkctzLyQ57xpump","symbol":"Jensen","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":3331.61}
+{"t":1794441314897,"type":"descarte","mint":"DeBN7Cf1Wm3Cg5etv9WMuUJxqMNQ7V69hd8zUDHApump","symbol":"Huang","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":81.34}
+{"t":1794441314897,"type":"descarte","mint":"7dHwBfXUU8ecEJBjULHV4DAGcGq4m6SdtctUbZExpump","symbol":"GEMINI","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":177.56}
+{"t":1794441314897,"type":"descarte","mint":"DDLrYbzHaD6WViJefy5c8GESzvZeqqwu9wiTVc3opump","symbol":"ORGASM","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":261.45}
+{"t":1794441314897,"type":"descarte","mint":"GzLTcbmzqXRw3sqaBh3smBWdoGqYjFefuhGsdAd4pump","symbol":"Koah","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":659.35}
+{"t":1794441314897,"type":"descarte","mint":"2SKtFqfVNMCDat6iUJDDYwLDwtUCV9CS8RyqR5rEpump","symbol":"Horny","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":2997.59}
+{"t":1794441314897,"type":"descarte","mint":"HnHGPj9UkCyQBxAYCVYEqkR3xK91fKpvUdE4m5ERtBKE","symbol":"HUNG","reason":"volumen < 50k: no llegó en 45 min","source":"meteora-damm-v2","volH1":0}
+{"t":1794441314897,"type":"descarte","mint":"9RqvPdGp7ufEXzb7Cygxbg5TTzqFAsaR1GVLbcEApump","symbol":"Horny","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":400.55}
+{"t":1794441314897,"type":"descarte","mint":"CUCf3AJ5wyNBmgC3EW2u2LR8YrpkxcCT1SFDTQmnpump","symbol":"wApe","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":18.72}
+{"t":1794441314897,"type":"descarte","mint":"9hyZPzwV6BggbCzSQwqeKjbTouDcNNfnnr6umtMBpump","symbol":"Fox","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":65.35}
+{"t":1794441314897,"type":"descarte","mint":"J2yPfsu8dgvo567578D3Lpxo5wDUjcpxTLtw1Shzpump","symbol":"AFFAIR","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":16.63}
+{"t":1794441314897,"type":"descarte","mint":"78xgmiM6GUY2LT5RQ6b37r35UtwjbtSvRm9NokaKS81F","symbol":"Horny","reason":"volumen < 50k: no llegó en 45 min","source":"pumpswap","volH1":0}
+{"t":1794441314897,"type":"descarte","mint":"mpfYVTSDUNuQvSXcGi2o1y7huaE9jetCTDR9HBZUVU7","symbol":"TILLY","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":26.31}
+{"t":1794441344337,"type":"descarte","mint":"GM5uHJh2nuSCmN98TQfrB3Rvvccv3ER2LXxNLLcfpump","symbol":"DANNY","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":82.15}
+{"t":1794441344337,"type":"descarte","mint":"739dnZEG4yaBWFsY8L8ZwrfhGG6dhtCSercW8Umspump","symbol":"vibeshift","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":660.55}
+{"t":1794441344337,"type":"descarte","mint":"AaPGkczyM8G7gLJ3iZ6U1L1AZSYH4yVmfNh1YoWYpump","symbol":"Green Chip","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":3.66}
+{"t":1794441344337,"type":"descarte","mint":"CKd7d5ZTbdC2TEotrhny6eV5W3HD68jSki6NYB7v5ioe","symbol":"Discipline","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794441344337,"type":"descarte","mint":"AeMKGJK3mAVcy5XpfjiZzWPzHTZCU6ZhPsJndveTpump","symbol":"CTP","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0.82}
+{"t":1794441344337,"type":"descarte","mint":"HbiD1d4XkwbnmJPPU4q3wshThpq14kWGYue4EyZpump","symbol":"huzz","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":2218.48}
+{"t":1794441344337,"type":"descarte","mint":"DhpRKzbXGh5wZgxuAWqJ9zVx4UnjTaNyR1CsXgU6pump","symbol":"vrl","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":37.37}
+{"t":1794441344337,"type":"descarte","mint":"BVtHriwr5shVvX99wTCdNdc7SktdL82MHoyWkaVQqMGZ","symbol":"CHICK","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":1.9}
+{"t":1794441372414,"type":"descarte","mint":"AZN18si85NtBJP9vQ6kJMYA6YkAHmi2LLknXtmaopump","symbol":"Discipline","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":4795.79}
+{"t":1794441372414,"type":"descarte","mint":"34Qs129vYBZqBxUNkTzRqpFpVJAAs3NQbCPy6xqMFLFY","symbol":"FLOATCAT","reason":"volumen < 50k: no llegó en 45 min","source":"raydium-launchlab","volH1":0}
+{"t":1794441372414,"type":"descarte","mint":"6ePXLqd2XRZ8Qg9wWMWNJDuBLnp5VyAH61HhonRTpump","symbol":"POINKIE","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":721.55}
+{"t":1794441372414,"type":"descarte","mint":"DTrrnTExp9TD8W8dZt8ZE9PaRfPTxMGNVDVjE6Tepump","symbol":"FERSPE","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":58.63}
+{"t":1794441372414,"type":"descarte","mint":"55Q9PpmAwTzx1dPpcfkC4ePQHxWwram5WeoD14Ubpump","symbol":"👑","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":14.5}
+{"t":1794441372414,"type":"descarte","mint":"Da7GhjqpS1AdeEZ3u81GSZvCazLQu1Y3jjNmoNw7pump","symbol":"TAO","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":583.75}
+{"t":1794441372414,"type":"descarte","mint":"FPmH2EmUyMuGiwCK4zUKc455SuNfay8qDVNRPd6ipump","symbol":"Jensen","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":4406.98}
+{"t":1794441372414,"type":"descarte","mint":"87ZmM2PQeU5sgArCR1RyyQHHRNJ19gUqnsJ9aETSCP9M","symbol":"HORNY","reason":"volumen < 50k: no llegó en 45 min","source":"pumpswap","volH1":0}
+{"t":1794441372414,"type":"descarte","mint":"DejCjnunCHBpQvogoLA9Mthk9AT6Lwg1FYZoN99vpump","symbol":"SOOTS","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":280.49}
+{"t":1794441372414,"type":"descarte","mint":"BZshWn8SwABkBDERU6iKRLAtb7gMeQjtcrAo8TLXA4u5","symbol":"Horny","reason":"volumen < 50k: no llegó en 45 min","source":"meteora-damm-v2","volH1":1788}
+{"t":1794441372414,"type":"descarte","mint":"JhwdggXLVWREdyKTx4PfiEXoxTGPrPzwJeFhByupump","symbol":"SATINU","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":66.77}
+{"t":1794441372414,"type":"descarte","mint":"8fCE5CsmMudwqBVt6i1BVS2EbSLf2q9cXFxMg5nHpump","symbol":"HWARE","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":65.58}
+{"t":1794441372414,"type":"descarte","mint":"Bmnj9vN36ZCFksCDa2PDYXqyKzGfJqtzfbgFxWzUKL7L","symbol":"SKIRM","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":3487.32}
+{"t":1794441372414,"type":"descarte","mint":"GwspS5jqKHQREpCiKWWcbJNqqpZXBg8k1jG1LoLyPgHY","symbol":"SKIRM","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794441372414,"type":"descarte","mint":"8n1G5MjQ6pDbQ7AGLvdkoPAJ4FkbDWujQoeaaad8pump","symbol":"BTC","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":565.17}
+{"t":1794441372414,"type":"descarte","mint":"4N6T5fm9WxDgVw2RBPUg8Vgbw47Kbpu2Vwh5kKuDpump","symbol":"horndog","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":11.46}
+{"t":1794441372414,"type":"descarte","mint":"4mUPQyU9A8cgK9ZPbBNk2Uz7PpzSNBhJen9nR2CAfoUP","symbol":"DISCIPLINE","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":405.33}
+{"t":1794441380888,"type":"descarte","mint":"9YwuZuNnK85fFjHj68RwAprPfrrachkK2j9zH2rPobFe","symbol":"COOK (9Ywu…)","reason":"LP no bloqueado (0 %)","top10":17.87717289428798,"lpLocked":0}
+{"t":1794441400488,"type":"descarte","mint":"Eqv5hk2AvExvf83mBVsU9ZrKYpuJi8WH889u36B1pump","symbol":"","reason":"volumen < 50k: no llegó en 45 min","source":"migración","volH1":1288.96}
+{"t":1794441400488,"type":"descarte","mint":"ASHZGPeDSwkiKJk66WD7LM3SKbdd7tYBUc7xn9fApump","symbol":"","reason":"volumen < 50k: no llegó en 45 min","source":"migración","volH1":0}
+{"t":1794441400488,"type":"descarte","mint":"46c3UmrQJih6a2JYstt2tsLjjBunPJrihqFLAnn8pump","symbol":"CHICK","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":444.25}
+{"t":1794441400488,"type":"descarte","mint":"CX1K9j3C21TEWGuJ3Xi256j7JFFMPZz4X6AQV3nMoJpy","symbol":"Tilly","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794441400488,"type":"descarte","mint":"2EuxvEgNaZ8FcbXuUy9SPuRyEfJ9tNLV6PvHPZXdMNAB","symbol":"LETS GO ","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794441400488,"type":"descarte","mint":"3oSN1iChwyWGinLVAvob4uN2KtyjWjLMeRXFAssgpump","symbol":"sovmao","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":1603.53}
+{"t":1794441400488,"type":"descarte","mint":"7R9khSvRnMKGfcztASYKzD2cV77gPNzsSspiNLy9qub1","symbol":"sovmao","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794441428551,"type":"descarte","mint":"hTG8LyimQXzW9MWeCyBmj1TK2beic7z5AA5C6NcfHT6","symbol":"wifjacket","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794441428551,"type":"descarte","mint":"Bq4fLegjzzvYs7P5n6EmFu7kzjw9GnBhTy5jJKwod2PQ","symbol":"Audacoin","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794441428551,"type":"descarte","mint":"9CirYuxDcFZGXCwq1Bu9Rib51TdAFNPQGQncZU6xqGrL","symbol":"TRENCHY","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":386.48}
+{"t":1794441428551,"type":"descarte","mint":"9iqxvy91TVXNp2uTE2DYzk6dwQXdUd1XZSx6dQmAf7r1","symbol":"Max","reason":"volumen < 50k: no llegó en 45 min","source":"pumpswap","volH1":0}
+{"t":1794441428551,"type":"descarte","mint":"Aq6eDUPmeThScsgChRGfYuogBnbpLYY1NvUF2r8m7K5x","symbol":"TILLY","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":1119.26}
+{"t":1794441428551,"type":"descarte","mint":"6MU6zPbpQVVRZZACMnty15coyBUEYPidCPQUBymZpump","symbol":"TILLY","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":2979.58}
+{"t":1794441428551,"type":"descarte","mint":"5A9ymhTre2upTRRi6iY5xpxDfTeyeUB4epmF2ZmEpump","symbol":"TILLY","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":7690.97}
+{"t":1794441428551,"type":"descarte","mint":"HtUZgyjJMHeSmagPpQA3njx4ckk4fkjVA4THcMDwpump","symbol":"$SCOTT","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":249.73}
+{"t":1794441428551,"type":"descarte","mint":"GC1fJm2qZK1Q7fdJajFwKJnQtNWUDAChdj8BiFsbpump","symbol":"CHIMP","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":748.61}
+{"t":1794441428551,"type":"descarte","mint":"BCxy5rFT2pVPZJk1D83uJv7Gv4oi8z9gvWc8HDPBpump","symbol":"maxex","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":3.37}
+{"t":1794441428551,"type":"descarte","mint":"38A6neQsJvr2fweZXkY3EQNNA4NDAF5wwckTqEabpump","symbol":"VDHZ","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":44.03}
+{"t":1794441428551,"type":"descarte","mint":"Fyh3bXE1d9mw3Q9bUaJ5PboKp7MnRPRc1D8SvvCjpump","symbol":"$CUTE$","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":38.51}
+{"t":1794441428551,"type":"descarte","mint":"Ax3Sv3UtTibYLdaoYk1o3RxpMBDuwrvjtbtasFZSpump","symbol":"VIBESHIFT","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":194.33}
+{"t":1794441428551,"type":"descarte","mint":"8U3J1LrgAf5Dz9gaF8DNfWLBFe81ys51pm7Wgycrpump","symbol":"$BTC","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":12178.45}
+{"t":1794441428551,"type":"descarte","mint":"HAGPdqseFtmGJ7uL17VWNoBJK9L8A9cBVvxj7wFFGFHR","symbol":"Max","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":4.91}
+{"t":1794441428551,"type":"descarte","mint":"jnbeYFbKgUm33R5cZLpNaNqDdCvLWnRwAcQg7ACpump","symbol":"CHICK","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":3677.77}
+{"t":1794441428551,"type":"descarte","mint":"88VjtWvocwtc227s8njWXeSBX6iTTWChFURThdQpump","symbol":"DeepSeek","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":41683.95}
+{"t":1794441428551,"type":"descarte","mint":"3cSY4urnnbhoPpJ7LSRMLNamDdFinjMhbvjvGtZqpump","symbol":"Horny","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794441428551,"type":"descarte","mint":"3KTXW3mPU3AZnEocMmUXef9TjVbdjPnJK1Hw3oy9pump","symbol":"Horny","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794441428551,"type":"descarte","mint":"5vw5DTRTgZfKyewdVWsA9tnYrkvZwXXpTP5fEwn4pump","symbol":"","reason":"volumen < 50k: no llegó en 45 min","source":"migración","volH1":0}
+{"t":1794441428551,"type":"descarte","mint":"BuZHAu3CaXpfSyDU6N1VVNvex5Tmi3nMbLqb5pnfpump","symbol":"cap","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":9.82}
+{"t":1794441437350,"type":"descarte","mint":"2AReFdR9kkaoQPGCKWV5AU1ugnvMDfA42SnJXSZbudRZ","symbol":"Horny (2ARe…)","reason":"LP no bloqueado (0 %)","top10":7.2816598411184,"lpLocked":0}
+{"t":1794441456634,"type":"descarte","mint":"5H3H4Jp8H1iSNDtWzT8tVPMD6Jr7nWUmKPpCZQ3Gpump","symbol":"NOTMAX","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":83.6}
+{"t":1794441456635,"type":"descarte","mint":"EbxZJtmPdJwoqTfaepnXKWPXXWVsA65J4qSFVpJBDgLb","symbol":"LETS GO ","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794441456635,"type":"descarte","mint":"F3U6eMRtKv3PvqajMeFR51AkEZyHyZg7K8XdCmHMpump","symbol":"HUANGBIBIE","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":8.3}
+{"t":1794441484926,"type":"descarte","mint":"BR6drsbL4ymWuzXLD3emHqwYjbvNDk5shrTr9SnNpump","symbol":"cap","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":22.41}
+{"t":1794441484926,"type":"descarte","mint":"67AQW1iP464qjYa3kSpfKxRauHKmWWRc411dP6HMpump","symbol":"FREEJENSEN","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":392.01}
+{"t":1794441484926,"type":"descarte","mint":"95op2uQzfMmTPRCR3ZcuJJe3rfHcrqRf3mgfAM5npump","symbol":"CHAROC","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":1031.55}
+{"t":1794441484926,"type":"descarte","mint":"4rnHXo4T5aVvCTar8gCjwGgKtjMaGC1KzJHaeHfopump","symbol":"WIZARDBNK","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":0}
+{"t":1794441484926,"type":"descarte","mint":"3Y1htbkX23E6FfxKNvu4XNLjmBzLfAkREKVgGa4Apump","symbol":"NINJA","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":7063.38}
+{"t":1794441484926,"type":"descarte","mint":"aokgAv4hGg5hXkf67VXo8ofpvQ2unbVnktgwzXPpump","symbol":"$BWIZ","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":41.81}
+{"t":1794441484926,"type":"descarte","mint":"73nKGpyKfMh7ZbjvRDbKr4AKE8PsB8HMtaBNCvDApump","symbol":"$SCOTT","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":28.93}
+{"t":1794441484926,"type":"descarte","mint":"A3NeULY8Ah84rvV7yzchPeaHPPNZuM5DhbfYvQswpump","symbol":"Tilly","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":806.01}
+{"t":1794441484926,"type":"descarte","mint":"6qb8L8c9iEMDN3YbHijxorw32UXQiUYeSV7itbnSpump","symbol":"LAMBO","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":329.1}
+{"t":1794441484926,"type":"descarte","mint":"BX2LF2RqatGis5JBAYaK5zpKHfTBZDiC7aR4QyWSpump","symbol":"OMYAC","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":9.9}
+{"t":1794441484926,"type":"descarte","mint":"27mz1M4ZLWS8hi1DCvKMphcyUPBXPDHZ6QsstZVvpump","symbol":"$Hypergamy","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":130.46}
+{"t":1794441484926,"type":"descarte","mint":"9JGvuo3RDfNkwx3fH2htK76VYpvtTxLzZJZQYHufpump","symbol":"Dave","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":971.49}
+{"t":1794441484926,"type":"descarte","mint":"4Rug7TL1ghWMW6s1W8VoNBP7A6hbQnoMGQhLGBF7pump","symbol":"pruple","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":153.91}
+{"t":1794441484926,"type":"descarte","mint":"6eJKsBDQVAQz91uVVgxAoJTSAkW94mWPcQ86b5Cypump","symbol":"ALHUANG","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":2330.2}
+{"t":1794441484926,"type":"descarte","mint":"Duz5MJsN5HyYRgc87By4v5hDJqH9qzmCepMMALLvpump","symbol":"Mustache","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":1550.7}
+{"t":1794441484926,"type":"descarte","mint":"A9bPhFZTC8jz2xixPGFtuQzbdDW2RinM94nFJng6pump","symbol":"pruple","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":317.39}
+{"t":1794441484926,"type":"descarte","mint":"A3Dho78m99obxUS4Dj7WkoF5Gz6HMjZi3roZGhKopump","symbol":"ch","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":814.32}
+{"t":1794441484926,"type":"descarte","mint":"ExMbk46MdpB3k8uiCTfN6FaTMyywg4kozGmCE1FQHE7E","symbol":"BULLSHITBENCH","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":3593.37}
+{"t":1794441484926,"type":"descarte","mint":"BxTK1xv2tfQiC1VB6PPDQSQPM8bQsD5Na3pFgycYjUp6","symbol":"MUSTACHE","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":432.36}
+{"t":1794441493667,"type":"descarte","mint":"GMB7B88rjkWXbRd6D9yXRYtxk5s2MgCmJLuXRgcyV1pH","symbol":"HUNG (GMB7…)","reason":"LP no bloqueado (0 %)","top10":8.2976255620739,"lpLocked":1.1292143286372877e-9}
+{"t":1794441513005,"type":"descarte","mint":"CHVwnczCpVMgu7u6y4oLvNd1YMNevHwFtt9uBsp1VavK","symbol":"Audacoin","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794441513005,"type":"descarte","mint":"DDKPbRKRRNGM46yDz9BvmHLENzUYEhXVGr92ikJ1tRM3","symbol":"DICKINU","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794441513005,"type":"descarte","mint":"EwTsqdKzPtKJPNbp8sxsTp1Yp6LyPQyU86WuSJSzpump","symbol":"DISCIPLINE","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":13.1}
+{"t":1794441513005,"type":"descarte","mint":"B2MFrwFqL1ey8cf49VwnJtNCecjoAMBnMayZU9Dbpump","symbol":"Rex","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":32497.47}
+{"t":1794441541066,"type":"descarte","mint":"C54qKHD1yqmSHWEwsyZ4wgbGwarToJh4B7QbYH6F6c3k","symbol":"Audacoin","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":2009.3}
+{"t":1794441541067,"type":"descarte","mint":"8rf7ivtLvF9RYm4hkYiQvgHn3Y1ro9Uizr8KF1aQQAzv","symbol":"Mustache","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794441541067,"type":"descarte","mint":"4kNTKC3xCiuhE36FSfwPVSDtNHr2E3Rvj3RG9seHpump","symbol":"DeepSeek","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":1001.99}
+{"t":1794441541067,"type":"descarte","mint":"73SJ9jYf73Jxf7aboYuaaAYN9bLvnQ7WPAVfTRBRpump","symbol":"CHICK","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":2832.46}
+{"t":1794441541067,"type":"descarte","mint":"6rNxu4vd1Bsi8tySuBJsg6Nky8cajWWvq3DfBfitivcx","symbol":"Audacoin","reason":"volumen < 50k: no llegó en 45 min","source":"meteora-dbc","volH1":915.59}
+{"t":1794441541067,"type":"descarte","mint":"FGeQ8wfmkwQ5bf8Srnu5Cwo7t8dda2Y2xdRDMdBVpump","symbol":"COSCHOIR","reason":"volumen < 50k: no llegó en 45 min","source":"pumpswap","volH1":2604.84}
+{"t":1794441541067,"type":"descarte","mint":"FJoCzgq1BnHakWQjpxfyg9tfRf4tFsPL7FsgWbtnpump","symbol":"ORGASM","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":1578.51}
+{"t":1794441541067,"type":"descarte","mint":"5pHBMZ1z5FjYg3tSWcvJc5gijnHc9BzueJ7LmM7pump","symbol":"DOOYET","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":142.5}
+{"t":1794441541067,"type":"descarte","mint":"3SXXWDtiMUyz6D1DLzUEpyQTHMeNtFNV4DAMPmaHpump","symbol":"JAJA","reason":"volumen < 50k: no llegó en 45 min","source":"pump-fun","volH1":675.26}
+{"t":1794441550171,"type":"rechazo","mint":"CjdWpihFWiUfETEmVY68t2NkFD3UH62FpoH5v1Hopump","symbol":"stachecat (CjdW…)","reason":"puntaje 0.314 < 0.6","parts":{"presionCompradora":0.28,"impulso5m":0.02,"tendencia1h":0,"actividad":1,"liquidez":0,"holders":0.02,"edad":1}}
+{"t":1794441552416,"type":"descarte","mint":"DUxExUiJjx8v3R3HzDvkiJQd3NKZWjrC46a39HSHpump","symbol":"dwog (DUxE…)","reason":"volumen < 50k al revalidar"}
+{"t":1794441569385,"type":"descarte","mint":"C4gogLeL8nWBaX247y5ScRPV3xFdDrUGmjjujWCbgsQ8","symbol":"ket","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794441569385,"type":"descarte","mint":"BP3uHs3usZQfXABXxCMRqWCDzAyV7KN8WDSg5ZeJpump","symbol":"NIHAOMAXING","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":32.75}
+{"t":1794441569385,"type":"descarte","mint":"24VGQv6DChSxH2ADvEiBQrZESHLN82VsVR1N9qq3pump","symbol":"","reason":"volumen < 50k: no llegó en 45 min","source":"migración","volH1":0}
+{"t":1794441569385,"type":"descarte","mint":"GH4XDyCuD2T7qBqY8PMtLSqwFJTFLNexTgt5qadJpump","symbol":"Time","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":85.17}
+{"t":1794441597699,"type":"descarte","mint":"52FHbo34YBuap1NfCwFJYUYLg7yW1bCMxDj3m17tpump","symbol":"FG","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":929.03}
+{"t":1794441597699,"type":"descarte","mint":"AxABpXDSX4vgyXyda98BBjnfFYKnarzP3Nt1QzrnWLFL","symbol":"","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":0}
+{"t":1794441597699,"type":"descarte","mint":"CgkRAqMjHQaxmckiR3RDJn9vhq9xKdo9PX56cfKVUAPw","symbol":"JENXIT","reason":"volumen < 50k: no llegó en 45 min","source":"pumpfun","volH1":2430.48}
