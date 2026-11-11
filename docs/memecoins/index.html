@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mesa de memecoins</title>
+<style>
+:root{--bg:#0b0d0c;--panel:#111513;--line:#1f2622;--fg:#d7e2dc;--mut:#6f7d75;--green:#3ddc84;--red:#ff5c5c;--amber:#f5b74a;--blue:#5aa9ff;--violet:#b48cff;--cyan:#4fd1c5}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:13px/1.5 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+main{max-width:1200px;margin:auto;padding:16px}
+header{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:baseline;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:10px}
+h1{font-size:15px;margin:0;letter-spacing:.06em;text-transform:uppercase}
+h2{font-size:12px;color:var(--mut);text-transform:uppercase;letter-spacing:.08em;margin:0 0 8px;font-weight:600}
+.mut{color:var(--mut)}.g{color:var(--green)}.r{color:var(--red)}.a{color:var(--amber)}
+.live::before{content:"● ";color:var(--green);animation:blink 1.6s infinite}.stale::before{content:"● ";color:var(--amber)}
+@keyframes blink{50%{opacity:.25}}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;margin:12px 0}
+.k{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:10px 12px}
+.k .l{font-size:11px;color:var(--mut);text-transform:uppercase;letter-spacing:.06em}.k .v{font-size:22px;font-weight:700;margin-top:2px}.k .s{font-size:11px;color:var(--mut)}
+.grid{display:grid;grid-template-columns:1.4fr 1fr;gap:10px}
+@media(max-width:860px){.grid{grid-template-columns:1fr}}
+.box{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:12px;min-width:0}
+svg{width:100%;height:auto;display:block}
+.feed{max-height:420px;overflow-y:auto}
+.row{display:flex;gap:8px;padding:2px 0;border-bottom:1px dashed #18201c}.row .t{color:var(--mut);flex:none}
+.tag{flex:none;font-weight:700;width:76px}
+.SCOUT{color:var(--blue)}.FILTER{color:var(--amber)}.ANALYST{color:var(--violet)}.EXECUTOR{color:var(--green)}.RISK{color:var(--red)}.LOGGER{color:var(--cyan)}
+.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%}
+th{color:var(--mut);font-weight:500;text-align:left;font-size:11px;padding:4px 6px;border-bottom:1px solid var(--line);white-space:nowrap}
+td{padding:4px 6px;border-bottom:1px solid #161c19;white-space:nowrap}
+.bar{height:6px;background:#1a211d;border-radius:3px;overflow:hidden;margin-top:3px}.bar>i{display:block;height:100%;background:var(--amber)}
+.funnel{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;text-align:center;margin-bottom:10px}
+.funnel div{background:#0d110f;border:1px solid var(--line);border-radius:6px;padding:6px}.funnel b{display:block;font-size:18px}
+.sum{white-space:pre-wrap;background:#0d110f;border:1px solid var(--line);border-radius:6px;padding:10px;margin:0 0 8px}
+.foot{color:var(--mut);font-size:11px;margin-top:14px}
+a{color:var(--blue)}
+</style>
+</head>
+<body>
+<main>
+<header>
+  <h1>▌Mesa de memecoins · Solana · <span class="a">PAPER</span></h1>
+  <span id="status" class="stale">conectando…</span>
+</header>
+<div class="kpis" id="kpis"></div>
+<div class="grid">
+  <div class="box"><h2>Curva de equity</h2><div id="chart" class="mut">esperando datos…</div></div>
+  <div class="box"><h2>Embudo de agentes</h2><div class="funnel" id="funnel"></div><h2>Motivos de descarte</h2><div id="reasons"></div></div>
+</div>
+<div class="box" style="margin-top:10px"><h2>Posiciones abiertas</h2><div class="scroll" id="positions"></div></div>
+<div class="grid" style="margin-top:10px">
+  <div class="box"><h2>Actividad de los agentes</h2><div class="feed" id="feed"></div></div>
+  <div class="box"><h2>Resumen diario</h2><div id="summary" class="mut">El primero se genera a las 9:00 de Argentina.</div></div>
+</div>
+<div class="box" style="margin-top:10px"><h2>Operaciones cerradas</h2><div class="scroll" id="trades"></div></div>
+<div class="box" style="margin-top:10px"><h2>Últimas decisiones (motivo de cada compra, venta y descarte)</h2><div class="scroll" id="decisions"></div></div>
+<p class="foot">Dinero simulado con precios reales. Reglas: volumen 1h ≥ 50k · mint y freeze revocados · LP bloqueado ≥ 90 % · top 10 ≤ 20 % · dev sin rugs · puntaje ≥ 0,6 · 8 % del saldo por operación · stop −6 % · trailing desde +12 % · sin promediar · sin revancha. Se actualiza solo cada minuto.</p>
+</main>
+<script>
+const REPO = 'camilobosio/crypto-bot', BRANCH = 'memecoin-data';
+const local = new URLSearchParams(location.search).get('src');
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+const ar = (t) => new Date(t - 3 * 36e5).toISOString().slice(11, 19);
+const arD = (t) => new Date(t - 3 * 36e5).toISOString().slice(5, 16).replace('T', ' ');
+const usd = (x) => (x >= 0 ? '+' : '−') + Math.abs(x).toFixed(2);
+const pc = (x) => (x >= 0 ? '+' : '') + (x * 100).toFixed(1) + ' %';
+const cl = (x) => (x >= 0 ? 'g' : 'r');
+const px = (x) => (+x).toPrecision(4);
+
+async function load() {
+  if (local) return (await fetch(local + '?t=' + Date.now())).json();
+  try {
+    const r = await fetch(`https://api.github.com/repos/${REPO}/contents/live.json?ref=${BRANCH}`, { headers: { Accept: 'application/vnd.github.raw' }, cache: 'no-store' });
+    if (r.ok) return r.json();
+  } catch {}
+  return (await fetch(`https://raw.githubusercontent.com/${REPO}/${BRANCH}/live.json?t=${Date.now()}`, { cache: 'no-store' })).json();
+}
+
+function chart(pts, cap) {
+  if (!pts || pts.length < 2) return '<span class="mut">La curva aparece después de los primeros minutos.</span>';
+  const W = 700, H = 220, P = { l: 46, r: 8, t: 10, b: 20 };
+  const ts = pts.map((p) => p.t), es = pts.map((p) => p.e).concat([cap]);
+  const t0 = Math.min(...ts), t1 = Math.max(...ts), y0 = Math.min(...es), y1 = Math.max(...es);
+  const pad = (y1 - y0) * 0.1 || 1;
+  const X = (t) => P.l + ((t - t0) / (t1 - t0 || 1)) * (W - P.l - P.r);
+  const Y = (v) => P.t + (1 - (v - (y0 - pad)) / (y1 - y0 + 2 * pad)) * (H - P.t - P.b);
+  const d = pts.map((p, i) => `${i ? 'L' : 'M'}${X(p.t).toFixed(1)},${Y(p.e).toFixed(1)}`).join('');
+  const up = pts.at(-1).e >= cap;
+  let g = '';
+  for (let k = 0; k <= 4; k++) { const v = y0 - pad + ((y1 - y0 + 2 * pad) * k) / 4; g += `<line x1="${P.l}" x2="${W - P.r}" y1="${Y(v)}" y2="${Y(v)}" stroke="#1a211d"/><text x="${P.l - 6}" y="${Y(v) + 4}" text-anchor="end" fill="#6f7d75" font-size="10">${v.toFixed(1)}</text>`; }
+  for (let k = 0; k <= 3; k++) { const t = t0 + ((t1 - t0) * k) / 3; g += `<text x="${X(t)}" y="${H - 5}" text-anchor="middle" fill="#6f7d75" font-size="10">${arD(t).slice(6)}</text>`; }
+  return `<svg viewBox="0 0 ${W} ${H}">${g}<line x1="${P.l}" x2="${W - P.r}" y1="${Y(cap)}" y2="${Y(cap)}" stroke="#6f7d75" stroke-dasharray="3 4"/><path d="${d}" fill="none" stroke="${up ? '#3ddc84' : '#ff5c5c'}" stroke-width="1.8"/></svg>`;
+}
+
+function render(L) {
+  const fresh = Date.now() - L.updatedAt < 4 * 6e4;
+  $('status').className = fresh ? 'live' : 'stale';
+  $('status').textContent = (fresh ? 'EN VIVO' : 'sin datos nuevos') + ' · actualizado ' + ar(L.updatedAt) + ' (Arg)';
+  const pnl = L.equity - L.capital, closed = L.trades.length, wins = L.trades.filter((t) => t.pnl > 0).length;
+  const hrs = (L.updatedAt - L.startedAt) / 36e5;
+  const paused = L.pausedUntil > Date.now();
+  const k = (l, v, s = '', c = '') => `<div class="k"><div class="l">${l}</div><div class="v ${c}">${v}</div><div class="s">${s}</div></div>`;
+  $('kpis').innerHTML =
+    k('Saldo (equity)', L.equity.toFixed(2), 'USD · empezó con ' + L.capital) +
+    k('Resultado', usd(pnl), pc(pnl / L.capital), cl(pnl)) +
+    k('Disponible', L.cash.toFixed(2), 'USD en caja') +
+    k('Abiertas', L.positions.length + ' / ' + L.rules.maxOpen, paused ? '<span class="a">pausa anti-venganza</span>' : 'posiciones') +
+    k('Cerradas', closed, closed ? Math.round((wins / closed) * 100) + ' % ganadoras' : 'todavía ninguna') +
+    k('Corriendo', hrs >= 24 ? (hrs / 24).toFixed(1) + ' d' : hrs.toFixed(1) + ' h', 'vigilando ' + L.watching + ' tokens');
+  $('chart').innerHTML = chart(L.equityPts, L.capital);
+  const S = L.stats;
+  $('funnel').innerHTML = [['Scout', S.scanned, 'vistos'], ['Volumen', S.passedVolume, '≥ 50k/h'], ['Filter', S.passedFilter, 'seguros'], ['Analyst', S.approved, '≥ 0,6']]
+    .map(([a, n, s]) => `<div><span class="mut">${a}</span><b>${n}</b><span class="mut">${s}</span></div>`).join('');
+  const rs = Object.entries(L.counters).sort((a, b) => b[1] - a[1]).slice(0, 8), max = rs[0]?.[1] || 1;
+  $('reasons').innerHTML = rs.length ? rs.map(([r, n]) => `<div style="margin-bottom:6px"><div style="display:flex;justify-content:space-between;gap:8px"><span>${esc(r)}</span><span class="mut">${n}</span></div><div class="bar"><i style="width:${(n / max) * 100}%"></i></div></div>`).join('') : '<span class="mut">Sin descartes todavía.</span>';
+  $('positions').innerHTML = L.positions.length ? `<table><thead><tr><th>Token</th><th>DEX</th><th>Entrada</th><th>Precio</th><th>Stop</th><th>Máx</th><th>Tamaño</th><th>Resultado</th><th>Trailing</th><th>Desde</th></tr></thead><tbody>${L.positions.map((p) => `<tr><td><b>${esc(p.symbol)}</b></td><td class="mut">${esc(p.dex)}</td><td>${px(p.entry)}</td><td>${px(p.price)}</td><td>${px(p.stop)}</td><td class="g">${pc(p.peak / p.entry - 1)}</td><td>${p.size.toFixed(2)}</td><td class="${cl(p.ret)}"><b>${pc(p.ret)}</b></td><td>${p.trailing ? '<span class="g">activo</span>' : '<span class="mut">desde +12 %</span>'}</td><td class="mut">${arD(p.entryT)}</td></tr>`).join('')}</tbody></table>` : '<span class="mut">Sin posiciones abiertas.</span>';
+  $('feed').innerHTML = L.activity.map((a) => `<div class="row"><span class="t">${ar(a.t)}</span><span class="tag ${a.agent}">${a.agent}</span><span>${esc(a.msg)}</span></div>`).join('');
+  $('trades').innerHTML = L.trades.length ? `<table><thead><tr><th>Token</th><th>Entrada</th><th>Salida</th><th>Tamaño</th><th>Resultado</th><th>Máx alcanzado</th><th>Puntaje</th><th>Motivo de salida</th></tr></thead><tbody>${L.trades.map((t) => `<tr><td><b>${esc(t.symbol)}</b></td><td class="mut">${arD(t.entryT)}</td><td class="mut">${arD(t.exitT)}</td><td>${t.size.toFixed(2)}</td><td class="${cl(t.pnl)}"><b>${usd(t.pnl)} (${pc(t.ret)})</b></td><td>${pc(t.peakRet)}</td><td>${t.score?.toFixed(2) ?? ''}</td><td>${esc(t.reason)}</td></tr>`).join('')}</tbody></table>` : '<span class="mut">Todavía ninguna.</span>';
+  $('decisions').innerHTML = `<table><thead><tr><th>Hora</th><th>Tipo</th><th>Token</th><th>Motivo</th></tr></thead><tbody>${L.decisions.map((d) => `<tr><td class="mut">${ar(d.t)}</td><td class="${d.type === 'compra' ? 'g' : d.type === 'venta' ? (d.pnl >= 0 ? 'g' : 'r') : 'a'}">${d.type}</td><td>${esc(d.symbol || d.mint.slice(0, 6))}</td><td style="white-space:normal">${esc(d.reason)}</td></tr>`).join('')}</tbody></table>`;
+  if (L.summaries?.length) {
+    $('summary').innerHTML = L.summaries.map((s) => `<div class="sum">${esc(arD(s.t))} — saldo ${s.equity.toFixed(2)} USD
+Período: ${usd(s.pnlPeriod)} USD · ${s.trades} ops · ${Math.round(s.winRate * 100)} % ganadoras
+Mejor: ${esc(s.best)}
+Peor: ${esc(s.worst)}
+Embudo: ${s.scanned} vistos → ${s.filtered} seguros → ${s.approved} aprobados</div>`).join('');
+  }
+}
+
+async function tick() {
+  try { render(await load()); } catch (e) { $('status').className = 'stale'; $('status').textContent = 'reintentando…'; }
+}
+tick();
+setInterval(tick, 75_000);
+</script>
+</body>
+</html>

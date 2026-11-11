@@ -1,0 +1,48 @@
+# Mesa de memecoins de Solana (PAPER) en los servidores de GitHub, 24/7, sin tu compu.
+# Cada corrida dura ~5,5 h y al terminar lanza la siguiente. Los datos en vivo se guardan
+# en la rama "memecoin-data" (no dispara reconstrucciones de la página) y el terminal los lee de ahí.
+name: memecoins
+
+on:
+  schedule:
+    - cron: '37 * * * *'   # respaldo por si la cadena se corta
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  actions: write
+  issues: write
+
+concurrency:
+  group: memecoins
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Traer los datos de la mesa
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir mc-data && cd mc-data
+          git init -q
+          git config user.name "crypto-bot"
+          git config user.email "crypto-bot@users.noreply.github.com"
+          git remote add origin "https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git"
+          if git fetch -q --depth 1 origin memecoin-data; then git checkout -q -b memecoin-data FETCH_HEAD; else git checkout -q --orphan memecoin-data; fi
+      - name: Mesa de memecoins (6 agentes)
+        env:
+          GH_TOKEN: ${{ github.token }}
+          AVISAR_A: maugeperfumerie
+        run: node memecoins/run.js --minutes 320 --data mc-data --sync
+      - name: Lanzar la siguiente corrida
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run memecoins.yml --ref main
