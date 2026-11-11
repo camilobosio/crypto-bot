@@ -4,11 +4,11 @@
   "pending": [],
   "peak": 100,
   "halted": null,
-  "dayKey": null,
+  "dayKey": "2026-11-11",
   "dayStartEquity": 100,
   "blockEntries": false,
   "lastEquity": 100,
-  "lastT": 1794430500000,
+  "lastT": 1794430800000,
   "fees": 0,
   "funding": 0,
   "cooldown": {}
