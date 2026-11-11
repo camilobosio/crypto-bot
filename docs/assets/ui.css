@@ -116,5 +116,8 @@ td.num, th.num { text-align: right; }
 .bar { height: 6px; border-radius: 99px; background: var(--surface-2); overflow: hidden; margin-top: 5px; }
 .bar > i { display: block; height: 100%; border-radius: 99px; background: linear-gradient(90deg, var(--amber), color-mix(in srgb, var(--amber) 60%, var(--red))); }
 
+.hist tr.row-open td { background: color-mix(in srgb, var(--accent) 6%, transparent); }
+.reason-cell { white-space: normal; min-width: 220px; color: var(--muted); font-size: 12.5px; }
+.kpi .v.pos { color: var(--green); } .kpi .v.neg { color: var(--red); }
 .foot { color: var(--muted); font-size: 12px; margin-top: 22px; line-height: 1.6; }
 .sum { background: var(--surface-2); border: 1px solid var(--border); border-radius: 12px; padding: 12px; font-size: 13px; line-height: 1.6; margin-bottom: 8px; }

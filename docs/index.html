@@ -6,53 +6,54 @@
 <title>Bot de futuros · Trading Lab</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/ui.css">
+<link rel="stylesheet" href="assets/ui.css?v=3">
 </head>
 <body>
 <div class="top"><div class="top-in">
   <div class="brand"><span class="brand-mark">◆</span>Trading Lab</div>
-  <nav class="nav"><a class="on" href="./">Futuros</a><a href="memecoins/">Memecoins</a></nav>
+  <nav class="nav"><a class="on" href="/crypto-bot/">Futuros</a><a href="/crypto-bot/memecoins/">Memecoins</a></nav>
   <span id="status" class="pill"><span class="dot"></span>Conectando…</span>
 </div></div>
 
 <main>
   <div class="eyebrow">Bot de futuros perpetuos · paper trading</div>
   <h1>Rupturas con tendencia de 4 h</h1>
-  <div class="sub" id="subtitle">Dinero simulado con precios reales · 8 pares</div>
+  <div class="sub" id="subtitle">Dinero simulado con precios reales</div>
 
+  <!-- 1. Indicadores (igual en los dos paneles) -->
   <section class="hero">
-    <div class="card">
-      <div class="sub">Patrimonio</div>
-      <div class="big" id="equity">—</div>
-      <div id="pnlchip"></div>
-    </div>
+    <div class="card"><div class="sub">Saldo</div><div class="big" id="equity">—</div><div id="pnlchip"></div></div>
     <div class="kpis" id="kpis"></div>
   </section>
 
   <div class="stack">
+    <!-- 2. Curva -->
     <div class="card">
-      <div class="card-h"><h2>Curva de patrimonio</h2><span class="sub">línea punteada = capital inicial</span></div>
+      <div class="card-h"><h2>Curva de saldo</h2><span class="sub">línea punteada = capital inicial</span></div>
       <div id="chart"></div>
     </div>
 
+    <!-- 3. Historial de operaciones -->
+    <div class="card">
+      <div class="card-h"><h2>Historial de operaciones</h2><span class="sub" id="histcount"></span></div>
+      <div id="history"></div>
+    </div>
+
+    <!-- 4. Propio de este bot -->
     <div class="card">
       <div class="card-h"><h2>Radar del bot</h2><span class="sub">qué está esperando en cada par para entrar</span></div>
       <div class="radar" id="radar"></div>
     </div>
 
-    <div class="card">
-      <div class="card-h"><h2>Posiciones abiertas</h2><span class="sub" id="poscount"></span></div>
-      <div id="positions"></div>
-    </div>
-
+    <!-- 5. Actividad + detalle -->
     <div class="cols">
       <div class="card">
-        <div class="card-h"><h2>Operaciones cerradas</h2><span class="sub" id="tradecount"></span></div>
-        <div id="trades"></div>
+        <div class="card-h"><h2>Actividad del bot</h2><span class="sub">en vivo</span></div>
+        <div class="feed" id="feed"></div>
       </div>
       <div class="card">
-        <div class="card-h"><h2>Bitácora</h2><span class="sub">últimos movimientos</span></div>
-        <div class="feed mono" id="log"></div>
+        <div class="card-h"><h2>Detalle</h2><span class="sub">riesgo y costos</span></div>
+        <div id="detail"></div>
       </div>
     </div>
   </div>
@@ -60,67 +61,60 @@
   <p class="foot" id="rules"></p>
 </main>
 
-<script src="assets/ui.js"></script>
+<script src="assets/ui.js?v=3"></script>
 <script>
-const { f, areaChart, startLoop } = UI;
+const { f, areaChart, startLoop, hero, history } = UI;
 const $ = (id) => document.getElementById(id);
-const sideBadge = (s, lev) => `<span class="badge ${s === 1 ? 'b-green' : 'b-red'}">${s === 1 ? 'LARGO' : 'CORTO'}${lev ? ' ' + lev + 'x' : ''}</span>`;
+const name = (s) => s.replace('USDT', '');
 
 function render(L) {
-  const pnl = L.equity - L.capital, dd = 1 - L.equity / L.peak;
-  const closed = L.trades.length, wins = L.trades.filter((t) => t.pnl > 0).length;
+  const used = L.positions.reduce((a, p) => a + p.margin, 0);
+  const wins = L.trades.filter((t) => t.pnl > 0).length;
   $('subtitle').textContent = `Dinero simulado con precios reales · ${L.watch.length} pares · última vela ${f.time(L.lastBarT)} (hora Argentina)`;
-  $('equity').innerHTML = `${f.money(L.equity)}<small>USDT</small>`;
-  $('pnlchip').innerHTML = `<span class="chip ${pnl >= 0 ? 'b-green' : 'b-red'}">${pnl >= 0 ? '▲' : '▼'} ${f.signed(pnl)} USDT · ${f.pct(pnl / L.capital, 2)}</span> <span class="sub">desde ${L.capital} USDT</span>`;
-  const k = (l, v, s = '', extra = '') => `<div class="kpi"><div class="l">${l}</div><div class="v">${v}</div><div class="s">${s}</div>${extra}</div>`;
-  const statusBadge = L.status === 'operando' ? '<span class="badge b-green">OPERANDO</span>' : `<span class="badge b-red">${L.status.toUpperCase()}</span>`;
-  $('kpis').innerHTML =
-    k('Estado', statusBadge, `${L.positions.length} de ${L.rules.maxPos} posiciones`) +
-    k('Caída desde el máximo', f.pct(-dd), `corta en ${Math.round(L.rules.maxDD * 100)} %`, `<div class="meter"><i style="width:${Math.min(100, (dd / L.rules.maxDD) * 100)}%;background:${dd > L.rules.maxDD * 0.6 ? 'var(--red)' : 'var(--accent)'}"></i></div>`) +
-    k('Operaciones', closed, closed ? `${Math.round((wins / closed) * 100)} % ganadoras` : 'todavía ninguna') +
-    k('Riesgo por operación', Math.round(L.rules.risk * 100) + ' %', `apalancamiento hasta ${L.rules.maxLev}x`) +
-    k('Costos', f.money(L.fees + L.funding) + ' USDT', `comisiones ${f.money(L.fees)} · financ. ${f.money(L.funding)}`) +
-    k('Corriendo', f.dur(L.updatedAt - L.startedAt), 'desde ' + f.dt(L.startedAt));
-
+  hero({
+    equity: L.equity, capital: L.capital, unit: 'USDT', cash: L.wallet - used, open: L.positions.length, maxOpen: L.rules.maxPos,
+    closed: L.trades.length, wins, startedAt: L.startedAt, updatedAt: L.updatedAt,
+    state: L.status === 'operando' ? 'ok' : L.status === 'detenido' ? 'stop' : 'pause',
+    stateText: L.status === 'operando' ? 'buscando rupturas' : L.status,
+  });
   areaChart($('chart'), L.equityPts, { baseline: L.capital, unit: 'USDT' });
 
+  const side = (s, lev) => ({ side: `${s === 1 ? 'LARGO' : 'CORTO'} ${lev}x`, sideCls: s === 1 ? 'b-green' : 'b-red' });
+  const rows = [
+    ...L.positions.map((p) => ({ name: name(p.sym), ...side(p.side, p.lev), entryT: p.entryT, entry: p.entry, exit: p.price, size: p.margin, pnl: p.upnl, pct: p.upnl / p.margin, reason: `stop ${f.price(p.stop)} · objetivo ${f.price(p.tp)} · liquidación ${f.price(p.liq)}`, open: true })),
+    ...L.trades.map((t) => { const margin = (t.qty * t.entry) / t.lev; return { name: name(t.sym), ...side(t.side, t.lev), entryT: t.entryT, entry: t.entry, exitT: t.exitT, exit: t.exit, size: margin, pnl: t.pnl, pct: t.pnl / margin, reason: t.reason, open: false }; }),
+  ];
+  history(rows, 'USDT');
+
   $('radar').innerHTML = L.watch.map((w) => {
-    const name = w.sym.replace('USDT', '');
     const trend = w.trend === 1 ? '<span class="badge b-green">▲ ALCISTA</span>' : w.trend === -1 ? '<span class="badge b-red">▼ BAJISTA</span>' : '<span class="badge b-muted">LATERAL</span>';
-    const open = L.positions.find((p) => p.sym === w.sym);
     let hint;
-    if (open) hint = `<span class="pos">● En posición</span>`;
+    if (L.positions.find((p) => p.sym === w.sym)) hint = '<span class="pos">● En posición</span>';
     else if (!w.trend) hint = 'Sin tendencia clara: no opera';
-    else if ((w.trend === 1 && w.dist < 0) || (w.trend === -1 && w.dist > 0)) {
-      hint = `Ya ${w.trend === 1 ? 'superó' : 'perforó'} <b class="mono">${f.price(w.level)}</b> antes: espera un cruce nuevo para entrar`;
-    } else {
-      const d = Math.abs(w.dist ?? 0), prox = Math.max(0, 100 - d * 100 * 25);
+    else if ((w.trend === 1 && w.dist < 0) || (w.trend === -1 && w.dist > 0)) hint = `Ya ${w.trend === 1 ? 'superó' : 'perforó'} <b class="mono">${f.price(w.level)}</b>: espera un cruce nuevo`;
+    else {
+      const d = Math.abs(w.dist ?? 0), prox = Math.max(0, 100 - d * 2500);
       hint = `${w.trend === 1 ? 'Compra' : 'Venta en corto'} si ${w.trend === 1 ? 'supera' : 'pierde'} <b class="mono">${f.price(w.level)}</b> · a ${f.pct(d).replace('+', '')}
         <div class="meter"><i style="width:${prox}%;background:${w.trend === 1 ? 'var(--green)' : 'var(--red)'}"></i></div>`;
     }
-    return `<div class="pair"><div class="pair-h"><span class="sym">${name}</span>${trend}</div>
-      <div class="px mono">${f.price(w.price)}</div><div class="sub ${f.cls(w.chg24)}">${f.pct(w.chg24)} 24 h</div><div class="hint">${hint}</div></div>`;
+    return `<div class="pair"><div class="pair-h"><span class="sym">${name(w.sym)}</span>${trend}</div><div class="px mono">${f.price(w.price)}</div><div class="sub ${f.cls(w.chg24)}">${f.pct(w.chg24)} 24 h</div><div class="hint">${hint}</div></div>`;
   }).join('');
 
-  $('poscount').textContent = `${L.positions.length} de ${L.rules.maxPos}`;
-  $('positions').innerHTML = L.positions.length ? `<div class="tbl-wrap"><table><thead><tr><th>Par</th><th>Lado</th><th class="num">Entrada</th><th class="num">Precio</th><th class="num">Stop</th><th class="num">Objetivo</th><th class="num">Liquidación</th><th class="num">Margen</th><th class="num">Resultado</th><th>Desde</th></tr></thead><tbody>${
-    L.positions.map((p) => `<tr><td class="sym">${p.sym.replace('USDT', '')}</td><td>${sideBadge(p.side, p.lev)}</td><td class="num mono">${f.price(p.entry)}</td><td class="num mono">${f.price(p.price)}</td><td class="num mono">${f.price(p.stop)}</td><td class="num mono">${f.price(p.tp)}</td><td class="num mono muted">${f.price(p.liq)}</td><td class="num">${f.money(p.margin)}</td><td class="num ${f.cls(p.upnl)}"><b>${f.signed(p.upnl)}</b></td><td class="muted">${f.dt(p.entryT)}</td></tr>`).join('')
-  }</tbody></table></div>` : '<div class="empty">Sin posiciones abiertas. El radar muestra qué está esperando el bot en cada par.</div>';
-
-  $('tradecount').textContent = closed ? `${closed} · ${Math.round((wins / closed) * 100)} % ganadoras` : '';
-  $('trades').innerHTML = closed ? `<div class="tbl-wrap"><table><thead><tr><th>Par</th><th>Lado</th><th>Salida</th><th class="num">Resultado</th><th class="num">R</th><th>Motivo</th></tr></thead><tbody>${
-    L.trades.map((t) => `<tr><td class="sym">${t.sym.replace('USDT', '')}</td><td>${sideBadge(t.side, t.lev)}</td><td class="muted">${f.dt(t.exitT)}</td><td class="num ${f.cls(t.pnl)}"><b>${f.signed(t.pnl)}</b></td><td class="num ${f.cls(t.r)}">${t.r.toFixed(2)}</td><td>${f.esc(t.reason)}</td></tr>`).join('')
-  }</tbody></table></div>` : '<div class="empty">Todavía no cerró ninguna operación.</div>';
-
-  $('log').innerHTML = L.log.map((line) => {
+  $('feed').innerHTML = L.log.map((line) => {
     const m = line.match(/^\[(.+?)\] (.*)$/); if (!m) return '';
     const t = Date.parse(m[1].replace(' ', 'T') + 'Z');
-    const tag = /APERTURA/.test(m[2]) ? 'EXECUTOR' : /CIERRE/.test(m[2]) ? 'RISK' : /EVENTO/.test(m[2]) ? 'RISK' : 'LOGGER';
-    const label = { EXECUTOR: 'APERTURA', RISK: /EVENTO/.test(m[2]) ? 'EVENTO' : 'CIERRE', LOGGER: 'VELA' }[tag];
-    return `<div class="ev"><span class="t">${f.time(t)}</span><span class="ag ${tag}">${label}</span><span class="m">${f.esc(m[2].replace(/^(APERTURA|CIERRE|EVENTO) /, ''))}</span></div>`;
+    const [tag, label] = /APERTURA/.test(m[2]) ? ['EXECUTOR', 'APERTURA'] : /CIERRE/.test(m[2]) ? ['RISK', 'CIERRE'] : /EVENTO/.test(m[2]) ? ['RISK', 'EVENTO'] : ['LOGGER', 'VELA'];
+    return `<div class="ev"><span class="t mono">${f.timeS(t)}</span><span class="ag ${tag}">${label}</span><span class="m">${f.esc(m[2].replace(/^(APERTURA|CIERRE|EVENTO) /, ''))}</span></div>`;
   }).join('');
 
-  $('rules').innerHTML = `Estrategia <b>${f.esc(L.strategy)}</b>: opera a favor de la tendencia de 4 h cuando el precio rompe el máximo o mínimo de las últimas ${L.params.dcN} h. Stop a ${L.params.stopAtr} ATR, objetivo ${L.params.tpR} R, cierre a las 24 h. Arriesga ${Math.round(L.rules.risk * 100)} % por operación con apalancamiento elegido por el bot (techo ${L.rules.maxLev}x). Precios de Binance como referencia; costos y financiamiento simulados como en Bybit. Se actualiza cada minuto.`;
+  const dd = 1 - L.equity / L.peak;
+  $('detail').innerHTML = `
+    <div class="kpi" style="padding:0 0 12px"><div class="l">Caída desde el máximo</div><div class="v">${f.pct(-dd)}</div><div class="s">el interruptor corta en ${Math.round(L.rules.maxDD * 100)} %</div>
+      <div class="meter"><i style="width:${Math.min(100, (dd / L.rules.maxDD) * 100)}%;background:${dd > L.rules.maxDD * 0.6 ? 'var(--red)' : 'var(--accent)'}"></i></div></div>
+    <div class="kpi" style="padding:12px 0;border-top:1px solid var(--border)"><div class="l">Riesgo por operación</div><div class="v">${Math.round(L.rules.risk * 100)} %</div><div class="s">apalancamiento elegido por el bot, hasta ${L.rules.maxLev}x</div></div>
+    <div class="kpi" style="padding:12px 0 0;border-top:1px solid var(--border)"><div class="l">Costos acumulados</div><div class="v">${f.money(L.fees + L.funding)} USDT</div><div class="s">comisiones ${f.money(L.fees)} · financiamiento ${f.money(L.funding)}</div></div>`;
+
+  $('rules').innerHTML = `Estrategia ${f.esc(L.strategy)}: opera a favor de la tendencia de 4 h cuando el precio rompe el máximo o mínimo de las últimas ${L.params.dcN} h. Stop a ${L.params.stopAtr} ATR, objetivo ${L.params.tpR} R, cierre a las 24 h. En el historial, "Monto" es el margen puesto y el % es sobre ese margen. Precios de Binance como referencia; costos y financiamiento simulados como en Bybit. Se actualiza solo cada minuto.`;
 }
 
 startLoop('futures-data', render, $('status'));

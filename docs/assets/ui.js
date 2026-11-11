@@ -85,5 +85,45 @@
     setInterval(() => lastAt && setStatus(statusEl, lastAt), 15_000);
   }
 
-  window.UI = { loadLive, f, areaChart, setStatus, startLoop };
+  // Bloque superior idéntico en los dos paneles.
+  // m: { equity, capital, unit, cash, open, maxOpen, closed, wins, startedAt, updatedAt, state: 'ok'|'pause'|'stop', stateText }
+  function hero(m) {
+    const pnl = m.equity - m.capital;
+    document.getElementById('equity').innerHTML = `${f.money(m.equity)}<small>${m.unit}</small>`;
+    document.getElementById('pnlchip').innerHTML = `<span class="chip ${pnl >= 0 ? 'b-green' : 'b-red'}">${pnl >= 0 ? '▲' : '▼'} ${f.signed(pnl)} ${m.unit} · ${f.pct(pnl / m.capital, 2)}</span> <span class="sub">desde ${m.capital} ${m.unit}</span>`;
+    const k = (l, v, s = '', c = '') => `<div class="kpi"><div class="l">${l}</div><div class="v ${c}">${v}</div><div class="s">${s}</div></div>`;
+    const badge = m.state === 'ok' ? '<span class="badge b-green">OPERANDO</span>' : m.state === 'pause' ? '<span class="badge b-amber">PAUSA</span>' : '<span class="badge b-red">DETENIDO</span>';
+    document.getElementById('kpis').innerHTML =
+      k('Resultado', f.signed(pnl) + ' ' + m.unit, f.pct(pnl / m.capital, 2), f.cls(pnl)) +
+      k('Disponible', f.money(m.cash) + ' ' + m.unit, 'libre para operar') +
+      k('Estado', badge, m.stateText) +
+      k('Abiertas', `${m.open} / ${m.maxOpen}`, 'posiciones ahora') +
+      k('Cerradas', m.closed, m.closed ? `${Math.round((m.wins / m.closed) * 100)} % ganadoras` : 'todavía ninguna') +
+      k('Corriendo', f.dur(m.updatedAt - m.startedAt), 'desde ' + f.dt(m.startedAt));
+  }
+
+  // Historial de operaciones: abiertas primero, después las cerradas (más nuevas arriba).
+  // r: { name, side, sideCls, entryT, entry, exitT, exit, size, pnl, pct, reason, open }
+  function history(rows, unit) {
+    const el = document.getElementById('history');
+    const nOpen = rows.filter((r) => r.open).length, closed = rows.filter((r) => !r.open);
+    const wins = closed.filter((r) => r.pnl > 0).length, total = closed.reduce((a, r) => a + r.pnl, 0);
+    document.getElementById('histcount').innerHTML = rows.length
+      ? `${nOpen} abiertas · ${closed.length} cerradas${closed.length ? ` · ${Math.round((wins / closed.length) * 100)} % ganadoras · <b class="${f.cls(total)}">${f.signed(total)} ${unit}</b>` : ''}`
+      : '';
+    if (!rows.length) { el.innerHTML = '<div class="empty">Todavía no hubo operaciones. Apenas el bot compre algo, aparece acá con su precio de entrada, de salida y el resultado.</div>'; return; }
+    el.innerHTML = `<div class="tbl-wrap"><table class="hist"><thead><tr><th>Estado</th><th>Activo</th><th>Lado</th><th>Compra / entrada</th><th class="num">Precio</th><th>Venta / salida</th><th class="num">Precio</th><th class="num">Monto</th><th class="num">Resultado</th><th>Motivo</th></tr></thead><tbody>${
+      rows.map((r) => `<tr class="${r.open ? 'row-open' : ''}">
+        <td>${r.open ? '<span class="badge b-accent">ABIERTA</span>' : r.pnl >= 0 ? '<span class="badge b-green">GANADA</span>' : '<span class="badge b-red">PERDIDA</span>'}</td>
+        <td class="sym">${f.esc(r.name)}</td>
+        <td><span class="badge ${r.sideCls}">${f.esc(r.side)}</span></td>
+        <td class="muted">${f.dt(r.entryT)}</td><td class="num mono">${f.price(r.entry)}</td>
+        <td class="muted">${r.open ? 'en curso' : f.dt(r.exitT)}</td><td class="num mono">${f.price(r.exit)}${r.open ? ' <span class="muted">ahora</span>' : ''}</td>
+        <td class="num">${f.money(r.size)}</td>
+        <td class="num ${f.cls(r.pnl)}"><b>${f.signed(r.pnl)}</b> <span class="muted">${f.pct(r.pct)}</span></td>
+        <td class="reason-cell">${f.esc(r.reason)}</td></tr>`).join('')
+    }</tbody></table></div>`;
+  }
+
+  window.UI = { loadLive, f, areaChart, setStatus, startLoop, hero, history };
 })();

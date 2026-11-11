@@ -6,61 +6,56 @@
 <title>Mesa de memecoins · Trading Lab</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/ui.css">
+<link rel="stylesheet" href="../assets/ui.css?v=3">
 </head>
 <body>
 <div class="top"><div class="top-in">
   <div class="brand"><span class="brand-mark">◆</span>Trading Lab</div>
-  <nav class="nav"><a href="../">Futuros</a><a class="on" href="./">Memecoins</a></nav>
+  <nav class="nav"><a href="/crypto-bot/">Futuros</a><a class="on" href="/crypto-bot/memecoins/">Memecoins</a></nav>
   <span id="status" class="pill"><span class="dot"></span>Conectando…</span>
 </div></div>
 
 <main>
   <div class="eyebrow">Mesa de memecoins · Solana · paper trading</div>
   <h1>6 agentes, capital primero</h1>
-  <div class="sub">Scout → Filter → Analyst → Executor · Risk vigila · Logger registra todo</div>
+  <div class="sub" id="subtitle">Dinero simulado con precios reales</div>
 
+  <!-- 1. Indicadores (igual en los dos paneles) -->
   <section class="hero">
-    <div class="card">
-      <div class="sub">Saldo (equity)</div>
-      <div class="big" id="equity">—</div>
-      <div id="pnlchip"></div>
-    </div>
+    <div class="card"><div class="sub">Saldo</div><div class="big" id="equity">—</div><div id="pnlchip"></div></div>
     <div class="kpis" id="kpis"></div>
   </section>
 
   <div class="stack">
-    <div class="cols">
-      <div class="card">
-        <div class="card-h"><h2>Curva de equity</h2><span class="sub">línea punteada = capital inicial</span></div>
-        <div id="chart"></div>
-      </div>
-      <div class="card">
-        <div class="card-h"><h2>Embudo de agentes</h2><span class="sub" id="watching"></span></div>
-        <div class="funnel" id="funnel"></div>
-        <div style="margin-top:16px"><h2 style="font-size:13px">Motivos de descarte</h2><div id="reasons"></div></div>
-      </div>
-    </div>
-
+    <!-- 2. Curva -->
     <div class="card">
-      <div class="card-h"><h2>Posiciones abiertas</h2><span class="sub" id="poscount"></span></div>
-      <div id="positions"></div>
+      <div class="card-h"><h2>Curva de saldo</h2><span class="sub">línea punteada = capital inicial</span></div>
+      <div id="chart"></div>
     </div>
 
+    <!-- 3. Historial de operaciones -->
+    <div class="card">
+      <div class="card-h"><h2>Historial de operaciones</h2><span class="sub" id="histcount"></span></div>
+      <div id="history"></div>
+    </div>
+
+    <!-- 4. Propio de este bot -->
+    <div class="card">
+      <div class="card-h"><h2>Embudo de agentes</h2><span class="sub" id="watching"></span></div>
+      <div class="funnel" id="funnel"></div>
+      <div style="margin-top:16px"><h2 style="font-size:13px">Motivos de descarte</h2><div id="reasons"></div></div>
+    </div>
+
+    <!-- 5. Actividad + detalle -->
     <div class="cols">
       <div class="card">
         <div class="card-h"><h2>Actividad de los agentes</h2><span class="sub">en vivo</span></div>
         <div class="feed" id="feed"></div>
       </div>
       <div class="card">
-        <div class="card-h"><h2>Resumen diario</h2><span class="sub">9:00 hora Argentina</span></div>
-        <div id="summary"><div class="empty">El primer resumen se genera mañana a las 9:00.</div></div>
+        <div class="card-h"><h2>Detalle</h2><span class="sub">resumen diario a las 9:00</span></div>
+        <div id="detail"></div>
       </div>
-    </div>
-
-    <div class="card">
-      <div class="card-h"><h2>Operaciones cerradas</h2><span class="sub" id="tradecount"></span></div>
-      <div id="trades"></div>
     </div>
 
     <div class="card">
@@ -72,26 +67,27 @@
   <p class="foot" id="rules"></p>
 </main>
 
-<script src="../assets/ui.js"></script>
+<script src="../assets/ui.js?v=3"></script>
 <script>
-const { f, areaChart, startLoop } = UI;
+const { f, areaChart, startLoop, hero, history } = UI;
 const $ = (id) => document.getElementById(id);
 
 function render(L) {
-  const pnl = L.equity - L.capital, closed = L.trades.length, wins = L.trades.filter((t) => t.pnl > 0).length;
-  const paused = L.pausedUntil > Date.now(), R = L.rules;
-  $('equity').innerHTML = `${f.money(L.equity)}<small>USD</small>`;
-  $('pnlchip').innerHTML = `<span class="chip ${pnl >= 0 ? 'b-green' : 'b-red'}">${pnl >= 0 ? '▲' : '▼'} ${f.signed(pnl)} USD · ${f.pct(pnl / L.capital, 2)}</span> <span class="sub">desde ${L.capital} USD</span>`;
-  const k = (l, v, s = '') => `<div class="kpi"><div class="l">${l}</div><div class="v">${v}</div><div class="s">${s}</div></div>`;
-  $('kpis').innerHTML =
-    k('Estado', paused ? '<span class="badge b-amber">PAUSA</span>' : '<span class="badge b-green">OPERANDO</span>', paused ? 'anti-venganza hasta ' + f.time(L.pausedUntil) : 'buscando oportunidades') +
-    k('Disponible', f.money(L.cash) + ' USD', 'en caja') +
-    k('Abiertas', `${L.positions.length} / ${R.maxOpen}`, `${Math.round(R.size * 100)} % del saldo cada una`) +
-    k('Cerradas', closed, closed ? `${Math.round((wins / closed) * 100)} % ganadoras` : 'todavía ninguna') +
-    k('Stop / trailing', `${Math.round(R.stop * 100)} %`, `trailing desde +${Math.round(R.trail * 100)} %`) +
-    k('Corriendo', f.dur(L.updatedAt - L.startedAt), 'desde ' + f.dt(L.startedAt));
-
+  const R = L.rules, paused = L.pausedUntil > Date.now();
+  const wins = L.trades.filter((t) => t.pnl > 0).length;
+  $('subtitle').textContent = `Dinero simulado con precios reales · Pump.fun, Raydium y otros DEX de Solana`;
+  hero({
+    equity: L.equity, capital: L.capital, unit: 'USD', cash: L.cash, open: L.positions.length, maxOpen: R.maxOpen,
+    closed: L.trades.length, wins, startedAt: L.startedAt, updatedAt: L.updatedAt,
+    state: paused ? 'pause' : 'ok', stateText: paused ? 'anti-venganza hasta ' + f.time(L.pausedUntil) : 'buscando oportunidades',
+  });
   areaChart($('chart'), L.equityPts, { baseline: L.capital, unit: 'USD' });
+
+  const rows = [
+    ...L.positions.map((p) => ({ name: p.symbol, side: 'COMPRA', sideCls: 'b-green', entryT: p.entryT, entry: p.entry, exit: p.price, size: p.size, pnl: p.value - p.size, pct: p.ret, reason: `stop ${f.price(p.stop)}${p.trailing ? ' · trailing activo' : ''} · máximo ${f.pct(p.peak / p.entry - 1)} · ${p.dex}`, open: true })),
+    ...L.trades.map((t) => ({ name: t.symbol, side: 'COMPRA', sideCls: 'b-green', entryT: t.entryT, entry: t.entry, exitT: t.exitT, exit: t.exit, size: t.size, pnl: t.pnl, pct: t.ret, reason: `${t.reason} · máximo ${f.pct(t.peakRet)} · puntaje ${t.score?.toFixed(2) ?? '—'}`, open: false })),
+  ];
+  history(rows, 'USD');
 
   const S = L.stats;
   $('watching').textContent = `vigilando ${L.watching} tokens`;
@@ -100,29 +96,21 @@ function render(L) {
   const rs = Object.entries(L.counters).sort((a, b) => b[1] - a[1]).slice(0, 7), max = rs[0]?.[1] || 1;
   $('reasons').innerHTML = rs.length ? rs.map(([r, n]) => `<div class="reason"><div class="reason-h"><span>${f.esc(r)}</span><span class="muted">${n.toLocaleString('es-AR')}</span></div><div class="bar"><i style="width:${(n / max) * 100}%"></i></div></div>`).join('') : '<div class="sub" style="margin-top:8px">Sin descartes todavía.</div>';
 
-  $('poscount').textContent = `${L.positions.length} de ${R.maxOpen}`;
-  $('positions').innerHTML = L.positions.length ? `<div class="tbl-wrap"><table><thead><tr><th>Token</th><th>DEX</th><th class="num">Entrada</th><th class="num">Precio</th><th class="num">Stop</th><th class="num">Máximo</th><th class="num">Tamaño</th><th class="num">Resultado</th><th>Trailing</th><th>Desde</th></tr></thead><tbody>${
-    L.positions.map((p) => `<tr><td class="sym">${f.esc(p.symbol)}</td><td class="muted">${f.esc(p.dex)}</td><td class="num mono">${f.price(p.entry)}</td><td class="num mono">${f.price(p.price)}</td><td class="num mono">${f.price(p.stop)}</td><td class="num pos">${f.pct(p.peak / p.entry - 1)}</td><td class="num">${f.money(p.size)}</td><td class="num ${f.cls(p.ret)}"><b>${f.pct(p.ret)}</b></td><td>${p.trailing ? '<span class="badge b-green">ACTIVO</span>' : '<span class="badge b-muted">desde +12 %</span>'}</td><td class="muted">${f.dt(p.entryT)}</td></tr>`).join('')
-  }</tbody></table></div>` : '<div class="empty">Sin posiciones abiertas. Los agentes siguen buscando tokens que pasen todos los filtros.</div>';
-
   $('feed').innerHTML = L.activity.map((a) => `<div class="ev"><span class="t mono">${f.timeS(a.t)}</span><span class="ag ${a.agent}">${a.agent}</span><span class="m">${f.esc(a.msg)}</span></div>`).join('');
 
-  $('tradecount').textContent = closed ? `${closed} · ${Math.round((wins / closed) * 100)} % ganadoras` : '';
-  $('trades').innerHTML = closed ? `<div class="tbl-wrap"><table><thead><tr><th>Token</th><th>Entrada</th><th>Salida</th><th class="num">Tamaño</th><th class="num">Resultado</th><th class="num">Máximo</th><th class="num">Puntaje</th><th>Motivo de salida</th></tr></thead><tbody>${
-    L.trades.map((t) => `<tr><td class="sym">${f.esc(t.symbol)}</td><td class="muted">${f.dt(t.entryT)}</td><td class="muted">${f.dt(t.exitT)}</td><td class="num">${f.money(t.size)}</td><td class="num ${f.cls(t.pnl)}"><b>${f.signed(t.pnl)}</b> <span class="muted">${f.pct(t.ret)}</span></td><td class="num">${f.pct(t.peakRet)}</td><td class="num">${t.score?.toFixed(2) ?? ''}</td><td style="white-space:normal;min-width:200px">${f.esc(t.reason)}</td></tr>`).join('')
-  }</tbody></table></div>` : '<div class="empty">Todavía no cerró ninguna operación.</div>';
+  const sum = L.summaries?.[0];
+  $('detail').innerHTML = (sum ? `<div class="sum"><b>Resumen ${f.dt(sum.t)}</b> · saldo ${f.money(sum.equity)} USD<br>
+      Período: <b class="${f.cls(sum.pnlPeriod)}">${f.signed(sum.pnlPeriod)} USD</b> · ${sum.trades} operaciones · ${Math.round(sum.winRate * 100)} % ganadoras<br>
+      Mejor: ${f.esc(sum.best)}<br>Peor: ${f.esc(sum.worst)}</div>` : '<div class="empty" style="min-height:90px;margin-bottom:12px">El primer resumen diario sale mañana a las 9:00.</div>') +
+    `<div class="kpi" style="padding:12px 0;border-top:1px solid var(--border)"><div class="l">Por operación</div><div class="v">${Math.round(R.size * 100)} % del saldo</div><div class="s">nunca más · sin promediar a la baja</div></div>
+     <div class="kpi" style="padding:12px 0 0;border-top:1px solid var(--border)"><div class="l">Stop / trailing</div><div class="v">${Math.round(R.stop * 100)} % / +${Math.round(R.trail * 100)} %</div><div class="s">el trailing sigue al máximo a ${Math.round(R.trailDist * 100)} %</div></div>`;
 
   const typeBadge = (d) => d.type === 'compra' ? 'b-green' : d.type === 'venta' ? (d.pnl >= 0 ? 'b-green' : 'b-red') : d.type === 'rechazo' ? 'b-accent' : 'b-amber';
   $('decisions').innerHTML = `<div class="tbl-wrap"><table><thead><tr><th>Hora</th><th>Tipo</th><th>Token</th><th>Motivo</th></tr></thead><tbody>${
-    L.decisions.map((d) => `<tr><td class="muted mono">${f.timeS(d.t)}</td><td><span class="badge ${typeBadge(d)}">${d.type.toUpperCase()}</span></td><td class="sym">${f.esc(d.symbol || d.mint.slice(0, 6))}</td><td style="white-space:normal;min-width:240px">${f.esc(d.reason)}</td></tr>`).join('')
+    L.decisions.map((d) => `<tr><td class="muted mono">${f.timeS(d.t)}</td><td><span class="badge ${typeBadge(d)}">${d.type.toUpperCase()}</span></td><td class="sym">${f.esc(d.symbol || d.mint.slice(0, 6))}</td><td class="reason-cell">${f.esc(d.reason)}</td></tr>`).join('')
   }</tbody></table></div>`;
 
-  if (L.summaries?.length) $('summary').innerHTML = L.summaries.map((s) => `<div class="sum"><b>${f.dt(s.t)}</b> · saldo ${f.money(s.equity)} USD<br>
-    Período: <b class="${f.cls(s.pnlPeriod)}">${f.signed(s.pnlPeriod)} USD</b> · ${s.trades} operaciones · ${Math.round(s.winRate * 100)} % ganadoras<br>
-    Mejor: ${f.esc(s.best)}<br>Peor: ${f.esc(s.worst)}<br>
-    <span class="muted">Embudo: ${s.scanned} vistos → ${s.filtered} seguros → ${s.approved} aprobados</span></div>`).join('');
-
-  $('rules').innerHTML = `Reglas: volumen 1 h ≥ ${(R.minVol / 1000).toFixed(0)}k USD · mint y freeze revocados · LP bloqueado ≥ ${R.lp} % · top 10 holders ≤ ${R.top10} % · dev sin historial de rugs · puntaje ≥ ${String(R.score).replace('.', ',')} · ${Math.round(R.size * 100)} % del saldo por operación · stop ${Math.round(R.stop * 100)} % · trailing desde +${Math.round(R.trail * 100)} % a ${Math.round(R.trailDist * 100)} % del máximo · sin promediar a la baja · sin revancha. Dinero simulado con precios reales de DexScreener; 1 % de costo por lado. Se actualiza cada minuto.`;
+  $('rules').innerHTML = `Reglas: volumen 1 h ≥ ${(R.minVol / 1000).toFixed(0)}k USD · mint y freeze revocados · LP bloqueado ≥ ${R.lp} % · top 10 holders ≤ ${R.top10} % · dev sin historial de rugs · puntaje ≥ ${String(R.score).replace('.', ',')} · ${Math.round(R.size * 100)} % del saldo por operación · stop ${Math.round(R.stop * 100)} % · trailing desde +${Math.round(R.trail * 100)} % · sin revancha. En el historial, "Monto" es lo invertido y el % es sobre ese monto (incluye 1 % de costo por lado). Precios de DexScreener. Se actualiza solo cada minuto.`;
 }
 
 startLoop('memecoin-data', render, $('status'));
