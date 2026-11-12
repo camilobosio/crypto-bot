@@ -19,8 +19,9 @@ export class Executor {
     return null;
   }
 
-  buy(token, pair, analysis) {
-    const price = +pair.priceUsd;
+  // chain (opcional): { price, liq, pool, solUsd } leído de la blockchain justo antes de comprar
+  buy(token, pair, analysis, chain = null) {
+    const price = chain?.price ?? +pair.priceUsd;
     const size = Math.min(this.cfg.maxPctPerTrade * this.equity(), this.s.cash);
     if (!(price > 0)) return 'sin precio';
     if (size < 1) return 'saldo insuficiente';
@@ -28,18 +29,33 @@ export class Executor {
     this.s.cash -= size;
     this.s.positions[token.mint] = {
       mint: token.mint, symbol: token.symbol || pair.baseToken?.symbol || token.mint.slice(0, 6), pair: pair.pairAddress, dex: pair.dexId,
-      entryT: Date.now(), entry: price, qty, size, price, peak: price, liqEntry: pair.liquidity?.usd ?? 0, liq: pair.liquidity?.usd ?? 0,
+      entryT: Date.now(), entry: price, qty, size, price, peak: price,
+      liqEntry: chain?.liq ?? pair.liquidity?.usd ?? 0, liq: chain?.liq ?? pair.liquidity?.usd ?? 0, liqSrc: chain ? 'blockchain' : 'dexscreener',
+      pool: chain?.pool ?? (pair.dexId === 'pumpswap' ? undefined : null), solUsd: chain?.solUsd ?? (+pair.priceUsd / +pair.priceNative || 0),
+      src: chain ? 'blockchain' : 'dexscreener', realized: 0, tpDone: false,
       stop: price * (1 + this.risk.stopPct), trailing: false, score: analysis.score, misses: 0,
     };
     return null;
   }
 
+  // Venta parcial: cobra una parte y deja el resto abierto.
+  sellPart(mint, fraction, price) {
+    const p = this.s.positions[mint];
+    const qty = p.qty * fraction;
+    const proceeds = qty * price * (1 - this.cfg.costPct);
+    p.qty -= qty;
+    p.realized = (p.realized ?? 0) + proceeds;
+    this.s.cash += proceeds;
+    return { pnl: proceeds - p.size * fraction };
+  }
+
   sell(mint, price, reason) {
     const p = this.s.positions[mint];
-    const proceeds = p.qty * price * (1 - this.cfg.costPct);
+    const proceeds = p.qty * price * (1 - this.cfg.costPct) + (p.realized ?? 0);
+    this.s.cash -= p.realized ?? 0; // lo de la venta parcial ya estaba sumado al saldo
     const pnl = proceeds - p.size;
     this.s.cash += proceeds;
-    const trade = { mint, symbol: p.symbol, dex: p.dex, entryT: p.entryT, exitT: Date.now(), entry: p.entry, exit: price, size: p.size, pnl, ret: pnl / p.size, peakRet: p.peak / p.entry - 1, reason, score: p.score };
+    const trade = { mint, symbol: p.symbol, dex: p.dex, entryT: p.entryT, exitT: Date.now(), entry: p.entry, exit: price, size: p.size, pnl, ret: pnl / p.size, peakRet: p.peak / p.entry - 1, reason, score: p.score, partial: !!p.tpDone, src: p.src };
     this.s.trades.push(trade);
     delete this.s.positions[mint];
     if (pnl < 0) {

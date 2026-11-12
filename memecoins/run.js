@@ -12,6 +12,7 @@ import { marketBatch, security } from './agents/filter.js';
 import { analyze } from './agents/analyst.js';
 import { Executor } from './agents/executor.js';
 import { Risk } from './agents/risk.js';
+import { poolInfo, readPools } from './lib/chain.js';
 
 const arg = (k, d) => { const i = process.argv.indexOf(k); return i > 0 ? process.argv[i + 1] : d; };
 const MINUTES = +arg('--minutes', 320);
@@ -25,7 +26,15 @@ const fresh = () => ({
   equityPts: [], stats: { scanned: 0, passedVolume: 0, passedFilter: 0, approved: 0 }, blacklist: {}, lossStreak: 0,
   pausedUntil: 0, lastSummaryDay: null, summaries: [],
 });
-const s = fs.existsSync(STATE) ? JSON.parse(fs.readFileSync(STATE, 'utf8')) : fresh();
+let s = fs.existsSync(STATE) ? JSON.parse(fs.readFileSync(STATE, 'utf8')) : fresh();
+// Sesión nueva (cambió cfg.sessionId): se archiva la anterior y el paper arranca de cero con el capital inicial.
+if ((s.sessionId ?? 'v1') !== cfg.sessionId && (s.trades.length || Object.keys(s.positions).length)) {
+  fs.mkdirSync(path.join(DIR, 'archivo'), { recursive: true });
+  fs.writeFileSync(path.join(DIR, 'archivo', `${s.sessionId ?? 'v1'}.json`), JSON.stringify(s));
+  console.log(`Sesión ${s.sessionId ?? 'v1'} archivada → paper de cero (${cfg.sessionId})`);
+  s = fresh();
+}
+s.sessionId = cfg.sessionId;
 // limpia un resumen vacío que generó la primera versión al arrancar
 s.summaries = (s.summaries ?? []).filter((x) => x.t - s.startedAt > 36e5);
 const log = new Logger(DIR, s);
@@ -91,7 +100,22 @@ async function processQueue() {
     log.decision('descarte', t, 'volumen < 50k al revalidar');
     return;
   }
-  log.activity('FILTER', `${t.symbol}: pasó TODOS los filtros (top10 ${sec.top10.toFixed(1)} %, LP ${sec.lpLocked.toFixed(0)} %, ${sec.holders} holders) → Analyst`);
+  const liqUsd = pair.liquidity?.usd ?? 0, m5 = pair.priceChange?.m5 ?? 0;
+  if (liqUsd < cfg.filter.minLiquidityUsd) {
+    log.decision('descarte', t, `liquidez < ${cfg.filter.minLiquidityUsd / 1000}k`, { liq: liqUsd });
+    log.activity('FILTER', `${t.symbol}: DESCARTADO · liquidez ${Math.round(liqUsd / 1000)}k`);
+    retryAt.set(t.mint, Date.now() + 10 * 6e4);
+    watch.set(t.mint, { ...t, foundAt: Date.now() });
+    return;
+  }
+  if (m5 > cfg.filter.maxChange5mPct) {
+    log.decision('rechazo', t, `subió ${m5.toFixed(0)} % en 5 min (no se persigue la vela)`, { m5 });
+    log.activity('FILTER', `${t.symbol}: +${m5.toFixed(0)} % en 5 min → no se persigue, se reevalúa en 5 min`);
+    retryAt.set(t.mint, Date.now() + 5 * 6e4);
+    watch.set(t.mint, { ...t, foundAt: Date.now() });
+    return;
+  }
+  log.activity('FILTER', `${t.symbol}: pasó TODOS los filtros (insiders ${sec.insiders}, top10 ${sec.top10.toFixed(1)} %, LP ${sec.lpLocked.toFixed(0)} %, ${sec.holders} holders) → Analyst`);
   const a = analyze(pair, sec);
   if (a.score < cfg.analyst.minScore) {
     log.decision('rechazo', t, `puntaje ${a.score.toFixed(3)} < ${cfg.analyst.minScore}`, { parts: a.parts });
@@ -108,11 +132,31 @@ async function processQueue() {
     log.activity('EXECUTOR', `${t.symbol}: no opera · ${block}`);
     return;
   }
-  const err = ex.buy(t, pair, a);
+  // Precio de la blockchain justo antes de comprar (PumpSwap): se compra al precio real del pool
+  let chain = null;
+  if (pair.dexId === 'pumpswap') {
+    try {
+      const pool = await poolInfo(pair.pairAddress);
+      const solUsd = +pair.priceUsd / +pair.priceNative;
+      if (pool && solUsd > 0) {
+        const c = (await readPools([{ key: t.mint, info: pool }])).get(t.mint);
+        if (c?.priceSol > 0) chain = { price: c.priceSol * solUsd, liq: 2 * c.solReserve * solUsd, pool, solUsd };
+      }
+    } catch (e) { log.activity('EXECUTOR', `${t.symbol}: RPC no respondió (${e.message}) → uso precio de DexScreener`); }
+    if (chain) {
+      const gap = chain.price / +pair.priceUsd - 1;
+      if (Math.abs(gap) > cfg.filter.maxChainGapPct) {
+        log.decision('rechazo', t, `blockchain y DexScreener difieren ${(gap * 100).toFixed(0)} % (datos no confiables)`, { gap });
+        log.activity('EXECUTOR', `${t.symbol}: precio de la blockchain ${(gap * 100).toFixed(0)} % distinto del de DexScreener → no opera`);
+        return;
+      }
+    }
+  }
+  const err = ex.buy(t, pair, a, chain);
   if (err) { log.decision('rechazo', t, `executor: ${err}`); return; }
   const p = s.positions[t.mint];
-  log.decision('compra', t, `filtros OK + puntaje ${a.score.toFixed(2)}`, { size: +p.size.toFixed(2), price: p.entry, parts: a.parts, top10: sec.top10, lpLocked: sec.lpLocked, volH1: pair.volume?.h1, liq: pair.liquidity?.usd, dex: pair.dexId });
-  log.activity('EXECUTOR', `COMPRA ${p.symbol} · ${p.size.toFixed(2)} USD (${(cfg.executor.maxPctPerTrade * 100).toFixed(0)} % del saldo) a ${p.entry.toPrecision(4)} · stop ${p.stop.toPrecision(4)}`);
+  log.decision('compra', t, `filtros OK + puntaje ${a.score.toFixed(2)}`, { size: +p.size.toFixed(2), price: p.entry, parts: a.parts, top10: sec.top10, lpLocked: sec.lpLocked, volH1: pair.volume?.h1, liq: p.liq, dex: pair.dexId, src: p.src, insiders: sec.insiders });
+  log.activity('EXECUTOR', `COMPRA ${p.symbol} · ${p.size.toFixed(2)} USD (${(cfg.executor.maxPctPerTrade * 100).toFixed(0)} % del saldo) a ${p.entry.toPrecision(4)} · stop ${p.stop.toPrecision(4)} · precio de ${p.src}`);
 }
 
 // ---- Panel y persistencia
@@ -126,7 +170,7 @@ function writeLive() {
     trades: s.trades.slice(-100).reverse(), activity: s.activity.slice(-150).reverse(), decisions: s.recentDecisions.slice(-60).reverse(),
     counters: s.counters, stats: s.stats, watching: watch.size, queue: secQueue.length, pausedUntil: s.pausedUntil,
     equityPts: s.equityPts.filter((_, i) => i % step === 0 || i === s.equityPts.length - 1), summaries: s.summaries.slice(-3).reverse(),
-    rules: { minVol: cfg.filter.minVolumeH1Usd, top10: cfg.filter.maxTop10Pct, lp: cfg.filter.minLpLockedPct, score: cfg.analyst.minScore, size: cfg.executor.maxPctPerTrade, stop: cfg.risk.stopPct, trail: cfg.risk.trailActivatePct, trailDist: cfg.risk.trailDistancePct, maxOpen: cfg.executor.maxOpen },
+    rules: { session: cfg.sessionId, minLiq: cfg.filter.minLiquidityUsd, insiders: cfg.filter.maxInsiders, tp: cfg.risk.takeProfitPct, tpFrac: cfg.risk.takeProfitFraction, minVol: cfg.filter.minVolumeH1Usd, top10: cfg.filter.maxTop10Pct, lp: cfg.filter.minLpLockedPct, score: cfg.analyst.minScore, size: cfg.executor.maxPctPerTrade, stop: cfg.risk.stopPct, trail: cfg.risk.trailActivatePct, trailDist: cfg.risk.trailDistancePct, maxOpen: cfg.executor.maxOpen },
   };
   fs.writeFileSync(path.join(DIR, 'live.json'), JSON.stringify(live));
   fs.writeFileSync(STATE, JSON.stringify(s));

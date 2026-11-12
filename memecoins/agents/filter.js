@@ -45,6 +45,12 @@ export async function security(mint, cfg) {
   const top10 = (r.topHolders ?? []).filter((h) => !isPool(h)).slice(0, 10).reduce((a, h) => a + (h.pct ?? 0), 0);
   if (top10 > cfg.maxTop10Pct) fails.push(`top 10 holders ${top10.toFixed(1)} %`);
 
+  // Redes de wallets "insider": el dueño reparte el token en cientos/miles de wallets chicas para
+  // esquivar el filtro de top 10 y después vende todo junto (así fueron los rugs de GTA 6 y Rockstar).
+  const insiders = r.graphInsidersDetected ?? 0;
+  if (cfg.maxInsiders != null && insiders > cfg.maxInsiders) fails.push(`red de ${insiders} wallets insider`);
+  if ((r.risks ?? []).some((x) => /copycat/i.test(x.name))) fails.push('token copia de otro (copycat)');
+
   // Dev con historial de rugs
   const rugRisks = (r.risks ?? []).filter((x) => RUG_WORDS.test(`${x.name} ${x.description ?? ''}`));
   if (r.rugged) fails.push('token marcado como rug');
@@ -52,6 +58,6 @@ export async function security(mint, cfg) {
 
   return {
     ok: fails.length === 0, reason: fails.join(' · '), top10, lpLocked,
-    holders: r.totalHolders ?? 0, risks: (r.risks ?? []).map((x) => x.name), symbol: r.tokenMeta?.symbol,
+    holders: r.totalHolders ?? 0, insiders, risks: (r.risks ?? []).map((x) => x.name), symbol: r.tokenMeta?.symbol,
   };
 }
