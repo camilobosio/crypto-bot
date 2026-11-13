@@ -3,7 +3,7 @@
 export default {
   capitalUsd: 100,
   // Cambiar este nombre reinicia el paper de cero (la sesión anterior queda archivada en la rama de datos).
-  sessionId: '2026-11-12-v2',
+  sessionId: '2026-11-13-v3',   // v3: más tamaño por operación + apuestas tempranas
 
   scout: {
     pumpportal: true,           // tokens nuevos y migraciones de Pump.fun en vivo (websocket)
@@ -14,7 +14,11 @@ export default {
   },
 
   filter: {
-    minVolumeH1Usd: 50_000,     // volumen de la última hora
+    minVolumeH1Usd: 50_000,     // volumen de la última hora (operaciones normales)
+    // Apuestas tempranas: tokens que recién arrancan, con menos volumen. Pasan TODOS los filtros de
+    // seguridad igual que el resto, pero entran con menos plata y como mucho una abierta a la vez.
+    earlyMinVolumeH1Usd: 15_000,
+    earlyMinLiquidityUsd: 20_000,
     maxTop10Pct: 20,            // top 10 holders (sin contar pools/curva) <= 20 %
     minLpLockedPct: 90,         // LP bloqueado o quemado
     minLiquidityUsd: 50_000,    // liquidez mínima del pool: menos que esto se vacía con pocas ventas
@@ -30,7 +34,9 @@ export default {
   analyst: { minScore: 0.6 },
 
   executor: {
-    maxPctPerTrade: 0.08,       // 8 % del saldo actual por operación. Nunca más.
+    maxPctPerTrade: 0.15,       // 15 % del saldo actual por operación normal (antes 8 %: arriesgaba muy poco)
+    earlyPctPerTrade: 0.05,     // 5 % en las apuestas tempranas
+    maxEarlyOpen: 1,            // como mucho una apuesta temprana abierta a la vez
     maxOpen: 5,
     costPct: 0.01,              // comisión + slippage estimados por lado (1 %)
     lossStreakPause: 3,         // anti-venganza: tras 3 pérdidas seguidas, pausa

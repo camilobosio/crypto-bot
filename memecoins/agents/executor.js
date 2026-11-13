@@ -1,5 +1,5 @@
 // EXECUTOR: solo opera lo que el Analyst aprobó (que a su vez solo recibe lo que pasó el Filter).
-// Máximo 8 % del saldo actual por operación. Una posición por token: nunca promedia a la baja.
+// Tamaño: maxPctPerTrade del saldo (earlyPctPerTrade en las apuestas tempranas). Una posición por token: nunca promedia a la baja.
 // Anti-venganza: un token que cerró en pérdida queda vetado para siempre, y tras N pérdidas seguidas pausa.
 export class Executor {
   constructor(cfg, risk, state, log) { this.cfg = cfg; this.risk = risk; this.s = state; this.log = log; }
@@ -11,8 +11,9 @@ export class Executor {
   }
 
   // Devuelve el motivo por el que NO puede operar, o null.
-  blocker(mint) {
+  blocker(mint, early = false) {
     if (this.s.positions[mint]) return 'ya hay posición en este token (no se promedia)';
+    if (early && Object.values(this.s.positions).filter((p) => p.early).length >= (this.cfg.maxEarlyOpen ?? 1)) return 'ya hay una apuesta temprana abierta';
     if (this.s.blacklist[mint]) return `token vetado: ${this.s.blacklist[mint]}`;
     if (Date.now() < (this.s.pausedUntil ?? 0)) return `pausa anti-venganza hasta ${new Date(this.s.pausedUntil).toISOString().slice(11, 16)} UTC`;
     if (Object.keys(this.s.positions).length >= this.cfg.maxOpen) return `máximo de ${this.cfg.maxOpen} posiciones abiertas`;
@@ -20,9 +21,10 @@ export class Executor {
   }
 
   // chain (opcional): { price, liq, pool, solUsd } leído de la blockchain justo antes de comprar
-  buy(token, pair, analysis, chain = null) {
+  buy(token, pair, analysis, chain = null, early = false) {
     const price = chain?.price ?? +pair.priceUsd;
-    const size = Math.min(this.cfg.maxPctPerTrade * this.equity(), this.s.cash);
+    const pct = early ? this.cfg.earlyPctPerTrade : this.cfg.maxPctPerTrade;
+    const size = Math.min(pct * this.equity(), this.s.cash);
     if (!(price > 0)) return 'sin precio';
     if (size < 1) return 'saldo insuficiente';
     const qty = size / (price * (1 + this.cfg.costPct));
@@ -33,7 +35,7 @@ export class Executor {
       liqEntry: chain?.liq ?? pair.liquidity?.usd ?? 0, liq: chain?.liq ?? pair.liquidity?.usd ?? 0, liqSrc: chain ? 'blockchain' : 'dexscreener',
       pool: chain?.pool ?? (pair.dexId === 'pumpswap' ? undefined : null), solUsd: chain?.solUsd ?? (+pair.priceUsd / +pair.priceNative || 0),
       src: chain ? 'blockchain' : 'dexscreener', realized: 0, tpDone: false,
-      stop: price * (1 + this.risk.stopPct), trailing: false, score: analysis.score, misses: 0,
+      stop: price * (1 + this.risk.stopPct), trailing: false, score: analysis.score, misses: 0, early,
     };
     return null;
   }

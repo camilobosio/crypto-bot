@@ -70,12 +70,14 @@ async function sweep() {
     const t = watch.get(m), pair = market.get(m);
     if (!t || !pair) continue;
     t.volH1 = pair.volume?.h1 ?? 0;
-    if (t.volH1 >= cfg.filter.minVolumeH1Usd) {
+    const early = t.volH1 < cfg.filter.minVolumeH1Usd && t.volH1 >= cfg.filter.earlyMinVolumeH1Usd
+      && (pair.liquidity?.usd ?? 0) >= cfg.filter.earlyMinLiquidityUsd && !ex.blocker(m, true);
+    if (t.volH1 >= cfg.filter.minVolumeH1Usd || early) {
       watch.delete(m);
       t.symbol = symbolOf(t, pair);
       s.stats.passedVolume++;
-      secQueue.push({ t, pair });
-      log.activity('FILTER', `${t.symbol}: volumen 1h ${Math.round(t.volH1 / 1000)}k ✓ → chequeo de seguridad`);
+      secQueue.push({ t, pair, early });
+      log.activity('FILTER', `${t.symbol}: volumen 1h ${Math.round(t.volH1 / 1000)}k ✓${early ? ' (APUESTA TEMPRANA)' : ''} → chequeo de seguridad`);
     }
   }
 }
@@ -85,6 +87,7 @@ async function processQueue() {
   const item = secQueue.shift();
   if (!item) return sleep(500);
   const { t } = item;
+  let early = !!item.early;
   let sec;
   try { sec = await security(t.mint, cfg.filter); } catch (e) { sec = { ok: false, reason: `RugCheck falló (${e.message})` }; }
   if (!sec.ok) {
@@ -96,13 +99,16 @@ async function processQueue() {
   s.stats.passedFilter++;
   // datos de mercado frescos para el Analyst
   const pair = (await marketBatch([t.mint])).get(t.mint) ?? item.pair;
-  if ((pair.volume?.h1 ?? 0) < cfg.filter.minVolumeH1Usd) {
-    log.decision('descarte', t, 'volumen < 50k al revalidar');
+  const volNow = pair.volume?.h1 ?? 0;
+  if (volNow >= cfg.filter.minVolumeH1Usd) early = false; // ya llegó al volumen normal
+  if (volNow < (early ? cfg.filter.earlyMinVolumeH1Usd : cfg.filter.minVolumeH1Usd)) {
+    log.decision('descarte', t, `volumen < ${(early ? cfg.filter.earlyMinVolumeH1Usd : cfg.filter.minVolumeH1Usd) / 1000}k al revalidar`);
     return;
   }
   const liqUsd = pair.liquidity?.usd ?? 0, m5 = pair.priceChange?.m5 ?? 0;
-  if (liqUsd < cfg.filter.minLiquidityUsd) {
-    log.decision('descarte', t, `liquidez < ${cfg.filter.minLiquidityUsd / 1000}k`, { liq: liqUsd });
+  const minLiq = early ? cfg.filter.earlyMinLiquidityUsd : cfg.filter.minLiquidityUsd;
+  if (liqUsd < minLiq) {
+    log.decision('descarte', t, `liquidez < ${minLiq / 1000}k`, { liq: liqUsd });
     log.activity('FILTER', `${t.symbol}: DESCARTADO · liquidez ${Math.round(liqUsd / 1000)}k`);
     retryAt.set(t.mint, Date.now() + 10 * 6e4);
     watch.set(t.mint, { ...t, foundAt: Date.now() });
@@ -126,7 +132,7 @@ async function processQueue() {
   }
   s.stats.approved++;
   log.activity('ANALYST', `${t.symbol}: puntaje ${a.score.toFixed(3)} ✓ → Executor`);
-  const block = ex.blocker(t.mint);
+  const block = ex.blocker(t.mint, early);
   if (block) {
     log.decision('rechazo', t, `executor: ${block}`, { score: a.score });
     log.activity('EXECUTOR', `${t.symbol}: no opera · ${block}`);
@@ -152,11 +158,11 @@ async function processQueue() {
       }
     }
   }
-  const err = ex.buy(t, pair, a, chain);
+  const err = ex.buy(t, pair, a, chain, early);
   if (err) { log.decision('rechazo', t, `executor: ${err}`); return; }
   const p = s.positions[t.mint];
-  log.decision('compra', t, `filtros OK + puntaje ${a.score.toFixed(2)}`, { size: +p.size.toFixed(2), price: p.entry, parts: a.parts, top10: sec.top10, lpLocked: sec.lpLocked, volH1: pair.volume?.h1, liq: p.liq, dex: pair.dexId, src: p.src, insiders: sec.insiders });
-  log.activity('EXECUTOR', `COMPRA ${p.symbol} · ${p.size.toFixed(2)} USD (${(cfg.executor.maxPctPerTrade * 100).toFixed(0)} % del saldo) a ${p.entry.toPrecision(4)} · stop ${p.stop.toPrecision(4)} · precio de ${p.src}`);
+  log.decision('compra', t, `filtros OK + puntaje ${a.score.toFixed(2)}${early ? ' (apuesta temprana)' : ''}`, { early, size: +p.size.toFixed(2), price: p.entry, parts: a.parts, top10: sec.top10, lpLocked: sec.lpLocked, volH1: pair.volume?.h1, liq: p.liq, dex: pair.dexId, src: p.src, insiders: sec.insiders });
+  log.activity('EXECUTOR', `COMPRA${early ? ' TEMPRANA' : ''} ${p.symbol} · ${p.size.toFixed(2)} USD (${((early ? cfg.executor.earlyPctPerTrade : cfg.executor.maxPctPerTrade) * 100).toFixed(0)} % del saldo) a ${p.entry.toPrecision(4)} · stop ${p.stop.toPrecision(4)} · precio de ${p.src}`);
 }
 
 // ---- Panel y persistencia
