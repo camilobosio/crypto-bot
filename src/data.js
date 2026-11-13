@@ -92,7 +92,7 @@ function cached(file, startMs, step, fetcher, key) {
     if (!cache || cache.start > startMs) cache = { start: startMs, rows: [] };
     const last = cache.rows.at(-1);
     const fresh = await fetcher(last ? key(last) + step : startMs);
-    cache.rows.push(...fresh);
+    for (const r of fresh) cache.rows.push(r); // sin spread: con años de velas desborda la pila
     fs.writeFileSync(file, JSON.stringify(cache));
     return cache.rows.filter((r) => key(r) >= startMs);
   })();

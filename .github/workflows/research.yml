@@ -35,7 +35,9 @@ jobs:
           DATA_SOURCE: binance
           YEARS: '4'
           NODE_OPTIONS: --max-old-space-size=6144
-        run: node scripts/research.js 2>&1 | tee research.log
+        run: |
+          rm -rf results
+          node scripts/research.js 2>&1 | tee research.log
       - name: Publicar resultados
         if: always()
         env:
