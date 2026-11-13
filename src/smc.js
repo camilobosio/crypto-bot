@@ -12,6 +12,9 @@
 //   mode 'ltf': cuando el precio tocó la zona, en la temporalidad baja (5m o 15m) se espera el
 //               "breaker": mínimo → máximo → rompe ese mínimo → cierra arriba de ese máximo (MSS).
 //               Orden límite en el breaker, stop debajo del mínimo barrido.
+// Modo giro (onlyReversal): solo opera el PRIMER tramo después de un cambio de estructura (MSS) que
+// llega tras una tendencia de al menos minPrevLegs tramos para el otro lado. Ej.: después de varios
+// mínimos decrecientes, el precio cierra arriba del último máximo → busca el largo en el retroceso.
 // Objetivo: la liquidez externa (máximo del rango), si da al menos minRR; si no, no opera.
 // Bajista: todo al revés.
 // Todo se calcula vela por vela con datos ya cerrados (sin mirar el futuro).
@@ -26,9 +29,10 @@ function htfStates(B, p) {
   const S = {
     tr: new Int8Array(n), lo: new Float64Array(n).fill(NaN), hi: new Float64Array(n).fill(NaN),
     zLo: new Float64Array(n).fill(NaN), zHi: new Float64Array(n).fill(NaN), ote: new Uint8Array(n),
-    pull: new Uint8Array(n), id: new Int32Array(n), atr: a,
+    pull: new Uint8Array(n), id: new Int32Array(n), atr: a, flip: new Uint8Array(n),
   };
   let tr = 0, lo = NaN, hi = NaN, loI = -1, hiI = -1, brk = -1, extConf = false, id = 0;
+  let legsSame = 0, isFlip = false;
   let lastSH = null, lastSL = null; // swings de 3 velas confirmados (para arrancar)
   let zones = [];
 
@@ -68,6 +72,7 @@ function htfStates(B, p) {
       for (let q = Math.max(0, start); q <= j; q++) {
         if (dir === 1 ? l[q] < ex : h[q] > ex) { ex = dir === 1 ? l[q] : h[q]; exI = q; }
       }
+      if (tr === dir) { legsSame++; isFlip = false; } else { isFlip = tr !== 0 && legsSame >= (p.minPrevLegs ?? 3); legsSame = 1; }
       tr = dir; brk = j; id++; extConf = false;
       if (dir === 1) { lo = ex; loI = exI; hi = h[j]; hiI = j; } else { hi = ex; hiI = exI; lo = l[j]; loI = j; }
       zones = findZones(dir, exI, j);
@@ -93,6 +98,7 @@ function htfStates(B, p) {
       }
     }
 
+    S.flip[j] = isFlip ? 1 : 0;
     S.tr[j] = tr; S.lo[j] = lo; S.hi[j] = hi; S.id[j] = id; S.pull[j] = extConf ? 1 : 0;
     if (tr !== 0 && hi - lo >= p.sigAtr * a[j]) {
       const rng = hi - lo, mid = lo + rng / 2;
@@ -176,6 +182,7 @@ export const smc = {
       if (j < 0) continue;
       const tr = S.tr[j], zl = S.zLo[j], zh = S.zHi[j];
       if (!tr || Number.isNaN(zl) || !S.pull[j]) continue;
+      if (p.onlyReversal && !S.flip[j]) continue;
       // ¿el precio entró a la zona? (5m, dentro del rango vigente)
       if (tr === 1 ? b.l5[i] <= zh && b.l5[i] >= S.lo[j] : b.h5[i] >= zl && b.h5[i] <= S.hi[j]) tapped = S.id[j];
       const tp = tr === 1 ? S.hi[j] : S.lo[j];

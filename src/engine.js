@@ -19,6 +19,12 @@
 //               con tocarla: hay fila de órdenes). Si no se llena, en cada vela la corre al precio nuevo
 //               mientras no se haya alejado más de chaseR veces el riesgo; vence a las maxWaitBars velas.
 //               Paga comisión maker y sin slippage. Stop y objetivo quedan donde los puso la señal.
+// Salidas (cfg.exits.mode):
+//   'taker' -> stop y cierres a mercado (comisión taker + slippage). El take profit siempre es límite (maker).
+//   'maker' -> al tocar el stop deja una orden límite EN el precio del stop y espera que el precio rebote
+//              hasta ahí (solo así paga maker). Si el precio sigue en contra hasta emergencyR veces el
+//              riesgo más allá del stop, o pasan maxWaitBars velas, cierra a mercado igual (protección).
+//              Los cierres por tiempo/trailing/interruptor también se intentan con límite primero.
 // Tamaño: si la estrategia manda un puntaje (score 0-1) y cfg.risk.riskByScore existe, el riesgo por
 // operación sale de esa tabla; debajo de cfg.risk.minScore no opera.
 
@@ -36,6 +42,7 @@ export class FuturesPortfolio {
     this.s = state ?? FuturesPortfolio.initState(cfg.initialCapital);
     this.s.orders ??= {};
     this.limitMode = cfg.entry?.mode === 'limit';
+    this.makerExits = cfg.exits?.mode === 'maker';
     this.allowEntries = true;
     this.trades = [];
     this.equityCurve = [];
@@ -150,6 +157,31 @@ export class FuturesPortfolio {
     }
   }
 
+  // Salida con orden límite (ver cabecera). Pesimista: dentro de la vela, si pudo pasar lo malo, pasó.
+  makerExit(sym, pos, b, t) {
+    const C = this.cfg.costs, X = this.cfg.exits;
+    const adverse = pos.side === 1 ? b.l : b.h, favor = pos.side === 1 ? b.h : b.l;
+    const reached = (lvl, px) => pos.side * (px - lvl) <= 0;
+    const taker = (px, why) => this.close(sym, px * (1 - pos.side * C.slippagePct), t, why, C.takerFee);
+    const eo = pos.exitOrder;
+    if (eo) {
+      if (reached(eo.emerg, b.o)) return taker(b.o, `${eo.reason} (emergencia)`);
+      if (reached(eo.emerg, adverse)) return taker(eo.emerg, `${eo.reason} (emergencia)`);
+      if (pos.side * (favor - eo.px) > 0) return this.close(sym, eo.px, t, `${eo.reason} (límite)`, C.makerFee);
+      if (++eo.waited >= (X.maxWaitBars ?? 3)) return taker(b.c, `${eo.reason} (venció la límite)`);
+      return;
+    }
+    const why = pos.side * (pos.stop - pos.entry) >= 0 ? 'stop en ganancia' : 'stop';
+    if (reached(pos.stop, b.o) || reached(pos.stop, adverse)) {
+      const emerg = pos.stop - pos.side * (X.emergencyR ?? 0.25) * pos.R;
+      if (reached(emerg, b.o)) return taker(b.o, `${why} (emergencia)`);
+      if (reached(emerg, adverse)) return taker(emerg, `${why} (emergencia)`);
+      pos.exitOrder = { px: pos.stop, emerg, waited: 0, reason: why };
+      return;
+    }
+    if (pos.side * (favor - pos.tp) >= 0) this.close(sym, pos.tp, t, 'take profit', C.makerFee);
+  }
+
   step(i) {
     const s = this.s, R = this.cfg.risk, C = this.cfg.costs;
     const t = this.data[this.syms[0]][i].t;
@@ -172,7 +204,11 @@ export class FuturesPortfolio {
     for (const o of pend) {
       if (o.type === 'close') {
         const pos = s.positions[o.sym];
-        if (pos) this.close(o.sym, this.data[o.sym][i].o * (1 - pos.side * C.slippagePct), t, o.reason, C.takerFee);
+        if (!pos) continue;
+        if (this.makerExits) {
+          const px = this.data[o.sym][i].o;
+          pos.exitOrder ??= { px, emerg: px - pos.side * (this.cfg.exits.emergencyR ?? 0.25) * pos.R, waited: 0, reason: o.reason, fresh: false };
+        } else this.close(o.sym, this.data[o.sym][i].o * (1 - pos.side * C.slippagePct), t, o.reason, C.takerFee);
         continue;
       }
       if (s.halted || s.blockEntries || !this.allowEntries || s.positions[o.sym]) continue;
@@ -191,8 +227,9 @@ export class FuturesPortfolio {
       const b = this.data[sym][i];
       const adverse = pos.side === 1 ? b.l : b.h, favor = pos.side === 1 ? b.h : b.l;
       const beyond = (lvl, px) => pos.side * (px - lvl) <= 0; // px alcanzó lvl en contra
-      if (beyond(pos.liq, b.o)) this.close(sym, b.o, t, 'LIQUIDACIÓN', 0, true);
-      else if (beyond(pos.stop, b.o)) this.close(sym, b.o * (1 - pos.side * C.slippagePct), t, 'stop (gap)', C.takerFee);
+      if (beyond(pos.liq, b.o)) { this.close(sym, b.o, t, 'LIQUIDACIÓN', 0, true); continue; }
+      if (this.makerExits) { this.makerExit(sym, pos, b, t); continue; }
+      if (beyond(pos.stop, b.o)) this.close(sym, b.o * (1 - pos.side * C.slippagePct), t, 'stop (gap)', C.takerFee);
       else if (beyond(pos.stop, adverse)) this.close(sym, pos.stop * (1 - pos.side * C.slippagePct), t, pos.side * (pos.stop - pos.entry) >= 0 ? 'stop en ganancia' : 'stop', C.takerFee);
       else if (pos.side * (favor - pos.tp) >= 0) this.close(sym, pos.tp, t, 'take profit', C.makerFee);
     }

@@ -15,7 +15,7 @@ const OUT = path.resolve(import.meta.dirname, '..', 'results');
 fs.mkdirSync(OUT, { recursive: true });
 const YEARS = +(process.env.YEARS ?? 4);
 const base = structuredClone(cfg0);
-base.symbols = base.symbols.filter((s) => s !== 'SUIUSDT'); // SUI existe recién desde 2023: acortaría todo
+base.symbols = (process.env.SYMBOLS ?? 'BTCUSDT,ETHUSDT,XRPUSDT').split(','); // las que mejor anduvieron en la ronda 1
 base.historyDays = Math.round(YEARS * 365);
 
 const t0 = Date.now();
@@ -31,17 +31,21 @@ const day = (t) => new Date(t).toISOString().slice(0, 10);
 console.log(`Datos: ${syms.length} pares, ${n} velas de 5m, ${day(data[syms[0]][0].t)} → ${day(data[syms[0]][n - 1].t)} (${((Date.now() - t0) / 1000).toFixed(0)} s)`);
 
 const SCORE_RISK = [[0, 0.02], [0.5, 0.04], [0.84, 0.06]]; // dudosa 2 %, normal 4 %, muy clara 6 %
+const LIM = { mode: 'limit', maxWaitBars: 12, chaseR: 0.5 };
+const MAKER_OUT = { mode: 'maker', emergencyR: 0.25, maxWaitBars: 3 };
+// Ronda 2 (13/11): solo BTC, ETH y XRP; salidas con orden límite; modo giro.
 const variants = [
-  { key: 'A', name: 'Ruptura · entrada a mercado · 5 % fijo (lo que corre hoy)', strat: 'mtfBreakout', entry: { mode: 'market' } },
-  { key: 'B', name: 'Ruptura · orden límite · 5 % fijo', strat: 'mtfBreakout', entry: { mode: 'limit', maxWaitBars: 12, chaseR: 0.5 } },
-  { key: 'C', name: 'Ruptura · orden límite · tamaño según puntaje (2/4/6 %)', strat: 'mtfBreakout', entry: { mode: 'limit', maxWaitBars: 12, chaseR: 0.5 }, score: true },
-  { key: 'D', name: 'Video (SMC) · orden límite · 5 % fijo', strat: 'smc', entry: { mode: 'limit', maxWaitBars: 12, chaseR: 0.5 }, minStopPct: 0.0025 },
-  { key: 'E', name: 'Video (SMC) · orden límite · tamaño según puntaje (2/4/6 %)', strat: 'smc', entry: { mode: 'limit', maxWaitBars: 12, chaseR: 0.5 }, score: true, minStopPct: 0.0025 },
+  { key: 'A', name: 'Ruptura · entra a mercado · stop a mercado (lo que corre hoy)', strat: 'mtfBreakout', entry: { mode: 'market' } },
+  { key: 'B', name: 'Ruptura · entra con límite · stop a mercado', strat: 'mtfBreakout', entry: LIM },
+  { key: 'C', name: 'Ruptura · entra y sale con límite', strat: 'mtfBreakout', entry: LIM, exits: MAKER_OUT },
+  { key: 'D', name: 'Giro tras tendencia larga · entra y sale con límite', strat: 'smc', entry: LIM, exits: MAKER_OUT, minStopPct: 0.0025, fixed: { onlyReversal: true, minPrevLegs: 3 } },
+  { key: 'E', name: 'Giro tras tendencia (2 tramos) · entra y sale con límite', strat: 'smc', entry: LIM, exits: MAKER_OUT, minStopPct: 0.0025, fixed: { onlyReversal: true, minPrevLegs: 2 } },
 ];
 
 const cfgFor = (v, riskPct) => {
   const c = structuredClone(base);
   c.entry = v.entry;
+  if (v.exits) c.exits = v.exits;
   c.risk.maxSameSide = v.entry.mode === 'limit' ? 2 : undefined; // no apilar 3 apuestas iguales
   if (v.score) { c.risk.riskByScore = SCORE_RISK; c.risk.minScore = 0.34; }
   if (v.minStopPct) c.risk.minStopPct = v.minStopPct;
@@ -75,7 +79,9 @@ const from = base.walkforward.warmupDays * 288;
 const bh = metrics(buyAndHold(data, base, from, n), [], base.initialCapital);
 
 for (const v of variants) {
-  const S = strategies[v.strat];
+  const S0 = strategies[v.strat];
+  const S = v.fixed ? { ...S0, defaults: { ...S0.defaults, ...v.fixed } } : S0; // parámetros fijos de la variante
+  v.S = S;
   const c = cfgFor(v);
   // 1) Ventaja cruda: parámetros por defecto, todo el período, sin interruptor (mide si la idea gana algo).
   const raw = structuredClone(c); raw.risk.maxDrawdownPct = 1.01;
@@ -99,7 +105,7 @@ const best = [...results].sort((a, b) => b.mw.sharpe - a.mw.sharpe)[0];
 const riskRows = [];
 for (const r of [0.01, 0.02, 0.03, 0.05]) {
   const c = cfgFor(best.v, r);
-  const wf = walkForward({ data, funding, strategy: strategies[best.v.strat], cfg: c });
+  const wf = walkForward({ data, funding, strategy: best.v.S, cfg: c });
   const m = metrics(wf.pf.equityCurve, wf.pf.trades, base.initialCapital);
   riskRows.push([pc(r), m.final.toFixed(2), pc(m.totalReturn), pc(m.monthly), pc(m.maxDD), wf.pf.s.halted ? `sí (${day(wf.pf.s.halted.t)})` : 'no']);
   console.log(`riesgo ${pc(r)}: ${pc(m.totalReturn)} DD ${pc(m.maxDD)}`);
@@ -107,7 +113,7 @@ for (const r of [0.01, 0.02, 0.03, 0.05]) {
 
 // Resumen
 const tbl = (head, rows) => `| ${head.join(' | ')} |\n|${head.map(() => '---').join('|')}|\n` + rows.map((r) => `| ${r.join(' | ')} |`).join('\n');
-md.push(`# Estudio de ${YEARS} años: bot de futuros
+md.push(`# Estudio de ${YEARS} años: bot de futuros (ronda 2: salidas con límite y modo giro)
 
 Generado ${new Date().toISOString().slice(0, 16).replace('T', ' ')} UTC · ${syms.join(', ')} · velas de 5m (espejo público de Binance) · ${day(data[syms[0]][from].t)} → ${day(data[syms[0]][n - 1].t)}.
 Capital inicial ${base.initialCapital} USDT. Comisiones de Bybit (taker 0,055 %, maker 0,02 %), slippage 0,03 % en entradas a mercado y stops, financiamiento estimado 0,01 % cada 8 h.
