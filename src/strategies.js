@@ -1,4 +1,5 @@
-import { ema, atr, rollingMax, rollingMin } from './indicators.js';
+import { ema, atr, rollingMax, rollingMin, adx, structure } from './indicators.js';
+import { smc } from './smc.js';
 import { resample } from './tf.js';
 
 const col = (bars, k) => bars.map((b) => b[k]);
@@ -7,15 +8,34 @@ const col = (bars, k) => bars.map((b) => b[k]);
 export function base(c5) {
   const d1 = resample(c5, '1d'), h4 = resample(c5, '4h'), h1 = resample(c5, '1h'), m15 = resample(c5, '15m');
   const cd = col(d1.bars, 'c'), c4 = col(h4.bars, 'c'), c1 = col(h1.bars, 'c'), c15 = col(m15.bars, 'c');
-  const h1h = col(h1.bars, 'h'), h1l = col(h1.bars, 'l');
+  const h1h = col(h1.bars, 'h'), h1l = col(h1.bars, 'l'), h4h = col(h4.bars, 'h'), h4l = col(h4.bars, 'l');
+  const m15h = col(m15.bars, 'h'), m15l = col(m15.bars, 'l');
+  const a4 = adx(h4h, h4l, c4, 14);
   return {
-    c5: col(c5, 'c'), h5: col(c5, 'h'), l5: col(c5, 'l'),
+    t: col(c5, 't'), o5: col(c5, 'o'), c5: col(c5, 'c'), h5: col(c5, 'h'), l5: col(c5, 'l'),
     d: { i: d1.idx, c: cd, e: ema(cd, 20) },
-    h4: { i: h4.idx, c: c4, f: ema(c4, 21), s: ema(c4, 55) },
-    h1: { i: h1.idx, c: c1, h: h1h, l: h1l, e: ema(c1, 21), a: atr(h1h, h1l, c1, 14) },
-    m15: { i: m15.idx, c: c15, e: ema(c15, 9), a: atr(col(m15.bars, 'h'), col(m15.bars, 'l'), c15, 14) },
+    h4: { i: h4.idx, o: col(h4.bars, 'o'), c: c4, h: h4h, l: h4l, f: ema(c4, 21), s: ema(c4, 55), a: atr(h4h, h4l, c4, 14), adx: a4.adx, pdi: a4.pdi, ndi: a4.ndi, st: structure(h4h, h4l) },
+    h1: { i: h1.idx, o: col(h1.bars, 'o'), c: c1, h: h1h, l: h1l, e: ema(c1, 21), e55: ema(c1, 55), a: atr(h1h, h1l, c1, 14), st: structure(h1h, h1l) },
+    m15: { i: m15.idx, o: col(m15.bars, 'o'), c: c15, h: m15h, l: m15l, e: ema(c15, 9), a: atr(m15h, m15l, c15, 14) },
   };
 }
+
+// Puntaje de tendencia 0-1 para la dirección dir: cuántas razones independientes coinciden.
+// Diario sobre EMA20, EMAs de 4h y de 1h ordenadas, estructura (máximos y mínimos) en 4h y en 1h,
+// y ADX de 4h > 20 con el +DI/-DI a favor. Cada una suma 1/6.
+export function trendScore(x, i, dir) {
+  const jd = x.d.i[i], j4 = x.h4.i[i], j1 = x.h1.i[i];
+  if (jd < 0 || j4 < 0 || j1 < 0) return 0;
+  let n = 0;
+  if (dir * (x.d.c[jd] - x.d.e[jd]) > 0) n++;
+  if (dir * (x.h4.f[j4] - x.h4.s[j4]) > 0) n++;
+  if (dir * (x.h1.e[j1] - x.h1.e55[j1]) > 0) n++;
+  if (x.h4.st[j4] === dir) n++;
+  if (x.h1.st[j1] === dir) n++;
+  if (x.h4.adx[j4] > 20 && dir * (x.h4.pdi[j4] - x.h4.ndi[j4]) > 0) n++;
+  return n / 6;
+}
+const withScore = (x, i, sig) => (sig ? { ...sig, score: trendScore(x, i, sig.side) } : sig);
 
 // Dirección permitida: +1 solo largos, -1 solo cortos, 0 no opera.
 // 4h: EMA21 vs EMA55 y precio del lado correcto. Diario (opcional): precio vs EMA20.
@@ -78,7 +98,8 @@ export const strategies = {
     prepare(b, p) {
       return { ...b, dcH: rollingMax(b.h1.h, p.dcN), dcL: rollingMin(b.h1.l, p.dcN) };
     },
-    entry(x, i, p) {
+    entry(x, i, p) { return withScore(x, i, this.raw(x, i, p)); },
+    raw(x, i, p) {
       const dir = bias(x, i, p);
       const j1 = x.h1.i[i];
       if (!dir || j1 < 1) return null;
@@ -97,6 +118,9 @@ export const strategies = {
       return null;
     },
   },
+
+  // Estrategia del video (TraderMaine / ICT simplificado). Ver src/smc.js.
+  smc,
 };
 
 export const withDefaults = (s, params) => ({ ...s.defaults, ...(params ?? {}) });

@@ -1,0 +1,28 @@
+[
+ {
+  "testFrom": 1717200000000,
+  "testTo": 1719791700000,
+  "params": null,
+  "trainSharpe": -1.3071625723624856,
+  "testReturn": 0,
+  "testTrades": 0,
+  "halted": false
+ },
+ {
+  "testFrom": 1719792000000,
+  "testTo": 1721346900000,
+  "params": {
+   "htf": "1h",
+   "mode": "htf",
+   "sigAtr": 3,
+   "bufAtr": 0.1,
+   "minRR": 1.5,
+   "maxWait": 36,
+   "maxBars": 288
+  },
+  "trainSharpe": 0.3222624326128356,
+  "testReturn": -0.024094488179820517,
+  "testTrades": 3,
+  "halted": false
+ }
+]

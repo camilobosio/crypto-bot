@@ -1,0 +1,49 @@
+# Estudio de varios años del bot de futuros (backtest + walk-forward de todas las variantes).
+# Se dispara solo al subir cambios a la rama "research". El resultado queda en la rama
+# "research-results" (results/RESUMEN.md). No toca el bot que corre en paper.
+name: research
+
+on:
+  push:
+    branches: [research]
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: research
+  cancel-in-progress: true
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Recuperar velas guardadas
+        uses: actions/cache@v4
+        with:
+          path: data
+          key: estudio-velas-${{ github.run_id }}
+          restore-keys: estudio-velas-
+      - name: Estudio
+        env:
+          DATA_SOURCE: binance
+          YEARS: '4'
+          NODE_OPTIONS: --max-old-space-size=6144
+        run: node scripts/research.js 2>&1 | tee research.log
+      - name: Publicar resultados
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p results && cp research.log results/ 2>/dev/null || true
+          cd results
+          git init -q && git checkout -q -b research-results
+          git config user.name "crypto-bot" && git config user.email "crypto-bot@users.noreply.github.com"
+          git add -A && git commit -q -m "Estudio $(date -u +%F' '%H:%M) UTC"
+          git push -q -f "https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git" HEAD:research-results
