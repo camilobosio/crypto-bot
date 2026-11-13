@@ -1,0 +1,639 @@
+[
+ {
+  "testFrom": 1681344000000,
+  "testTo": 1683935700000,
+  "params": {
+   "htf": "4h",
+   "mode": "ltf",
+   "sigAtr": 3,
+   "bufAtr": 0.1,
+   "minRR": 1.5,
+   "maxWait": 36,
+   "maxBars": 288,
+   "onlyReversal": true,
+   "minPrevLegs": 2
+  },
+  "trainSharpe": 0.9334784294335139,
+  "testReturn": -0.1896151065305619,
+  "testTrades": 10,
+  "halted": false
+ },
+ {
+  "testFrom": 1683936000000,
+  "testTo": 1686614100000,
+  "params": null,
+  "trainSharpe": -0.08637832103596979,
+  "testReturn": 0,
+  "testTrades": 0,
+  "halted": false
+ },
+ {
+  "testFrom": 1686614400000,
+  "testTo": 1689206100000,
+  "params": {
+   "htf": "4h",
+   "mode": "ltf",
+   "sigAtr": 3,
+   "bufAtr": 0.1,
+   "minRR": 1.5,
+   "maxWait": 36,
+   "maxBars": 288,
+   "onlyReversal": true,
+   "minPrevLegs": 2
+  },
+  "trainSharpe": 0.44287516297151514,
+  "testReturn": 0,
+  "testTrades": 0,
+  "halted": false
+ },
+ {
+  "testFrom": 1689206400000,
+  "testTo": 1691884500000,
+  "params": null,
+  "trainSharpe": -1.1489169908400207,
+  "testReturn": 0,
+  "testTrades": 0,
+  "halted": false
+ },
+ {
+  "testFrom": 1691884800000,
+  "testTo": 1694562900000,
+  "params": null,
+  "trainSharpe": -1.7213231565858336,
+  "testReturn": 0,
+  "testTrades": 0,
+  "halted": false
+ },
+ {
+  "testFrom": 1694563200000,
+  "testTo": 1697154900000,
+  "params": {
+   "htf": "4h",
+   "mode": "ltf",
+   "sigAtr": 3,
+   "bufAtr": 0.1,
+   "minRR": 1.5,
+   "maxWait": 36,
+   "maxBars": 288,
+   "onlyReversal": true,
+   "minPrevLegs": 2
+  },
+  "trainSharpe": 1.5287943327427251,
+  "testReturn": -0.19927142534949394,
+  "testTrades": 8,
+  "halted": false
+ },
+ {
+  "testFrom": 1697155200000,
+  "testTo": 1699833300000,
+  "params": null,
+  "trainSharpe": -0.8510035249115673,
+  "testReturn": 0,
+  "testTrades": 0,
+  "halted": false
+ },
+ {
+  "testFrom": 1699833600000,
+  "testTo": 1702425300000,
+  "params": null,
+  "trainSharpe": -2.823440097980432,
+  "testReturn": 0,
+  "testTrades": 0,
+  "halted": false
+ },
+ {
+  "testFrom": 1702425600000,
+  "testTo": 1705103700000,
+  "params": {
+   "htf": "1h",
+   "mode": "htf",
+   "sigAtr": 3,
+   "bufAtr": 0.1,
+   "minRR": 1.5,
+   "maxWait": 36,
+   "maxBars": 288,
+   "onlyReversal": true,
+   "minPrevLegs": 2
+  },
+  "trainSharpe": 1.4049610462970643,
+  "testReturn": -0.05978637002874798,
+  "testTrades": 3,
+  "halted": false
+ },
+ {
+  "testFrom": 1705104000000,
+  "testTo": 1707782100000,
+  "params": {
+   "htf": "1h",
+   "mode": "htf",
+   "sigAtr": 3,
+   "bufAtr": 0.1,
+   "minRR": 1.5,
+   "maxWait": 36,
+   "maxBars": 288,
+   "onlyReversal": true,
+   "minPrevLegs": 2
+  },
+  "trainSharpe": 0.8149473415985058,
+  "testReturn": -0.01047387563743174,
+  "testTrades": 1,
+  "halted": true
+ },
+ {
+  "testFrom": 1707782400000,
+  "testTo": 1710287700000,
+  "params": {
+   "htf": "1h",
+   "mode": "ltf",
+   "sigAtr": 3,
+   "bufAtr": 0.1,
+   "minRR": 1.5,
+   "maxWait": 36,
+   "maxBars": 288,
+   "onlyReversal": true,
+   "minPrevLegs": 2
+  },
+  "trainSharpe": 0.19467338293412498,
+  "testReturn": 0,
+  "testTrades": 0,
+  "halted": true
+ },
+ {
+  "testFrom": 1710288000000,
+  "testTo": 1712966100000,
+  "params": {
+   "htf": "1h",
+   "mode": "ltf",
+   "sigAtr": 3,
+   "bufAtr": 0.1,
+   "minRR": 1.5,
+   "maxWait": 36,
+   "maxBars": 288,
+   "onlyReversal": true,
+   "minPrevLegs": 2
+  },
+  "trainSharpe": 1.501194351165257,
+  "testReturn": 0,
+  "testTrades": 0,
+  "halted": true
+ },
+ {
+  "testFrom": 1712966400000,
+  "testTo": 1715558100000,
+  "params": {
+   "htf": "4h",
+   "mode": "ltf",
+   "sigAtr": 3,
+   "bufAtr": 0.1,
+   "minRR": 1.5,
+   "maxWait": 36,
+   "maxBars": 288,
+   "onlyReversal": true,
+   "minPrevLegs": 2
+  },
+  "trainSharpe": 1.7100164486333544,
+  "testReturn": 0,
+  "testTrades": 0,
+  "halted": true
+ },
+ {
+  "testFrom": 1715558400000,
+  "testTo": 1718236500000,
+  "params": {
+   "htf": "4h",
+   "mode": "ltf",
+   "sigAtr": 3,
+   "bufAtr": 0.1,
+   "minRR": 1.5,
+   "maxWait": 36,
+   "maxBars": 288,
+   "onlyReversal": true,
+   "minPrevLegs": 2
+  },
+  "trainSharpe": 1.457851886846876,
+  "testReturn": 0,
+  "testTrades": 0,
+  "halted": true
+ },
+ {
+  "testFrom": 1718236800000,
+  "testTo": 1720828500000,
+  "params": {
+   "htf": "4h",
+   "mode": "ltf",
+   "sigAtr": 3,
+   "bufAtr": 0.1,
+   "minRR": 1.5,
+   "maxWait": 36,
+   "maxBars": 288,
+   "onlyReversal": true,
+   "minPrevLegs": 2
+  },
+  "trainSharpe": 2.06616457899595,
+  "testReturn": 0,
+  "testTrades": 0,
+  "halted": true
+ },
+ {
+  "testFrom": 1720828800000,
+  "testTo": 1723506900000,
+  "params": null,
+  "trainSharpe": -1.8147127213387377,
+  "testReturn": 0,
+  "testTrades": 0,
+  "halted": true
+ },
+ {
+  "testFrom": 1723507200000,
+  "testTo": 1726185300000,
+  "params": null,
+  "trainSharpe": -0.2848514230761845,
+  "testReturn": 0,
+  "testTrades": 0,
+  "halted": true
+ },
+ {
+  "testFrom": 1726185600000,
+  "testTo": 1728777300000,
+  "params": {
+   "htf": "4h",
+   "mode": "ltf",
+   "sigAtr": 3,
+   "bufAtr": 0.1,
+   "minRR": 1.5,
+   "maxWait": 36,
+   "maxBars": 288,
+   "onlyReversal": true,
+   "minPrevLegs": 2
+  },
+  "trainSharpe": 2.4062658790004403,
+  "testReturn": 0,
+  "testTrades": 0,
+  "halted": true
+ },
+ {
+  "testFrom": 1728777600000,
+  "testTo": 1731455700000,
+  "params": {
+   "htf": "1h",
+   "mode": "ltf",
+   "sigAtr": 3,
+   "bufAtr": 0.1,
+   "minRR": 1.5,
+   "maxWait": 36,
+   "maxBars": 288,
+   "onlyReversal": true,
+   "minPrevLegs": 2
+  },
+  "trainSharpe": 0.3063077415989802,
+  "testReturn": 0,
+  "testTrades": 0,
+  "halted": true
+ },
+ {
+  "testFrom": 1731456000000,
+  "testTo": 1734047700000,
+  "params": null,
+  "trainSharpe": -1.5512162683064687,
+  "testReturn": 0,
+  "testTrades": 0,
+  "halted": true
+ },
+ {
+  "testFrom": 1734048000000,
+  "testTo": 1736726100000,
+  "params": null,
+  "trainSharpe": -1.0481803499785052,
+  "testReturn": 0,
+  "testTrades": 0,
+  "halted": true
+ },
+ {
+  "testFrom": 1736726400000,
+  "testTo": 1739404500000,
+  "params": null,
+  "trainSharpe": -4.0015117420392965,
+  "testReturn": 0,
+  "testTrades": 0,
+  "halted": true
+ },
+ {
+  "testFrom": 1739404800000,
+  "testTo": 1741823700000,
+  "params": null,
+  "trainSharpe": -3.562627871578729,
+  "testReturn": 0,
+  "testTrades": 0,
+  "halted": true
+ },
+ {
+  "testFrom": 1741824000000,
+  "testTo": 1744502100000,
+  "params": {
+   "htf": "1h",
+   "mode": "htf",
+   "sigAtr": 3,
+   "bufAtr": 0.1,
+   "minRR": 1.5,
+   "maxWait": 36,
+   "maxBars": 288,
+   "onlyReversal": true,
+   "minPrevLegs": 2
+  },
+  "trainSharpe": 0.13426211248640296,
+  "testReturn": 0,
+  "testTrades": 0,
+  "halted": true
+ },
+ {
+  "testFrom": 1744502400000,
+  "testTo": 1747094100000,
+  "params": {
+   "htf": "1h",
+   "mode": "htf",
+   "sigAtr": 3,
+   "bufAtr": 0.1,
+   "minRR": 1.5,
+   "maxWait": 36,
+   "maxBars": 288,
+   "onlyReversal": true,
+   "minPrevLegs": 2
+  },
+  "trainSharpe": 0.31349427532092483,
+  "testReturn": 0,
+  "testTrades": 0,
+  "halted": true
+ },
+ {
+  "testFrom": 1747094400000,
+  "testTo": 1749772500000,
+  "params": null,
+  "trainSharpe": -0.5158316628114923,
+  "testReturn": 0,
+  "testTrades": 0,
+  "halted": true
+ },
+ {
+  "testFrom": 1749772800000,
+  "testTo": 1752364500000,
+  "params": null,
+  "trainSharpe": -1.6772498968322613,
+  "testReturn": 0,
+  "testTrades": 0,
+  "halted": true
+ },
+ {
+  "testFrom": 1752364800000,
+  "testTo": 1755042900000,
+  "params": null,
+  "trainSharpe": -1.9178692654428358,
+  "testReturn": 0,
+  "testTrades": 0,
+  "halted": true
+ },
+ {
+  "testFrom": 1755043200000,
+  "testTo": 1757721300000,
+  "params": null,
+  "trainSharpe": -0.012481147739950951,
+  "testReturn": 0,
+  "testTrades": 0,
+  "halted": true
+ },
+ {
+  "testFrom": 1757721600000,
+  "testTo": 1760313300000,
+  "params": {
+   "htf": "1h",
+   "mode": "htf",
+   "sigAtr": 3,
+   "bufAtr": 0.1,
+   "minRR": 1.5,
+   "maxWait": 36,
+   "maxBars": 288,
+   "onlyReversal": true,
+   "minPrevLegs": 2
+  },
+  "trainSharpe": 1.746028859703168,
+  "testReturn": 0,
+  "testTrades": 0,
+  "halted": true
+ },
+ {
+  "testFrom": 1760313600000,
+  "testTo": 1762991700000,
+  "params": {
+   "htf": "1h",
+   "mode": "htf",
+   "sigAtr": 3,
+   "bufAtr": 0.1,
+   "minRR": 1.5,
+   "maxWait": 36,
+   "maxBars": 288,
+   "onlyReversal": true,
+   "minPrevLegs": 2
+  },
+  "trainSharpe": 2.2607290871896595,
+  "testReturn": 0,
+  "testTrades": 0,
+  "halted": true
+ },
+ {
+  "testFrom": 1762992000000,
+  "testTo": 1765583700000,
+  "params": {
+   "htf": "1h",
+   "mode": "ltf",
+   "sigAtr": 3,
+   "bufAtr": 0.1,
+   "minRR": 1.5,
+   "maxWait": 36,
+   "maxBars": 288,
+   "onlyReversal": true,
+   "minPrevLegs": 2
+  },
+  "trainSharpe": 3.8066639696757147,
+  "testReturn": 0,
+  "testTrades": 0,
+  "halted": true
+ },
+ {
+  "testFrom": 1765584000000,
+  "testTo": 1768262100000,
+  "params": null,
+  "trainSharpe": -2.3828521228499833,
+  "testReturn": 0,
+  "testTrades": 0,
+  "halted": true
+ },
+ {
+  "testFrom": 1768262400000,
+  "testTo": 1770940500000,
+  "params": {
+   "htf": "1h",
+   "mode": "ltf",
+   "sigAtr": 3,
+   "bufAtr": 0.1,
+   "minRR": 1.5,
+   "maxWait": 36,
+   "maxBars": 288,
+   "onlyReversal": true,
+   "minPrevLegs": 2
+  },
+  "trainSharpe": 2.024425774067177,
+  "testReturn": 0,
+  "testTrades": 0,
+  "halted": true
+ },
+ {
+  "testFrom": 1770940800000,
+  "testTo": 1773359700000,
+  "params": {
+   "htf": "1h",
+   "mode": "ltf",
+   "sigAtr": 3,
+   "bufAtr": 0.1,
+   "minRR": 1.5,
+   "maxWait": 36,
+   "maxBars": 288,
+   "onlyReversal": true,
+   "minPrevLegs": 2
+  },
+  "trainSharpe": 2.2793610649475493,
+  "testReturn": 0,
+  "testTrades": 0,
+  "halted": true
+ },
+ {
+  "testFrom": 1773360000000,
+  "testTo": 1776038100000,
+  "params": {
+   "htf": "1h",
+   "mode": "ltf",
+   "sigAtr": 3,
+   "bufAtr": 0.1,
+   "minRR": 1.5,
+   "maxWait": 36,
+   "maxBars": 288,
+   "onlyReversal": true,
+   "minPrevLegs": 2
+  },
+  "trainSharpe": 0.02107706965096551,
+  "testReturn": 0,
+  "testTrades": 0,
+  "halted": true
+ },
+ {
+  "testFrom": 1776038400000,
+  "testTo": 1778630100000,
+  "params": null,
+  "trainSharpe": -0.4358955401942769,
+  "testReturn": 0,
+  "testTrades": 0,
+  "halted": true
+ },
+ {
+  "testFrom": 1778630400000,
+  "testTo": 1781308500000,
+  "params": null,
+  "trainSharpe": -1.0139503287627922,
+  "testReturn": 0,
+  "testTrades": 0,
+  "halted": true
+ },
+ {
+  "testFrom": 1781308800000,
+  "testTo": 1783900500000,
+  "params": {
+   "htf": "1h",
+   "mode": "ltf",
+   "sigAtr": 3,
+   "bufAtr": 0.1,
+   "minRR": 1.5,
+   "maxWait": 36,
+   "maxBars": 288,
+   "onlyReversal": true,
+   "minPrevLegs": 2
+  },
+  "trainSharpe": 1.2905344725289416,
+  "testReturn": 0,
+  "testTrades": 0,
+  "halted": true
+ },
+ {
+  "testFrom": 1783900800000,
+  "testTo": 1786578900000,
+  "params": {
+   "htf": "1h",
+   "mode": "ltf",
+   "sigAtr": 3,
+   "bufAtr": 0.1,
+   "minRR": 2.5,
+   "maxWait": 36,
+   "maxBars": 288,
+   "onlyReversal": true,
+   "minPrevLegs": 2
+  },
+  "trainSharpe": 1.787163155788909,
+  "testReturn": 0,
+  "testTrades": 0,
+  "halted": true
+ },
+ {
+  "testFrom": 1786579200000,
+  "testTo": 1789257300000,
+  "params": {
+   "htf": "1h",
+   "mode": "htf",
+   "sigAtr": 3,
+   "bufAtr": 0.1,
+   "minRR": 1.5,
+   "maxWait": 36,
+   "maxBars": 288,
+   "onlyReversal": true,
+   "minPrevLegs": 2
+  },
+  "trainSharpe": 0.5047201239670357,
+  "testReturn": 0,
+  "testTrades": 0,
+  "halted": true
+ },
+ {
+  "testFrom": 1789257600000,
+  "testTo": 1791849300000,
+  "params": {
+   "htf": "1h",
+   "mode": "ltf",
+   "sigAtr": 3,
+   "bufAtr": 0.1,
+   "minRR": 2.5,
+   "maxWait": 36,
+   "maxBars": 288,
+   "onlyReversal": true,
+   "minPrevLegs": 2
+  },
+  "trainSharpe": 0.3666067446289052,
+  "testReturn": 0,
+  "testTrades": 0,
+  "halted": true
+ },
+ {
+  "testFrom": 1791849600000,
+  "testTo": 1794527700000,
+  "params": {
+   "htf": "1h",
+   "mode": "ltf",
+   "sigAtr": 3,
+   "bufAtr": 0.1,
+   "minRR": 2.5,
+   "maxWait": 36,
+   "maxBars": 288,
+   "onlyReversal": true,
+   "minPrevLegs": 2
+  },
+  "trainSharpe": 0.7577278825564351,
+  "testReturn": 0,
+  "testTrades": 0,
+  "halted": true
+ }
+]

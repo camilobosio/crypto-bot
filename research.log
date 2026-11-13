@@ -1,0 +1,63 @@
+Datos: 3 pares, 420629 velas de 5m, 2022-11-14 → 2026-11-13 (4 s)
+[A] Ruptura · entra a mercado · stop a mercado (lo que corre hoy): backtest avgR -0.100 (671 ops) · walk-forward -9.8 % DD 43.4 % INTERRUPTOR (46 s)
+[B] Ruptura · entra con límite · stop a mercado: backtest avgR -0.082 (763 ops) · walk-forward -1.5 % DD 40.7 % INTERRUPTOR (55 s)
+[C] Ruptura · entra y sale con límite: backtest avgR -0.098 (672 ops) · walk-forward -5.0 % DD 43.3 % INTERRUPTOR (55 s)
+[D] Giro tras tendencia larga · entra y sale con límite: backtest avgR -0.254 (161 ops) · walk-forward -39.9 % DD 40.4 % INTERRUPTOR (20 s)
+[E] Giro tras tendencia (2 tramos) · entra y sale con límite: backtest avgR -0.186 (289 ops) · walk-forward -39.6 % DD 40.1 % INTERRUPTOR (22 s)
+riesgo 1.0 %: -33.0 % DD 40.1 %
+riesgo 2.0 %: -25.6 % DD 40.1 %
+riesgo 3.0 %: -29.4 % DD 40.4 %
+riesgo 5.0 %: -1.5 % DD 40.7 %
+# Estudio de 4 años: bot de futuros (ronda 2: salidas con límite y modo giro)
+
+Generado 2026-11-13 13:56 UTC · BTCUSDT, ETHUSDT, XRPUSDT · velas de 5m (espejo público de Binance) · 2023-01-13 → 2026-11-13.
+Capital inicial 100 USDT. Comisiones de Bybit (taker 0,055 %, maker 0,02 %), slippage 0,03 % en entradas a mercado y stops, financiamiento estimado 0,01 % cada 8 h.
+Órdenes límite: solo se llenan si el precio ATRAVIESA la orden (no alcanza con tocarla).
+
+**Referencia, comprar y mantener la canasta 1x:** 162.2 % · caída máxima 63.5 %.
+
+## 1. ¿La idea gana algo? (parámetros fijos, todo el período, sin interruptor)
+"Resultado medio (R)" positivo = la estrategia tiene ventaja después de costos.
+
+|  | Variante | Ops | Acierto | Resultado medio (R) | Profit factor |
+|---|---|---|---|---|---|
+| A | Ruptura · entra a mercado · stop a mercado (lo que corre hoy) | 671 | 38.5 % | -0.100 | 0.80 |
+| B | Ruptura · entra con límite · stop a mercado | 763 | 39.1 % | -0.082 | 0.82 |
+| C | Ruptura · entra y sale con límite | 672 | 37.4 % | -0.098 | 0.77 |
+| D | Giro tras tendencia larga · entra y sale con límite | 161 | 17.4 % | -0.254 | 0.59 |
+| E | Giro tras tendencia (2 tramos) · entra y sale con límite | 289 | 18.7 % | -0.186 | 0.65 |
+
+## 2. La prueba que cuenta: walk-forward (meses que no vio, con interruptor del 40 %)
+
+|  | Variante | Capital final | Retorno | Mensual | Caída máx. | Sharpe | Ops | Acierto | R medio | Interruptor |
+|---|---|---|---|---|---|---|---|---|---|---|
+| A | Ruptura · entra a mercado · stop a mercado (lo que corre hoy) | 90.22 | -9.8 % | -0.2 % | 43.4 % | -0.04 | 27 | 40.7 % | 0.01 | sí (2023-04-26) |
+| B | Ruptura · entra con límite · stop a mercado | 98.48 | -1.5 % | -0.0 % | 40.7 % | 0.07 | 23 | 34.8 % | 0.06 | sí (2023-04-26) |
+| C | Ruptura · entra y sale con límite | 95.01 | -5.0 % | -0.1 % | 43.3 % | 0.02 | 23 | 34.8 % | 0.04 | sí (2023-04-26) |
+| D | Giro tras tendencia larga · entra y sale con límite | 60.11 | -39.9 % | -1.2 % | 40.4 % | -0.82 | 18 | 16.7 % | -0.68 | sí (2024-09-20) |
+| E | Giro tras tendencia (2 tramos) · entra y sale con límite | 60.37 | -39.6 % | -1.1 % | 40.1 % | -0.79 | 22 | 18.2 % | -0.60 | sí (2024-01-31) |
+
+## 3. ¿El puntaje de tendencia sirve? (operaciones del backtest, por puntaje)
+Si el acierto y el R medio suben con el puntaje, tiene sentido arriesgar más cuando el puntaje es alto.
+
+
+
+## 4. Cuánto arriesgar por operación (mejor variante: B)
+
+| Riesgo por operación | Capital final | Retorno | Mensual | Caída máx. | Interruptor |
+|---|---|---|---|---|---|
+| 1.0 % | 66.96 | -33.0 % | -0.9 % | 40.1 % | sí (2023-11-13) |
+| 2.0 % | 74.44 | -25.6 % | -0.7 % | 40.1 % | sí (2023-05-12) |
+| 3.0 % | 70.65 | -29.4 % | -0.8 % | 40.4 % | sí (2023-05-07) |
+| 5.0 % | 98.48 | -1.5 % | -0.0 % | 40.7 % | sí (2023-04-26) |
+
+## 5. Detalle por par (walk-forward, mejor variante B)
+
+| Par | Ops | Acierto | USDT |
+|---|---|---|---|
+| ETHUSDT | 10 | 40 % | 5.22 |
+| XRPUSDT | 10 | 30 % | 1.28 |
+| BTCUSDT | 3 | 33 % | -8.01 |
+
+Tiempo total: 8 min.
+
