@@ -71,6 +71,8 @@ jobs:
           END=$((SECONDS + 320*60))
           last=$(count)
           while [ $SECONDS -lt $END ]; do
+            # toma los cambios de main sin esperar a la próxima corrida
+            git fetch -q origin main && git reset -q --hard origin/main || true
             node scripts/paper.js --once || echo "ciclo con error, sigo"
             sync
             c=$(count)

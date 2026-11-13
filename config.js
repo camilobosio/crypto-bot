@@ -2,7 +2,15 @@
 // Todo límite de riesgo vive acá y lo aplica src/engine.js. Ninguna estrategia lo puede saltear.
 export default {
   exchange: 'bybit',
-  symbols: ['BTCUSDT', 'ETHUSDT', 'SOLUSDT', 'XRPUSDT', 'DOGEUSDT', 'BNBUSDT', 'LINKUSDT', 'SUIUSDT'],
+  // 13/11: solo las tres que mejor anduvieron en el estudio de 4 años (antes 8 pares).
+  symbols: ['BTCUSDT', 'ETHUSDT', 'XRPUSDT'],
+  // Cambiar este nombre reinicia la prueba de cero (la anterior queda archivada en archivo/).
+  sessionId: '2026-11-13-v2',
+  // Entrar SIEMPRE con orden límite (nunca a mercado): se corre cada vela y se cancela si el precio se escapa.
+  entry: { mode: 'limit', maxWaitBars: 12, chaseR: 0.5 },
+  // Salir con límite también: al tocar el stop deja una límite en el stop y espera el rebote;
+  // si sigue en contra 0,25 veces el riesgo más, o pasan 3 velas (15 min), cierra a mercado igual.
+  exits: { mode: 'maker', emergencyR: 0.25, maxWaitBars: 3 },
   historyDays: 365,           // histórico de velas de 5m para backtest
   initialCapital: 100,        // USDT simulados
 
@@ -16,6 +24,8 @@ export default {
   risk: {
     riskPerTradePct: 0.05,    // cada operación arriesga 5 % del patrimonio entre entrada y stop
     maxPositions: 3,          // posiciones abiertas a la vez
+    maxSameSide: 2,           // como mucho 2 en la misma dirección (no repetir la misma apuesta)
+    weekendRiskFactor: 0.5,   // sábado y domingo arriesga la mitad (menos volumen, mercado más lateral)
     maxLeverage: 20,          // techo; el bot elige el apalancamiento por operación
     maintMarginPct: 0.005,    // margen de mantenimiento aproximado (Bybit, montos chicos)
     liqSafety: 2,             // la liquidación tiene que quedar al menos 2x más lejos que el stop

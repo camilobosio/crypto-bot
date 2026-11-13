@@ -125,10 +125,19 @@ async function cycle() {
   }));
   const data = alignCandles(raw);
   const times = data[cfg.symbols[0]].map((c) => c.t);
-  const state = fs.existsSync(STATE) ? JSON.parse(fs.readFileSync(STATE, 'utf8')) : null;
+  let state = fs.existsSync(STATE) ? JSON.parse(fs.readFileSync(STATE, 'utf8')) : null;
+  // Sesión nueva (cambió cfg.sessionId): se archiva la prueba anterior y arranca de cero.
+  if (state && (state.sessionId ?? 'v1') !== (cfg.sessionId ?? 'v1')) {
+    const arch = path.join(dir, 'archivo', state.sessionId ?? 'v1');
+    fs.mkdirSync(arch, { recursive: true });
+    for (const f of [STATE, TRADES, LOG, SUMMARY, EQUITY, TRADES_JSON, LIVE]) if (fs.existsSync(f)) fs.renameSync(f, path.join(arch, path.basename(f)));
+    console.log(`Sesión ${state.sessionId ?? 'v1'} archivada en ${arch} → prueba de cero (${cfg.sessionId})`);
+    state = null;
+  }
   const pf = new FuturesPortfolio({ data, funding, strategy, params, cfg, state, ind: prepareAll(strategy, data, params) });
 
   if (!state) {
+    pf.s.sessionId = cfg.sessionId;
     pf.s.lastT = times.at(-1);
     fs.writeFileSync(STATE, JSON.stringify(pf.s, null, 2));
     log(`Iniciado: ${cfg.initialCapital} USDT simulados · ${name} ${JSON.stringify(params)} · ${cfg.symbols.join(' ')}`);

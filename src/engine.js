@@ -82,11 +82,13 @@ export class FuturesPortfolio {
     s.cooldown[sym] = t + this.cfg.risk.cooldownMin * 6e4;
   }
 
-  riskPct(o) {
+  riskPct(o, t) {
     const R = this.cfg.risk;
-    if (o.score == null || !R.riskByScore) return R.riskPerTradePct;
-    let pct = 0;
-    for (const [min, p] of R.riskByScore) if (o.score >= min) pct = p;
+    let pct = R.riskPerTradePct;
+    if (o.score != null && R.riskByScore) { pct = 0; for (const [min, p] of R.riskByScore) if (o.score >= min) pct = p; }
+    // Fin de semana (sábado y domingo, hora UTC): menos volumen y más lateral → arriesga menos.
+    const wd = new Date(t).getUTCDay();
+    if (R.weekendRiskFactor != null && (wd === 0 || wd === 6)) pct *= R.weekendRiskFactor;
     return pct;
   }
 
@@ -104,7 +106,7 @@ export class FuturesPortfolio {
     const d = (o.side * (px - o.stop)) / px; // distancia al stop en %
     if (!(d >= R.minStopPct)) return false;
     const eq = this.equityAt(i, 'o');
-    const riskUsd = this.riskPct(o) * eq;
+    const riskUsd = this.riskPct(o, t) * eq;
     if (!(riskUsd > 0)) return false;
     const lev = Math.floor(Math.min(R.maxLeverage, 1 / (R.liqSafety * d + R.maintMarginPct)));
     if (lev < 1) return false;
